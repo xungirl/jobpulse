@@ -9,6 +9,8 @@
 #   3. disables reserved concurrency if the account's Lambda limit is < 100 (new accounts: 10)
 #   4. cdk bootstrap (first time only) + cdk deploy
 #   5. optionally starts one pipeline execution for today
+#
+# Non-interactive runs (CI, agents): CDK_REQUIRE_APPROVAL=never after reviewing `cdk diff`.
 set -euo pipefail
 
 REGION="us-east-2"
@@ -47,7 +49,7 @@ if (( LIMIT < 100 )); then RC=0; echo "Account concurrency limit is $LIMIT -> de
 if ! aws cloudformation describe-stacks --stack-name CDKToolkit >/dev/null 2>&1; then
   cdk bootstrap "aws://$ACCOUNT/$REGION"
 fi
-cdk deploy JobPulse --require-approval broadening \
+cdk deploy JobPulse --require-approval "${CDK_REQUIRE_APPROVAL:-broadening}" \
   -c alert_email="$ALERT_EMAIL" -c reserved_concurrency="$RC" --outputs-file infra/cdk.out/outputs.json
 
 URL="$(python3 -c 'import json;print(json.load(open("infra/cdk.out/outputs.json"))["JobPulse"]["DashboardUrl"])')"
