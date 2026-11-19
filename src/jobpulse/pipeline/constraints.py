@@ -16,11 +16,13 @@ _DEGREES = {
     "PhD": re.compile(r"\b(ph\.?\s?d\.?|doctoral|doctorate)\b", re.I),
 }
 _PHD_ONLY = re.compile(
-    r"\b(currently (enrolled|pursuing)( in)? an? (ph\.?\s?d|doctoral)|ph\.?\s?d\.? (student|candidate)s? only|"
-    r"must be (a|enrolled in a) ph\.?\s?d)", re.I
+    r"\b(currently (enrolled|pursuing)( in)? an? (ph\.?\s?d\.?|doctoral)( program| degree)?"
+    r"(?!\s*(or|/|,)\s*(an?\s+)?(ms|m\.s|master|bachelor|bs|undergrad))"  # "PhD or MS" is not PhD-only
+    r"|ph\.?\s?d\.? (student|candidate)s? only|must be (a|enrolled in a) ph\.?\s?d)",
+    re.I,
 )
 _GRAD_WINDOW = re.compile(
-    r"graduat\w*[^.\n]{0,40}?\b((?:between|from|in|by|before|after)\s+)?"
+    r"graduat(?:ion|ing|es|ed|e(?!\s+(?:degree|program|student|level|school)))[^.\n]{0,40}?\b((?:between|from|in|by|before|after)\s+)?"
     r"((?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec|fall|spring|summer|winter)\w*\.?\s+20(2[6-9])"
     r"(?:\s*(?:-|–|and|to|through)\s*(?:(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec|fall|spring|summer|"
     r"winter)\w*\.?\s+)?20(2[6-9]))?)",
@@ -35,8 +37,10 @@ _NO_SPONSORSHIP = re.compile(
     re.I,
 )
 _CITIZENSHIP = re.compile(
-    r"(must\s+be\s+a\s+u\.?s\.?\s+citizen|u\.?s\.?\s+citizenship\s+(is\s+)?required|"
-    r"requires?\s+u\.?s\.?\s+citizenship|\bITAR\b|\bU\.?S\.?\s+persons?\b|EAR\s+export)",
+    r"(must\s+be\s+a\s+u\.?s\.?\s+(citizen|person)"
+    r"|(requires?|required\s+to\s+be)\s+(the\s+successful\s+candidate\s+to\s+be\s+)?a\s+u\.?s\.?\s+(citizen|person)"
+    r"|u\.?s\.?\s+citizenship\s+(is\s+)?required(?!\s*:\s*no)"  # "US Citizenship Required: No"
+    r"|requires?\s+u\.?s\.?\s+citizenship|\bITAR\b)",
     re.I,
 )
 _CLEARANCE = re.compile(r"(security\s+clearance|\bTS/SCI\b|secret\s+clearance|active\s+clearance)", re.I)

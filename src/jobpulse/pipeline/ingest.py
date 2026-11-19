@@ -26,6 +26,10 @@ def run_ingest(ctx: Context, run_date: str) -> StepResult:
     m.set("listings_capped", len(fresh) - len(selected))
 
     for listing in selected:
+        if (existing := ctx.repos.posting(listing.id)) is not None and existing.jd_text:
+            m.incr("postings_ingested")  # re-run of this date: reuse stored JD, don't re-fetch
+            m.incr("postings_with_jd")
+            continue
         try:
             job = ats.fetch_job_text(ctx.http, listing.url) if ats.supported(listing.url) else None
         except HttpError as e:

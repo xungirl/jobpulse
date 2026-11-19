@@ -22,8 +22,59 @@ AI_TITLE = re.compile(
     re.IGNORECASE,
 )
 US_STATES = set(
-    "AL AK AZ AR CA CO CT DE FL GA HI ID IL IN IA KS KY LA ME MD MA MI MN MS MO MT NE NV NH NJ NM NY NC ND "
-    "OH OK OR PA RI SC SD TN TX UT VT VA WA WV WI WY DC".split()
+    [
+        "AL",
+        "AK",
+        "AZ",
+        "AR",
+        "CA",
+        "CO",
+        "CT",
+        "DE",
+        "FL",
+        "GA",
+        "HI",
+        "ID",
+        "IL",
+        "IN",
+        "IA",
+        "KS",
+        "KY",
+        "LA",
+        "ME",
+        "MD",
+        "MA",
+        "MI",
+        "MN",
+        "MS",
+        "MO",
+        "MT",
+        "NE",
+        "NV",
+        "NH",
+        "NJ",
+        "NM",
+        "NY",
+        "NC",
+        "ND",
+        "OH",
+        "OK",
+        "OR",
+        "PA",
+        "RI",
+        "SC",
+        "SD",
+        "TN",
+        "TX",
+        "UT",
+        "VT",
+        "VA",
+        "WA",
+        "WV",
+        "WI",
+        "WY",
+        "DC",
+    ]
 )
 
 
@@ -75,16 +126,18 @@ def parse_listings(raw: list[dict[str, Any]], run_date: str, lookback_days: int)
         locations = tuple(x.get("locations") or ())
         if not any(is_us_location(loc) for loc in locations):
             continue
-        out.append(Listing(
-            id=str(x["id"]),
-            company=str(x.get("company_name", "")).strip(),
-            title=str(x.get("title", "")).strip(),
-            url=str(x["url"]),
-            locations=locations,
-            category=str(x.get("category", "")),
-            date_posted=posted,
-            sponsorship=x.get("sponsorship"),
-        ))
+        out.append(
+            Listing(
+                id=str(x["id"]),
+                company=str(x.get("company_name", "")).strip(),
+                title=str(x.get("title", "")).strip(),
+                url=str(x["url"]),
+                locations=locations,
+                category=str(x.get("category", "")),
+                date_posted=posted,
+                sponsorship=x.get("sponsorship"),
+            )
+        )
     out.sort(key=lambda listing: (listing.date_posted, listing.company, listing.id))
     return out
 

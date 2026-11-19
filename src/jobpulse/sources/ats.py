@@ -48,18 +48,19 @@ def _json(http: HttpClient, url: str) -> Any:
 def greenhouse(http: HttpClient, url: str) -> JobText | None:
     q = urllib.parse.parse_qs(urllib.parse.urlparse(url).query)
     m = re.search(r"greenhouse\.io/(?:embed/job_app\?for=)?([\w-]+)/jobs/(\d+)", url)
-    jid = (q.get("gh_jid") or q.get("token") or [None])[0] or (m.group(2) if m else None)
-    if not jid or not m:
+    if not m:
         return None  # company-domain gh_jid links don't name the board; skip rather than guess
     board = m.group(1)
+    jid = (q.get("gh_jid") or q.get("token") or [m.group(2)])[0]
     try:
         d = _json(http, f"https://boards-api.greenhouse.io/v1/boards/{board}/jobs/{jid}")
     except HttpError as e:
         if e.status == 404:
             return JobText("greenhouse", None, None, False, "")
         raise
-    return JobText("greenhouse", d["title"], (d.get("location") or {}).get("name"), True,
-                   html_to_text(d.get("content")))
+    return JobText(
+        "greenhouse", d["title"], (d.get("location") or {}).get("name"), True, html_to_text(d.get("content"))
+    )
 
 
 def ashby(http: HttpClient, url: str) -> JobText | None:
@@ -70,8 +71,13 @@ def ashby(http: HttpClient, url: str) -> JobText | None:
     d = _json(http, f"https://api.ashbyhq.com/posting-api/job-board/{org}")
     for j in d.get("jobs", []):
         if j["id"] == jid:
-            return JobText("ashby", j["title"], j.get("location"), True,
-                           j.get("descriptionPlain") or html_to_text(j.get("descriptionHtml")))
+            return JobText(
+                "ashby",
+                j["title"],
+                j.get("location"),
+                True,
+                j.get("descriptionPlain") or html_to_text(j.get("descriptionHtml")),
+            )
     return JobText("ashby", None, None, False, "")
 
 
@@ -93,7 +99,8 @@ def lever(http: HttpClient, url: str) -> JobText | None:
 
 def workday(http: HttpClient, url: str) -> JobText | None:
     m = re.search(
-        r"https://([\w-]+)\.(wd\d+)\.myworkdayjobs\.com/(?:[a-z]{2}-[A-Z]{2}/)?([\w-]+)/job/(.+?)(?:\?|$)", url
+        r"https://([\w-]+)\.(wd\d+)\.myworkdayjobs\.com/(?:[a-z]{2}-[A-Z]{2}/)?([\w-]+)/job/(.+?)(?:\?|$)",
+        url,
     )
     if not m:
         return None
@@ -106,19 +113,27 @@ def workday(http: HttpClient, url: str) -> JobText | None:
             return JobText("workday", None, None, False, "")
         raise
     j = d["jobPostingInfo"]
-    return JobText("workday", j["title"], j.get("location"), bool(j.get("canApply", True)),
-                   html_to_text(j.get("jobDescription")))
+    return JobText(
+        "workday",
+        j["title"],
+        j.get("location"),
+        bool(j.get("canApply", True)),
+        html_to_text(j.get("jobDescription")),
+    )
 
 
 def oracle(http: HttpClient, url: str) -> JobText | None:
     m = re.search(
-        r"https://([\w.-]+\.oraclecloud\.com)/hcmUI/CandidateExperience/[a-z]{2}/sites/([\w-]+)/job/(\d+)", url
+        r"https://([\w.-]+\.oraclecloud\.com)/hcmUI/CandidateExperience/[a-z]{2}/sites/([\w-]+)/job/(\d+)",
+        url,
     )
     if not m:
         return None
     host, site, jid = m.groups()
-    api = (f"https://{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails"
-           f"?expand=all&onlyData=true&finder=ById;Id=%22{jid}%22,siteNumber={site}")
+    api = (
+        f"https://{host}/hcmRestApi/resources/latest/recruitingCEJobRequisitionDetails"
+        f"?expand=all&onlyData=true&finder=ById;Id=%22{jid}%22,siteNumber={site}"
+    )
     items = _json(http, api).get("items") or []
     if not items:
         return JobText("oracle", None, None, False, "")
@@ -140,20 +155,35 @@ def smartrecruiters(http: HttpClient, url: str) -> JobText | None:
             return JobText("smartrecruiters", None, None, False, "")
         raise
     sec = (d.get("jobAd") or {}).get("sections") or {}
-    body = "\n\n".join(f"{v.get('title', '')}\n{html_to_text(v.get('text'))}"
-                       for v in sec.values() if isinstance(v, dict))
+    body = "\n\n".join(
+        f"{v.get('title', '')}\n{html_to_text(v.get('text'))}" for v in sec.values() if isinstance(v, dict)
+    )
     loc = d.get("location") or {}
     return JobText("smartrecruiters", d.get("name"), loc.get("city"), bool(d.get("active", True)), body)
 
 
 FETCHERS: list[Callable[[HttpClient, str], JobText | None]] = [
-    ashby, lever, workday, oracle, smartrecruiters, greenhouse,
+    ashby,
+    lever,
+    workday,
+    oracle,
+    smartrecruiters,
+    greenhouse,
 ]
 
 
 def supported(url: str) -> bool:
-    return any(h in url for h in ("ashbyhq.com", "lever.co", "myworkdayjobs.com", "oraclecloud.com",
-                                  "smartrecruiters.com", "greenhouse.io"))
+    return any(
+        h in url
+        for h in (
+            "ashbyhq.com",
+            "lever.co",
+            "myworkdayjobs.com",
+            "oraclecloud.com",
+            "smartrecruiters.com",
+            "greenhouse.io",
+        )
+    )
 
 
 def fetch_job_text(http: HttpClient, url: str) -> JobText | None:
