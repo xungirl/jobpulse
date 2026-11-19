@@ -26,7 +26,7 @@ from jobpulse.taxonomy import Taxonomy
 MIN_COUNT_30D = 2
 TOP_GAPS_IN_PROMPT = 8
 SIMILAR_TITLE = 0.5
-REPEAT_WINDOW_DAYS = 14
+REPEAT_WINDOW_DAYS = 7
 
 IDEAS_SYSTEM = """You propose portfolio projects for a CS master's student applying to SWE / AI internships.
 Reply with ONE JSON object: {"ideas": [ {"title": str, "why": str, "scope": str, "stack": [str],
@@ -158,9 +158,10 @@ def run_gaps(ctx: Context, run_date: str) -> StepResult:
     previous = [i for i in ctx.repos.all_ideas() if i.date < run_date]
     window_start = (date.fromisoformat(run_date) - timedelta(days=REPEAT_WINDOW_DAYS)).isoformat()
     recent = [i for i in previous if i.date >= window_start]
-    # Gaps already targeted by an idea in the last 14 days are skipped, so the same top gaps
-    # do not get proposed (and then deduped away) day after day.
-    covered = {s for i in recent for s in i.target_skills}
+    # A gap that was the PRIMARY target of an idea in the last 7 days is skipped, so the same top
+    # gaps are not proposed (and then deduped away) day after day. Only the primary skill counts:
+    # ideas often list several skills, and counting all of them exhausted the pool within ~9 days.
+    covered = {i.target_skills[0] for i in recent if i.target_skills}
     open_gaps = [g for g in gaps if g["skill"] not in covered]
     m.set("gaps_recently_covered", len(gaps) - len(open_gaps))
     top = open_gaps[:TOP_GAPS_IN_PROMPT]

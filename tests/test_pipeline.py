@@ -102,11 +102,11 @@ def test_ideas_keep_coming_on_consecutive_days(ctx: Context) -> None:
     from jobpulse.pipeline.gaps import run_gaps
 
     run_pipeline(ctx, "2026-11-18")
-    first = {s for i in ctx.repos.all_ideas() for s in i.target_skills}
+    first = {i.target_skills[0] for i in ctx.repos.all_ideas()}
     result = run_gaps(ctx, "2026-11-19")  # same demand data, one day later
     second = [i for i in ctx.repos.all_ideas() if i.date == "2026-11-19"]
     assert result.metrics["gaps_recently_covered"] == len(first)
-    assert all(not set(i.target_skills) & first for i in second)
+    assert all(i.target_skills[0] not in first for i in second)
 
 
 def test_gap_ranking_and_dedupe() -> None:
