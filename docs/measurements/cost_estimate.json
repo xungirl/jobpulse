@@ -1,0 +1,50 @@
+{
+ "assumptions": {
+  "days": 30,
+  "slowdown_vs_local": 3.0,
+  "prices": {
+   "lambda_gb_s_arm": 1.33334e-05,
+   "lambda_req": 2.0000000000000002e-07,
+   "sfn_transition": 2.5e-05,
+   "ddb_wru": 6.25e-07,
+   "ddb_rru": 1.25e-07,
+   "ddb_gb_month": 0.25,
+   "s3_put": 5e-06,
+   "s3_get": 4.0000000000000003e-07,
+   "s3_gb_month": 0.023,
+   "logs_ingest_gb": 0.5
+  },
+  "free_tier": {
+   "lambda_gb_s": 400000,
+   "lambda_req": 1000000,
+   "sfn_transition": 4000,
+   "ddb_gb": 25,
+   "logs_gb": 5
+  },
+  "transitions_per_run": 9
+ },
+ "rows": {
+  "Lambda (arm64)": {
+   "volume": "180 invocations, 4,596 GB-s",
+   "usd": 0.0,
+   "free_tier_covers": true
+  },
+  "Step Functions (Standard)": {
+   "volume": "270 state transitions",
+   "usd": 0.0,
+   "free_tier_covers": true
+  },
+  "DynamoDB (on-demand)": {
+   "volume": "3,540 WRU, 7,260 RRU, 2.1 MB data",
+   "usd": 0.0031,
+   "free_tier_covers": false
+  },
+  "S3": {
+   "volume": "570 PUTs, 2.4 MB stored",
+   "usd": 0.0029,
+   "free_tier_covers": false
+  }
+ },
+ "total_usd_month_estimate": 0.006,
+ "gb_s_per_run": 153.2
+}

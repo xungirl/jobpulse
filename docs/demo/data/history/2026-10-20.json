@@ -1,0 +1,2811 @@
+{
+ "run_date": "2026-10-20",
+ "generated_at": "2026-11-19T04:38:23+00:00",
+ "persona_note": "Resumes are generated for a fictional demo persona; every bullet is copied verbatim from its bullet bank.",
+ "postings": [
+  {
+   "company": "Adobe",
+   "title": "AI & Architecture Intern",
+   "url": "https://adobe.wd5.myworkdayjobs.com/external_experienced/job/San-Jose/XMLNAME-2027-Intern---AI---Architecture_R172998",
+   "locations": [
+    "San Jose, CA"
+   ],
+   "date_posted": "2026-10-19",
+   "has_jd": true,
+   "required": [],
+   "nice": [
+    "AI Agents",
+    "MCP",
+    "Observability"
+   ],
+   "method": "qwen",
+   "flags": [],
+   "grad_window": null
+  },
+  {
+   "company": "Amplify",
+   "title": "AI Scientist Intern",
+   "url": "https://jobs.ashbyhq.com/amplify/bb45b7f6-dd7e-40e5-84e6-52e21650a7b8/application?embed=true",
+   "locations": [
+    "Remote in USA"
+   ],
+   "date_posted": "2026-10-19",
+   "has_jd": true,
+   "required": [
+    "Machine Learning",
+    "Data Analysis"
+   ],
+   "nice": [
+    "NLP",
+    "LLMs",
+    "Statistics",
+    "Python",
+    "R",
+    "SQL",
+    "AWS",
+    "GCP",
+    "Azure",
+    "Git"
+   ],
+   "method": "qwen",
+   "flags": [],
+   "grad_window": "Fall 2027"
+  },
+  {
+   "company": "Amplify",
+   "title": "Software Engineer Intern",
+   "url": "https://jobs.ashbyhq.com/amplify/855d22a3-f15e-49f6-854c-29e505653efa/application?embed=true",
+   "locations": [
+    "Remote in USA"
+   ],
+   "date_posted": "2026-10-19",
+   "has_jd": true,
+   "required": [],
+   "nice": [
+    "Python",
+    "Java",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Angular",
+    "Vue",
+    "Node.js",
+    "Django",
+    "Spring Boot",
+    "REST APIs",
+    "Distributed Systems",
+    "Data Structures & Algorithms",
+    "Object-Oriented Programming"
+   ],
+   "method": "qwen",
+   "flags": [],
+   "grad_window": "Fall 2027"
+  },
+  {
+   "company": "DriveWealth",
+   "title": "AI Consulting Associate Program Brokerage Intern",
+   "url": "https://jobs.ashbyhq.com/drivewealth/b11409e6-a86d-4504-b4da-36636f888c16/application?embed=true",
+   "locations": [
+    "Chicago, IL"
+   ],
+   "date_posted": "2026-10-20",
+   "has_jd": true,
+   "required": [
+    "Python",
+    "SQL",
+    "Data Analysis"
+   ],
+   "nice": [],
+   "method": "qwen",
+   "flags": [
+    "no sponsorship"
+   ],
+   "grad_window": "December 2027 to December 2028"
+  },
+  {
+   "company": "DriveWealth",
+   "title": "AI Consulting Associate Program Product Owner Intern",
+   "url": "https://jobs.ashbyhq.com/drivewealth/ec17ef99-dea9-4150-b935-5f74750d7b87/application?embed=true",
+   "locations": [
+    "Chicago, IL"
+   ],
+   "date_posted": "2026-10-20",
+   "has_jd": true,
+   "required": [
+    "Python",
+    "SQL",
+    "REST APIs",
+    "LLMs",
+    "Prompt Engineering"
+   ],
+   "nice": [],
+   "method": "qwen",
+   "flags": [
+    "no sponsorship"
+   ],
+   "grad_window": "December 2027 to December 2028"
+  },
+  {
+   "company": "DriveWealth",
+   "title": "AI Consulting Associate Program \u2013 AI Engineer Intern",
+   "url": "https://boards.greenhouse.io/drivewealth/jobs/8039350003",
+   "locations": [
+    "Chicago, IL",
+    "NYC"
+   ],
+   "date_posted": "2026-10-20",
+   "has_jd": true,
+   "required": [
+    "Python",
+    "SQL",
+    "REST APIs",
+    "LLMs",
+    "Prompt Engineering"
+   ],
+   "nice": [
+    "AWS",
+    "LangChain",
+    "Docker",
+    "LLM Evaluation"
+   ],
+   "method": "qwen",
+   "flags": [
+    "no sponsorship"
+   ],
+   "grad_window": "December 2027 to December 2028"
+  },
+  {
+   "company": "Integrate",
+   "title": "Software Engineer Intern",
+   "url": "https://jobs.ashbyhq.com/integrate/7681f59b-70c0-414b-96d9-ae8925cc2ed3/application?embed=true",
+   "locations": [
+    "Seattle, WA"
+   ],
+   "date_posted": "2026-10-20",
+   "has_jd": true,
+   "required": [
+    "React",
+    "TypeScript",
+    "JavaScript",
+    "HTML/CSS",
+    "REST APIs",
+    "Go",
+    "SQL"
+   ],
+   "nice": [
+    "CI/CD"
+   ],
+   "method": "qwen",
+   "flags": [
+    "US citizenship"
+   ],
+   "grad_window": null
+  },
+  {
+   "company": "Inversion Space",
+   "title": "AI & Internal Tools Software Engineer Intern",
+   "url": "https://job-boards.greenhouse.io/inversionspace/jobs/4745076005",
+   "locations": [
+    "Playa Vista, LA"
+   ],
+   "date_posted": "2026-10-19",
+   "has_jd": true,
+   "required": [
+    "TypeScript",
+    "JavaScript",
+    "Python",
+    "Go",
+    "Rust",
+    "Data Structures & Algorithms"
+   ],
+   "nice": [
+    "React",
+    "Node.js",
+    "REST APIs",
+    "LLMs",
+    "AI Agents",
+    "RAG",
+    "Docker",
+    "Linux",
+    "CI/CD"
+   ],
+   "method": "qwen",
+   "flags": [
+    "US citizenship"
+   ],
+   "grad_window": null
+  },
+  {
+   "company": "JP Morgan Chase",
+   "title": "Machine Learning Summer Associate Intern - NLP",
+   "url": "https://jpmc.fa.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1001/job/210801790",
+   "locations": [
+    "Palo Alto, CA",
+    "Seattle, WA",
+    "NYC"
+   ],
+   "date_posted": "2026-10-20",
+   "has_jd": true,
+   "required": [
+    "Python",
+    "PyTorch",
+    "TensorFlow",
+    "Hugging Face",
+    "NumPy",
+    "Pandas",
+    "scikit-learn",
+    "LLMs",
+    "AI Agents",
+    "NLP",
+    "RAG",
+    "Fine-tuning",
+    "Machine Learning",
+    "Statistics",
+    "Data Analysis"
+   ],
+   "nice": [
+    "LangChain",
+    "Operating Systems",
+    "LLM Evaluation",
+    "Reinforcement Learning"
+   ],
+   "method": "qwen",
+   "flags": [
+    "PhD only"
+   ],
+   "grad_window": "December 2027 and August 2028"
+  },
+  {
+   "company": "Metamorphic",
+   "title": "Engineering Intern",
+   "url": "https://jobs.ashbyhq.com/metamorphic/cf518648-4e65-4f7d-aa05-f01066d8bd8a/application?embed=true",
+   "locations": [
+    "Palo Alto, CA"
+   ],
+   "date_posted": "2026-10-20",
+   "has_jd": true,
+   "required": [
+    "Computer Vision",
+    "Reinforcement Learning",
+    "Robotics",
+    "AI Agents",
+    "LLMs",
+    "Machine Learning"
+   ],
+   "nice": [],
+   "method": "qwen",
+   "flags": [
+    "PhD only"
+   ],
+   "grad_window": null
+  },
+  {
+   "company": "OneEthos",
+   "title": "Research and Development Intern",
+   "url": "https://job-boards.greenhouse.io/oneethos/jobs/4459193009",
+   "locations": [
+    "Remote in USA"
+   ],
+   "date_posted": "2026-10-20",
+   "has_jd": true,
+   "required": [
+    "JavaScript",
+    "HTML/CSS",
+    "Node.js",
+    "Git",
+    "SQL",
+    "NoSQL",
+    "TypeScript",
+    "MongoDB",
+    "Azure",
+    "AWS",
+    "GCP"
+   ],
+   "nice": [
+    "Next.js",
+    "AI Agents",
+    "REST APIs"
+   ],
+   "method": "qwen",
+   "flags": [],
+   "grad_window": null
+  },
+  {
+   "company": "Salesforce",
+   "title": "AI Research Intern",
+   "url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/California---Palo-Alto/Summer-2027-Intern---AI-Research_JR365111-1",
+   "locations": [
+    "Palo Alto, CA"
+   ],
+   "date_posted": "2026-10-20",
+   "has_jd": true,
+   "required": [
+    "Python",
+    "PyTorch",
+    "JAX",
+    "AI Agents",
+    "Reinforcement Learning",
+    "LLMs",
+    "Computer Vision",
+    "Fine-tuning",
+    "Data Analysis"
+   ],
+   "nice": [
+    "Machine Learning"
+   ],
+   "method": "qwen",
+   "flags": [],
+   "grad_window": null
+  },
+  {
+   "company": "Salesforce",
+   "title": "Software Engineer Intern",
+   "url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/California---San-Francisco/Summer-2027-Intern---Software-Engineer--Security-Government-_JR364911-1",
+   "locations": [
+    "SF",
+    "Bellevue, WA"
+   ],
+   "date_posted": "2026-10-19",
+   "has_jd": true,
+   "required": [
+    "Object-Oriented Programming",
+    "Data Structures & Algorithms"
+   ],
+   "nice": [
+    "SQL",
+    "Relational Databases",
+    "Java",
+    "JavaScript",
+    "HTML/CSS"
+   ],
+   "method": "qwen",
+   "flags": [
+    "US citizenship"
+   ],
+   "grad_window": null
+  },
+  {
+   "company": "Skydio",
+   "title": "Mobile Software Engineer Intern",
+   "url": "https://jobs.ashbyhq.com/skydio/8a237302-3fe8-4403-b32b-7690f333ba52/application?embed=true",
+   "locations": [
+    "San Mateo, CA"
+   ],
+   "date_posted": "2026-10-20",
+   "has_jd": true,
+   "required": [
+    "Android",
+    "Kotlin",
+    "Linux",
+    "Python"
+   ],
+   "nice": [
+    "C++",
+    "Embedded Systems"
+   ],
+   "method": "qwen",
+   "flags": [],
+   "grad_window": null
+  },
+  {
+   "company": "Skydio",
+   "title": "Wireless Hardware Engineer Intern",
+   "url": "https://jobs.ashbyhq.com/skydio/1ac972b1-8094-4765-8869-63e1c4d50dea/application?embed=true",
+   "locations": [
+    "San Mateo, CA"
+   ],
+   "date_posted": "2026-10-20",
+   "has_jd": true,
+   "required": [
+    "Python",
+    "Data Analysis",
+    "REST APIs",
+    "ETL"
+   ],
+   "nice": [],
+   "method": "qwen",
+   "flags": [],
+   "grad_window": null
+  },
+  {
+   "company": "The Allen Institute for AI",
+   "title": "Research Intern - AI for Science",
+   "url": "https://job-boards.greenhouse.io/thealleninstitute/jobs/8293615",
+   "locations": [
+    "Seattle, WA"
+   ],
+   "date_posted": "2026-10-19",
+   "has_jd": true,
+   "required": [
+    "React",
+    "TypeScript",
+    "PyTorch"
+   ],
+   "nice": [],
+   "method": "qwen",
+   "flags": [],
+   "grad_window": null
+  },
+  {
+   "company": "The Allen Institute for AI",
+   "title": "Research Intern - Robotics",
+   "url": "https://job-boards.greenhouse.io/thealleninstitute/jobs/8293641",
+   "locations": [
+    "Seattle, WA"
+   ],
+   "date_posted": "2026-10-19",
+   "has_jd": true,
+   "required": [
+    "Robotics",
+    "Machine Learning"
+   ],
+   "nice": [],
+   "method": "qwen",
+   "flags": [],
+   "grad_window": null
+  },
+  {
+   "company": "Electronic Arts",
+   "title": "Software Engineer Intern",
+   "url": "https://jobs.ea.com/en_US/careers/JobDetail/Software-Engineer-Intern/216262",
+   "locations": [
+    "Orlando, FL"
+   ],
+   "date_posted": "2026-10-19",
+   "has_jd": false,
+   "required": [],
+   "nice": [],
+   "method": null,
+   "flags": [],
+   "grad_window": null
+  },
+  {
+   "company": "Intel",
+   "title": "AI Data Science / Software Engineering PhD Intern",
+   "url": "https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-Oregon-Hillsboro/AI-Data-Science---Software-Engineering-PhD-Intern-New-2027_JR0288139",
+   "locations": [
+    "Hillsboro, OR"
+   ],
+   "date_posted": "2026-10-20",
+   "has_jd": false,
+   "required": [],
+   "nice": [],
+   "method": null,
+   "flags": [],
+   "grad_window": null
+  },
+  {
+   "company": "Intel",
+   "title": "Data Science / Software Engineering PhD Intern",
+   "url": "https://intel.wd1.myworkdayjobs.com/en-us/external/job/US-California-Santa-Clara/AI-Data-Science---Software-Engineering-PhD-Intern-New-2027_JR0288138",
+   "locations": [
+    "Santa Clara, CA"
+   ],
+   "date_posted": "2026-10-20",
+   "has_jd": false,
+   "required": [],
+   "nice": [],
+   "method": null,
+   "flags": [],
+   "grad_window": null
+  },
+  {
+   "company": "The Toro Company",
+   "title": "Cloud Software Developer Intern",
+   "url": "https://ttc.wd1.myworkdayjobs.com/Toro_External_Careers/job/Frederick-CO/Cloud-Software-Development-Intern---The-Toro-Company_JR17498",
+   "locations": [
+    "Frederick, CO"
+   ],
+   "date_posted": "2026-10-19",
+   "has_jd": false,
+   "required": [],
+   "nice": [],
+   "method": null,
+   "flags": [],
+   "grad_window": null
+  },
+  {
+   "company": "Tyler Technologies",
+   "title": "Software Developer Intern",
+   "url": "https://jobs.jobvite.com/tylertech/job/ouQXAfwB?nl=1&nl=1&fr=false",
+   "locations": [
+    "Orono, ME"
+   ],
+   "date_posted": "2026-10-19",
+   "has_jd": false,
+   "required": [],
+   "nice": [],
+   "method": null,
+   "flags": [],
+   "grad_window": null
+  },
+  {
+   "company": "Waymo",
+   "title": "Machine Learning Intern - Simulation & Closed-Loop Training",
+   "url": "https://careers.withwaymo.com/jobs?gh_jid=8283558",
+   "locations": [
+    "Mountain View, CA"
+   ],
+   "date_posted": "2026-10-19",
+   "has_jd": false,
+   "required": [],
+   "nice": [],
+   "method": null,
+   "flags": [],
+   "grad_window": null
+  }
+ ],
+ "demand": [
+  {
+   "skill": "Python",
+   "category": "language",
+   "share_7d": 0.5882,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.5882,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 10
+  },
+  {
+   "skill": "LLMs",
+   "category": "ai",
+   "share_7d": 0.4118,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.4118,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 7
+  },
+  {
+   "skill": "REST APIs",
+   "category": "backend",
+   "share_7d": 0.4118,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.4118,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 7
+  },
+  {
+   "skill": "SQL",
+   "category": "language",
+   "share_7d": 0.4118,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.4118,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 7
+  },
+  {
+   "skill": "AI Agents",
+   "category": "ai",
+   "share_7d": 0.3529,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.3529,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 6
+  },
+  {
+   "skill": "Data Analysis",
+   "category": "ml",
+   "share_7d": 0.2941,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.2941,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 5
+  },
+  {
+   "skill": "JavaScript",
+   "category": "language",
+   "share_7d": 0.2941,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.2941,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 5
+  },
+  {
+   "skill": "Machine Learning",
+   "category": "ml",
+   "share_7d": 0.2941,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.2941,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 5
+  },
+  {
+   "skill": "TypeScript",
+   "category": "language",
+   "share_7d": 0.2941,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.2941,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 5
+  },
+  {
+   "skill": "React",
+   "category": "frontend",
+   "share_7d": 0.2353,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.2353,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 4
+  },
+  {
+   "skill": "AWS",
+   "category": "cloud",
+   "share_7d": 0.1765,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.1765,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 3
+  },
+  {
+   "skill": "Data Structures & Algorithms",
+   "category": "practice",
+   "share_7d": 0.1765,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.1765,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 3
+  },
+  {
+   "skill": "HTML/CSS",
+   "category": "frontend",
+   "share_7d": 0.1765,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.1765,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 3
+  },
+  {
+   "skill": "Node.js",
+   "category": "backend",
+   "share_7d": 0.1765,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.1765,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 3
+  },
+  {
+   "skill": "PyTorch",
+   "category": "ml",
+   "share_7d": 0.1765,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.1765,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 3
+  },
+  {
+   "skill": "Reinforcement Learning",
+   "category": "ml",
+   "share_7d": 0.1765,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.1765,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 3
+  },
+  {
+   "skill": "Azure",
+   "category": "cloud",
+   "share_7d": 0.1176,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.1176,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 2
+  },
+  {
+   "skill": "CI/CD",
+   "category": "devops",
+   "share_7d": 0.1176,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.1176,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 2
+  },
+  {
+   "skill": "Computer Vision",
+   "category": "ml",
+   "share_7d": 0.1176,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.1176,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 2
+  },
+  {
+   "skill": "Docker",
+   "category": "devops",
+   "share_7d": 0.1176,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.1176,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 2
+  },
+  {
+   "skill": "Fine-tuning",
+   "category": "ai",
+   "share_7d": 0.1176,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.1176,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 2
+  },
+  {
+   "skill": "GCP",
+   "category": "cloud",
+   "share_7d": 0.1176,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.1176,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 2
+  },
+  {
+   "skill": "Git",
+   "category": "devops",
+   "share_7d": 0.1176,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.1176,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 2
+  },
+  {
+   "skill": "Go",
+   "category": "language",
+   "share_7d": 0.1176,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.1176,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 2
+  },
+  {
+   "skill": "Java",
+   "category": "language",
+   "share_7d": 0.1176,
+   "delta_7d": null,
+   "postings_7d": 17,
+   "share_30d": 0.1176,
+   "delta_30d": null,
+   "postings_30d": 17,
+   "count_30d": 2
+  }
+ ],
+ "series": {
+  "dates": [
+   "2026-09-21",
+   "2026-09-22",
+   "2026-09-23",
+   "2026-09-24",
+   "2026-09-25",
+   "2026-09-26",
+   "2026-09-27",
+   "2026-09-28",
+   "2026-09-29",
+   "2026-09-30",
+   "2026-10-01",
+   "2026-10-02",
+   "2026-10-03",
+   "2026-10-04",
+   "2026-10-05",
+   "2026-10-06",
+   "2026-10-07",
+   "2026-10-08",
+   "2026-10-09",
+   "2026-10-10",
+   "2026-10-11",
+   "2026-10-12",
+   "2026-10-13",
+   "2026-10-14",
+   "2026-10-15",
+   "2026-10-16",
+   "2026-10-17",
+   "2026-10-18",
+   "2026-10-19",
+   "2026-10-20"
+  ],
+  "postings": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   17
+  ],
+  "skills": {
+   "Python": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    10
+   ],
+   "LLMs": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    7
+   ],
+   "REST APIs": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    7
+   ],
+   "SQL": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    7
+   ],
+   "AI Agents": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    6
+   ],
+   "Data Analysis": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    5
+   ]
+  }
+ },
+ "trends": [
+  {
+   "skill": "LLMs",
+   "github_repos": 7,
+   "github_stars": 18598,
+   "hn_stories": 10,
+   "hn_points": 3139,
+   "score": 0.6094
+  },
+  {
+   "skill": "Python",
+   "github_repos": 32,
+   "github_stars": 182473,
+   "hn_stories": 2,
+   "hn_points": 141,
+   "score": 0.6
+  },
+  {
+   "skill": "Rust",
+   "github_repos": 15,
+   "github_stars": 25678,
+   "hn_stories": 6,
+   "hn_points": 916,
+   "score": 0.5344
+  },
+  {
+   "skill": "Linux",
+   "github_repos": 9,
+   "github_stars": 20050,
+   "hn_stories": 7,
+   "hn_points": 2102,
+   "score": 0.4906
+  },
+  {
+   "skill": "AI Agents",
+   "github_repos": 7,
+   "github_stars": 15885,
+   "hn_stories": 7,
+   "hn_points": 1128,
+   "score": 0.4594
+  },
+  {
+   "skill": "Android",
+   "github_repos": 12,
+   "github_stars": 98696,
+   "hn_stories": 3,
+   "hn_points": 1224,
+   "score": 0.3375
+  },
+  {
+   "skill": "TypeScript",
+   "github_repos": 10,
+   "github_stars": 23784,
+   "hn_stories": 2,
+   "hn_points": 487,
+   "score": 0.2562
+  },
+  {
+   "skill": "MCP",
+   "github_repos": 9,
+   "github_stars": 22532,
+   "hn_stories": 2,
+   "hn_points": 218,
+   "score": 0.2406
+  },
+  {
+   "skill": "JavaScript",
+   "github_repos": 14,
+   "github_stars": 49185,
+   "hn_stories": 0,
+   "hn_points": 0,
+   "score": 0.2188
+  },
+  {
+   "skill": "Spark",
+   "github_repos": 0,
+   "github_stars": 0,
+   "hn_stories": 4,
+   "hn_points": 1647,
+   "score": 0.2
+  },
+  {
+   "skill": "Security",
+   "github_repos": 2,
+   "github_stars": 2344,
+   "hn_stories": 3,
+   "hn_points": 1753,
+   "score": 0.1812
+  },
+  {
+   "skill": "Git",
+   "github_repos": 4,
+   "github_stars": 11057,
+   "hn_stories": 2,
+   "hn_points": 251,
+   "score": 0.1625
+  },
+  {
+   "skill": "Observability",
+   "github_repos": 0,
+   "github_stars": 0,
+   "hn_stories": 3,
+   "hn_points": 1206,
+   "score": 0.15
+  },
+  {
+   "skill": "Embedded Systems",
+   "github_repos": 3,
+   "github_stars": 5624,
+   "hn_stories": 2,
+   "hn_points": 297,
+   "score": 0.1469
+  },
+  {
+   "skill": "iOS",
+   "github_repos": 9,
+   "github_stars": 32657,
+   "hn_stories": 0,
+   "hn_points": 0,
+   "score": 0.1406
+  }
+ ],
+ "trends_meta": {
+  "github_items": 100,
+  "hn_items": 500
+ },
+ "gaps": [
+  {
+   "skill": "LLMs",
+   "category": "ai",
+   "share_30d": 0.4118,
+   "count_30d": 7,
+   "trend_score": 0.6094,
+   "priority": 0.6628
+  },
+  {
+   "skill": "AI Agents",
+   "category": "ai",
+   "share_30d": 0.3529,
+   "count_30d": 6,
+   "trend_score": 0.4594,
+   "priority": 0.515
+  },
+  {
+   "skill": "JavaScript",
+   "category": "language",
+   "share_30d": 0.2941,
+   "count_30d": 5,
+   "trend_score": 0.2188,
+   "priority": 0.3584
+  },
+  {
+   "skill": "Machine Learning",
+   "category": "ml",
+   "share_30d": 0.2941,
+   "count_30d": 5,
+   "trend_score": 0.05,
+   "priority": 0.3088
+  },
+  {
+   "skill": "Data Analysis",
+   "category": "ml",
+   "share_30d": 0.2941,
+   "count_30d": 5,
+   "trend_score": 0.0,
+   "priority": 0.2941
+  },
+  {
+   "skill": "Reinforcement Learning",
+   "category": "ml",
+   "share_30d": 0.1765,
+   "count_30d": 3,
+   "trend_score": 0.05,
+   "priority": 0.1853
+  },
+  {
+   "skill": "Data Structures & Algorithms",
+   "category": "practice",
+   "share_30d": 0.1765,
+   "count_30d": 3,
+   "trend_score": 0.0,
+   "priority": 0.1765
+  },
+  {
+   "skill": "Git",
+   "category": "devops",
+   "share_30d": 0.1176,
+   "count_30d": 2,
+   "trend_score": 0.1625,
+   "priority": 0.1367
+  },
+  {
+   "skill": "GCP",
+   "category": "cloud",
+   "share_30d": 0.1176,
+   "count_30d": 2,
+   "trend_score": 0.05,
+   "priority": 0.1235
+  },
+  {
+   "skill": "Statistics",
+   "category": "ml",
+   "share_30d": 0.1176,
+   "count_30d": 2,
+   "trend_score": 0.05,
+   "priority": 0.1235
+  }
+ ],
+ "ideas_today": [
+  {
+   "title": "Autonomous Code Review Agent",
+   "why": "Demonstrates the ability to orchestrate LLMs with external tools to perform complex, multi-step reasoning tasks typical of modern AI infrastructure roles. Measured demand - LLMs: in 41% of 17 postings over 30 days; trend score 0.61. AI Agents: in 35% of 17 postings over 30 days; trend score 0.46. JavaScript: in 29% of 17 postings over 30 days; trend score 0.22. Git: in 12% of 17 postings over 30 days; trend score 0.16.",
+   "scope": "Build a Python-based agent that fetches GitHub PR diffs, analyzes them using an LLM for security and style issues, and posts comments via the GitHub API. Include a simple dashboard in JavaScript/React to view agent activity logs.",
+   "stack": [
+    "Python",
+    "LangChain",
+    "OpenAI API",
+    "GitHub API",
+    "React",
+    "JavaScript"
+   ],
+   "success_metrics": [
+    "Agent successfully parses and responds to 10+ real-world PR diffs without crashing",
+    "Latency per review cycle is under 30 seconds",
+    "Unit tests cover tool invocation logic with 80% code coverage"
+   ],
+   "target_skills": [
+    "LLMs",
+    "AI Agents",
+    "JavaScript",
+    "Git"
+   ],
+   "date": "2026-10-20",
+   "source": "qwen"
+  },
+  {
+   "title": "Real-Time Stock Sentiment Dashboard",
+   "why": "Showcases end-to-end data engineering skills by processing unstructured text into structured insights and visualizing them for business decision-making. Measured demand - Machine Learning: in 29% of 17 postings over 30 days; trend score 0.05. Data Analysis: in 29% of 17 postings over 30 days; trend score 0.00. JavaScript: in 29% of 17 postings over 30 days; trend score 0.22.",
+   "scope": "Create a pipeline that scrapes financial news headlines, uses a pre-trained transformer model to classify sentiment, stores results in SQLite, and displays trends on a web frontend built with vanilla JavaScript or a lightweight framework.",
+   "stack": [
+    "Python",
+    "Hugging Face Transformers",
+    "SQLite",
+    "JavaScript",
+    "Chart.js"
+   ],
+   "success_metrics": [
+    "Sentiment classification accuracy exceeds 75% on a held-out test set",
+    "Dashboard updates every 60 seconds with new data points",
+    "API response time for fetching historical sentiment data is under 200ms"
+   ],
+   "target_skills": [
+    "Machine Learning",
+    "Data Analysis",
+    "JavaScript"
+   ],
+   "date": "2026-10-20",
+   "source": "qwen"
+  },
+  {
+   "title": "Grid-World Navigation RL Trainer",
+   "why": "Proves foundational understanding of reinforcement learning algorithms and optimization techniques often required for robotics or game AI positions. Measured demand - Reinforcement Learning: in 18% of 17 postings over 30 days; trend score 0.05. Data Structures & Algorithms: in 18% of 17 postings over 30 days; trend score 0.00. JavaScript: in 29% of 17 postings over 30 days; trend score 0.22.",
+   "scope": "Implement a Q-Learning agent from scratch to navigate a custom grid-world environment with obstacles and rewards. Visualize the training process and final policy using a simple HTML5 Canvas interface driven by JavaScript.",
+   "stack": [
+    "Python",
+    "NumPy",
+    "HTML5 Canvas",
+    "JavaScript"
+   ],
+   "success_metrics": [
+    "Agent achieves 90% success rate in reaching the goal within 100 steps after convergence",
+    "Training loss decreases monotonically over 1000 episodes",
+    "Visualization renders at 60 FPS in Chrome/Firefox"
+   ],
+   "target_skills": [
+    "Reinforcement Learning",
+    "Data Structures & Algorithms",
+    "JavaScript"
+   ],
+   "date": "2026-10-20",
+   "source": "qwen"
+  }
+ ],
+ "ideas_recent": [
+  {
+   "title": "Secure Multi-Agent Code Orchestrator",
+   "why": "Companies are rapidly adopting autonomous agents for workflow automation, requiring robust security boundaries to prevent prompt injection and unauthorized tool execution. Measured demand - AI Agents: in 21% of 127 postings over 30 days (+10.7 pp vs previous 7 days); trend score 0.33. Security: in 5% of 127 postings over 30 days (+8.9 pp vs previous 7 days); trend score 0.36.",
+   "scope": "Build a Python-based system where two LLM agents (Planner and Executor) collaborate on tasks using LangChain. Implement strict input sanitization, output validation schemas, and sandboxed code execution for the Executor agent to mitigate security risks.",
+   "stack": [
+    "Python",
+    "LangChain",
+    "Pydantic",
+    "Docker"
+   ],
+   "success_metrics": [
+    "Pass 10+ adversarial prompt injection tests without executing malicious commands",
+    "Achieve 95% schema compliance rate on agent outputs",
+    "Reduce average task completion latency by 20% compared to single-agent baseline"
+   ],
+   "target_skills": [
+    "AI Agents",
+    "Security"
+   ],
+   "date": "2026-11-18",
+   "source": "qwen"
+  },
+  {
+   "title": "High-Performance Graph Query Engine",
+   "why": "Efficient data retrieval from complex relationships is critical for recommendation systems and fraud detection, demanding optimized algorithmic implementations beyond standard library functions. Measured demand - Data Structures & Algorithms: in 24% of 127 postings over 30 days (-6.5 pp vs previous 7 days); trend score 0.05.",
+   "scope": "Implement a custom in-memory graph database in C++ or Rust supporting BFS/DFS and shortest-path algorithms. Focus on memory locality optimizations and benchmark against Neo4j or NetworkX for specific query patterns.",
+   "stack": [
+    "C++",
+    "Rust",
+    "Google Benchmark",
+    "Valgrind"
+   ],
+   "success_metrics": [
+    "Process 1 million edge insertions in under 5 seconds",
+    "Answer shortest-path queries on a 10k-node graph with <1ms latency",
+    "Demonstrate 30% lower memory usage than reference implementation"
+   ],
+   "target_skills": [
+    "Data Structures & Algorithms"
+   ],
+   "date": "2026-11-18",
+   "source": "qwen"
+  },
+  {
+   "title": "Real-Time ML Model Monitoring Dashboard",
+   "why": "Production machine learning requires continuous tracking of model drift and performance metrics, often visualized through interactive business intelligence tools for stakeholder alignment. Measured demand - Machine Learning: in 27% of 127 postings over 30 days (+7.4 pp vs previous 7 days); trend score 0.00. Angular: in 7% of 127 postings over 30 days (-3.5 pp vs previous 7 days); trend score 0.00.",
+   "scope": "Create a lightweight API that serves synthetic prediction data with injected concept drift. Build an Angular frontend consuming this API to visualize accuracy trends and feature distribution shifts over time using Chart.js or D3.",
+   "stack": [
+    "Angular",
+    "TypeScript",
+    "FastAPI",
+    "Chart.js"
+   ],
+   "success_metrics": [
+    "Render live updates with <100ms UI lag",
+    "Detect simulated concept drift within 5 minutes of injection",
+    "Achieve 80% test coverage on core visualization components"
+   ],
+   "target_skills": [
+    "Machine Learning",
+    "Angular"
+   ],
+   "date": "2026-11-18",
+   "source": "qwen"
+  },
+  {
+   "title": "Vision-Language Model Fine-Tuning Service",
+   "why": "Highlights expertise in adapting large deep learning models for specific domain tasks using modern transfer learning techniques. Measured demand - Deep Learning: in 11% of 124 postings over 30 days (+7.6 pp vs previous 7 days); trend score 0.00. Machine Learning: in 27% of 124 postings over 30 days (-4.6 pp vs previous 7 days); trend score 0.01.",
+   "scope": "Develop a FastAPI service that allows users to upload a small dataset of image-caption pairs to fine-tune a CLIP model adapter, returning a custom embedding endpoint for similarity search.",
+   "stack": [
+    "PyTorch",
+    "Hugging Face PEFT",
+    "FastAPI",
+    "Docker"
+   ],
+   "success_metrics": [
+    "Fine-tuning completes within 10 minutes on a single GPU instance",
+    "Retrieval precision@k improves by measurable margin over base model",
+    "API response time for inference remains under 200ms"
+   ],
+   "target_skills": [
+    "Deep Learning",
+    "Machine Learning"
+   ],
+   "date": "2026-11-17",
+   "source": "qwen"
+  },
+  {
+   "title": "Minimal Data Analysis service with tests and a benchmark",
+   "why": "Data Analysis is requested by postings this month and is not yet evidenced in the bullet bank. Measured demand - Data Analysis: in 16% of 124 postings over 30 days (-3.5 pp vs previous 7 days); trend score 0.00.",
+   "scope": "Build the smallest useful service that depends on Data Analysis, with CI and a README.",
+   "stack": [
+    "Data Analysis",
+    "Python",
+    "pytest"
+   ],
+   "success_metrics": [
+    "CI green on every commit",
+    "one benchmark number recorded in the README"
+   ],
+   "target_skills": [
+    "Data Analysis"
+   ],
+   "date": "2026-11-17",
+   "source": "template"
+  },
+  {
+   "title": "Minimal Robotics service with tests and a benchmark",
+   "why": "Robotics is requested by postings this month and is not yet evidenced in the bullet bank. Measured demand - Robotics: in 14% of 124 postings over 30 days (-12.2 pp vs previous 7 days); trend score 0.04.",
+   "scope": "Build the smallest useful service that depends on Robotics, with CI and a README.",
+   "stack": [
+    "Robotics",
+    "Python",
+    "pytest"
+   ],
+   "success_metrics": [
+    "CI green on every commit",
+    "one benchmark number recorded in the README"
+   ],
+   "target_skills": [
+    "Robotics"
+   ],
+   "date": "2026-11-17",
+   "source": "template"
+  },
+  {
+   "title": "Kotlin Android ML Kit Integration",
+   "why": "Demonstrates the ability to integrate pre-trained machine learning models into mobile applications using industry-standard Kotlin tooling and libraries. Measured demand - Kotlin: in 6% of 122 postings over 30 days (-9.1 pp vs previous 7 days); trend score 0.04. Machine Learning: in 25% of 122 postings over 30 days (-13.3 pp vs previous 7 days); trend score 0.00.",
+   "scope": "Build a minimal Android app in Kotlin that uses Google's ML Kit for on-device text recognition, displaying results in a RecyclerView with proper error handling.",
+   "stack": [
+    "Kotlin",
+    "Android Studio",
+    "ML Kit"
+   ],
+   "success_metrics": [
+    "App successfully extracts text from camera feed with <1s latency",
+    "Unit tests cover at least 80% of ViewModel logic",
+    "APK builds without lint errors"
+   ],
+   "target_skills": [
+    "Kotlin",
+    "Machine Learning"
+   ],
+   "date": "2026-11-16",
+   "source": "qwen"
+  },
+  {
+   "title": "GitOps CI/CD Pipeline for Microservices",
+   "why": "Shows proficiency in modern software delivery practices by automating deployment workflows through version-controlled infrastructure and continuous integration tools. Measured demand - Git: in 25% of 122 postings over 30 days (-5.9 pp vs previous 7 days); trend score 0.12. Agile: in 10% of 122 postings over 30 days (+14.0 pp vs previous 7 days); trend score 0.00.",
+   "scope": "Create a two-service Node.js application where code changes trigger automated testing and staging deployments via GitHub Actions, managed entirely through Git pull requests.",
+   "stack": [
+    "Node.js",
+    "GitHub Actions",
+    "Docker"
+   ],
+   "success_metrics": [
+    "Pull request automatically runs test suite before merge",
+    "Merge to main triggers deployment to staging environment",
+    "Rollback mechanism tested and documented"
+   ],
+   "target_skills": [
+    "Git",
+    "Agile"
+   ],
+   "date": "2026-11-16",
+   "source": "qwen"
+  },
+  {
+   "title": "Statistical Anomaly Detection Service",
+   "why": "Highlights capability in applying statistical methods to real-world data streams to identify outliers, a common requirement in monitoring and analytics roles. Measured demand - Statistics: in 8% of 122 postings over 30 days (-0.8 pp vs previous 7 days); trend score 0.00. Data Analysis: in 16% of 122 postings over 30 days (+17.7 pp vs previous 7 days); trend score 0.00.",
+   "scope": "Develop a Python service that ingests synthetic time-series data, applies Z-score and IQR methods to flag anomalies, and exposes results via a REST API.",
+   "stack": [
+    "Python",
+    "Pandas",
+    "FastAPI"
+   ],
+   "success_metrics": [
+    "Detection accuracy >90% on labeled synthetic dataset",
+    "API response time <50ms for single record",
+    "Documentation includes statistical methodology explanation"
+   ],
+   "target_skills": [
+    "Statistics",
+    "Data Analysis"
+   ],
+   "date": "2026-11-16",
+   "source": "qwen"
+  }
+ ],
+ "resumes": [
+  {
+   "posting_id": "9b088f98-7e90-40d5-bb05-abaea98b3759",
+   "company": "The Allen Institute for AI",
+   "title": "Research Intern - AI for Science",
+   "url": "https://job-boards.greenhouse.io/thealleninstitute/jobs/8293615",
+   "pdf": "resumes/2026-10-20/the-allen-institute-for-ai-9b088f98.pdf",
+   "coverage_before": 0.6667,
+   "coverage_after": 1.0,
+   "projects": [
+    "StudyBuddy",
+    "ShelfScan",
+    "DocQA"
+   ],
+   "bullets": 9,
+   "fits_one_page": true
+  },
+  {
+   "posting_id": "4b1ef870-8dbd-4266-8248-07cc21b77402",
+   "company": "Skydio",
+   "title": "Wireless Hardware Engineer Intern",
+   "url": "https://jobs.ashbyhq.com/skydio/1ac972b1-8094-4765-8869-63e1c4d50dea/application?embed=true",
+   "pdf": "resumes/2026-10-20/skydio-4b1ef870.pdf",
+   "coverage_before": 0.75,
+   "coverage_after": 0.75,
+   "projects": [
+    "DocQA",
+    "Shopline",
+    "pricewatch"
+   ],
+   "bullets": 8,
+   "fits_one_page": true
+  },
+  {
+   "posting_id": "7f0b6226-d723-4097-a060-879f717c121d",
+   "company": "DriveWealth",
+   "title": "AI Consulting Associate Program \u2013 AI Engineer Intern",
+   "url": "https://boards.greenhouse.io/drivewealth/jobs/8039350003",
+   "pdf": "resumes/2026-10-20/drivewealth-7f0b6226.pdf",
+   "coverage_before": 0.6667,
+   "coverage_after": 0.6667,
+   "projects": [
+    "pricewatch",
+    "DocQA",
+    "ShelfScan"
+   ],
+   "bullets": 8,
+   "fits_one_page": true
+  },
+  {
+   "posting_id": "90ce8440-7b7f-4a23-9faf-98290634d956",
+   "company": "DriveWealth",
+   "title": "AI Consulting Associate Program Brokerage Intern",
+   "url": "https://jobs.ashbyhq.com/drivewealth/b11409e6-a86d-4504-b4da-36636f888c16/application?embed=true",
+   "pdf": "resumes/2026-10-20/drivewealth-90ce8440.pdf",
+   "coverage_before": 0.6667,
+   "coverage_after": 0.6667,
+   "projects": [
+    "DocQA",
+    "tinykv",
+    "Shopline"
+   ],
+   "bullets": 7,
+   "fits_one_page": true
+  },
+  {
+   "posting_id": "80919054-b40e-4ff9-9a11-e6e21dcf9d98",
+   "company": "DriveWealth",
+   "title": "AI Consulting Associate Program Product Owner Intern",
+   "url": "https://jobs.ashbyhq.com/drivewealth/ec17ef99-dea9-4150-b935-5f74750d7b87/application?embed=true",
+   "pdf": "resumes/2026-10-20/drivewealth-80919054.pdf",
+   "coverage_before": 0.6,
+   "coverage_after": 0.6,
+   "projects": [
+    "DocQA",
+    "Shopline",
+    "ShelfScan"
+   ],
+   "bullets": 8,
+   "fits_one_page": true
+  },
+  {
+   "posting_id": "0e371048-09e7-4111-8768-bae91b1a2437",
+   "company": "Amplify",
+   "title": "Software Engineer Intern",
+   "url": "https://jobs.ashbyhq.com/amplify/855d22a3-f15e-49f6-854c-29e505653efa/application?embed=true",
+   "pdf": "resumes/2026-10-20/amplify-0e371048.pdf",
+   "coverage_before": 0.3571,
+   "coverage_after": 0.5,
+   "projects": [
+    "Shopline",
+    "StudyBuddy",
+    "DocQA"
+   ],
+   "bullets": 10,
+   "fits_one_page": true
+  },
+  {
+   "posting_id": "230b2e34-559a-447a-a712-6fe2661159c2",
+   "company": "The Allen Institute for AI",
+   "title": "Research Intern - Robotics",
+   "url": "https://job-boards.greenhouse.io/thealleninstitute/jobs/8293641",
+   "pdf": "resumes/2026-10-20/the-allen-institute-for-ai-230b2e34.pdf",
+   "coverage_before": 0.5,
+   "coverage_after": 0.5,
+   "projects": [
+    "tinykv",
+    "DocQA",
+    "Shopline"
+   ],
+   "bullets": 5,
+   "fits_one_page": true
+  },
+  {
+   "posting_id": "a1f44bba-d5c1-4c7c-ac07-e78ab47ee7a5",
+   "company": "Skydio",
+   "title": "Mobile Software Engineer Intern",
+   "url": "https://jobs.ashbyhq.com/skydio/8a237302-3fe8-4403-b32b-7690f333ba52/application?embed=true",
+   "pdf": "resumes/2026-10-20/skydio-a1f44bba.pdf",
+   "coverage_before": 0.5,
+   "coverage_after": 0.5,
+   "projects": [
+    "DocQA",
+    "tinykv",
+    "Shopline"
+   ],
+   "bullets": 7,
+   "fits_one_page": true
+  },
+  {
+   "posting_id": "e7dad441-1919-402c-8936-123968e0e6b3",
+   "company": "OneEthos",
+   "title": "Research and Development Intern",
+   "url": "https://job-boards.greenhouse.io/oneethos/jobs/4459193009",
+   "pdf": "resumes/2026-10-20/oneethos-e7dad441.pdf",
+   "coverage_before": 0.2857,
+   "coverage_after": 0.4286,
+   "projects": [
+    "StudyBuddy",
+    "pricewatch",
+    "Shopline"
+   ],
+   "bullets": 9,
+   "fits_one_page": true
+  },
+  {
+   "posting_id": "df54723a-af5c-4a60-bdf7-9724974c60a7",
+   "company": "Salesforce",
+   "title": "AI Research Intern",
+   "url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site/job/California---Palo-Alto/Summer-2027-Intern---AI-Research_JR365111-1",
+   "pdf": "resumes/2026-10-20/salesforce-df54723a.pdf",
+   "coverage_before": 0.3,
+   "coverage_after": 0.4,
+   "projects": [
+    "ShelfScan",
+    "DocQA",
+    "tinykv"
+   ],
+   "bullets": 8,
+   "fits_one_page": true
+  },
+  {
+   "posting_id": "8380f6f8-d9af-4411-9bf0-e340bc47df59",
+   "company": "Amplify",
+   "title": "AI Scientist Intern",
+   "url": "https://jobs.ashbyhq.com/amplify/bb45b7f6-dd7e-40e5-84e6-52e21650a7b8/application?embed=true",
+   "pdf": "resumes/2026-10-20/amplify-8380f6f8.pdf",
+   "coverage_before": 0.3333,
+   "coverage_after": 0.3333,
+   "projects": [
+    "pricewatch",
+    "DocQA",
+    "Shopline"
+   ],
+   "bullets": 10,
+   "fits_one_page": true
+  },
+  {
+   "posting_id": "31ee782b-3421-455d-9cc1-e5c1fc84b692",
+   "company": "Adobe",
+   "title": "AI & Architecture Intern",
+   "url": "https://adobe.wd5.myworkdayjobs.com/external_experienced/job/San-Jose/XMLNAME-2027-Intern---AI---Architecture_R172998",
+   "pdf": "resumes/2026-10-20/adobe-31ee782b.pdf",
+   "coverage_before": 0.0,
+   "coverage_after": 0.0,
+   "projects": [
+    "ShelfScan",
+    "tinykv",
+    "DocQA"
+   ],
+   "bullets": 5,
+   "fits_one_page": true
+  }
+ ],
+ "runs": [
+  {
+   "date": "2026-10-20",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 23.0,
+    "ingest.listings_new": 23.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.postings_ingested": 23.0,
+    "ingest.postings_with_jd": 17.0,
+    "ingest.jd_unsupported_ats": 3.0,
+    "ingest.jd_fetch_failed": 1.0,
+    "extract.postings_to_extract": 17.0,
+    "extract.cache_hits": 17.0,
+    "extract.cache_misses": 0.0,
+    "extract.llm_extractions": 17.0,
+    "extract.llm_calls": 0.0,
+    "extract.cache_hit_rate": 1.0,
+    "trends.postings_with_extraction": 17.0,
+    "trends.skills_seen": 59.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 48.0,
+    "tailor.skipped_ineligible": 5.0,
+    "tailor.truthfulness_checks_passed": 12.0,
+    "tailor.overflow_bullets_dropped": 0.0,
+    "tailor.resumes_generated": 12.0,
+    "tailor.coverage_before_avg": 0.4688,
+    "tailor.coverage_after_avg": 0.5288,
+    "gaps.gaps_found": 17.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 23.0,
+    "publish.resumes_linked": 12.0,
+    "gaps.gaps_recently_covered": 0.0
+   }
+  },
+  {
+   "date": "2026-10-21",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 19.0,
+    "ingest.listings_new": 7.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.jd_unsupported_ats": 2.0,
+    "ingest.postings_ingested": 7.0,
+    "ingest.postings_with_jd": 5.0,
+    "extract.postings_to_extract": 5.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 5.0,
+    "extract.llm_extractions": 5.0,
+    "extract.llm_calls": 5.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 5.0,
+    "trends.skills_seen": 24.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 49.0,
+    "tailor.skipped_ineligible": 3.0,
+    "tailor.truthfulness_checks_passed": 2.0,
+    "tailor.overflow_bullets_dropped": 0.0,
+    "tailor.resumes_generated": 2.0,
+    "tailor.coverage_before_avg": 0.4167,
+    "tailor.coverage_after_avg": 0.4167,
+    "gaps.gaps_found": 20.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 7.0,
+    "publish.resumes_linked": 2.0,
+    "gaps.gaps_recently_covered": 3.0
+   }
+  },
+  {
+   "date": "2026-10-22",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 14.0,
+    "ingest.listings_new": 7.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.jd_unsupported_ats": 3.0,
+    "ingest.postings_ingested": 7.0,
+    "ingest.postings_with_jd": 2.0,
+    "ingest.jd_fetch_failed": 2.0,
+    "extract.postings_to_extract": 2.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 2.0,
+    "extract.llm_extractions": 2.0,
+    "extract.llm_calls": 2.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 2.0,
+    "trends.skills_seen": 12.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 51.0,
+    "tailor.truthfulness_checks_passed": 2.0,
+    "tailor.overflow_bullets_dropped": 0.0,
+    "tailor.resumes_generated": 2.0,
+    "tailor.coverage_before_avg": 0.4143,
+    "tailor.coverage_after_avg": 0.5143,
+    "gaps.gaps_found": 22.0,
+    "gaps.ideas_deduped": 1.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 7.0,
+    "publish.resumes_linked": 2.0,
+    "gaps.gaps_recently_covered": 6.0
+   }
+  },
+  {
+   "date": "2026-10-23",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 28.0,
+    "ingest.listings_new": 21.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.jd_unsupported_ats": 13.0,
+    "ingest.postings_ingested": 21.0,
+    "ingest.postings_with_jd": 8.0,
+    "extract.postings_to_extract": 8.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 8.0,
+    "extract.llm_extractions": 8.0,
+    "extract.llm_calls": 8.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 8.0,
+    "trends.skills_seen": 41.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 50.0,
+    "tailor.skipped_ineligible": 3.0,
+    "tailor.truthfulness_checks_passed": 5.0,
+    "tailor.overflow_bullets_dropped": 0.0,
+    "tailor.resumes_generated": 5.0,
+    "tailor.coverage_before_avg": 0.2941,
+    "tailor.coverage_after_avg": 0.3537,
+    "gaps.gaps_found": 29.0,
+    "gaps.ideas_deduped": 2.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 21.0,
+    "publish.resumes_linked": 5.0,
+    "gaps.gaps_recently_covered": 9.0
+   }
+  },
+  {
+   "date": "2026-10-24",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 21.0,
+    "ingest.listings_new": 0.0,
+    "ingest.listings_capped": 0.0,
+    "extract.postings_to_extract": 0.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 0.0,
+    "extract.llm_calls": 0.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 0.0,
+    "trends.skills_seen": 0.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 44.0,
+    "gaps.gaps_found": 29.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 0.0,
+    "publish.resumes_linked": 0.0,
+    "gaps.gaps_recently_covered": 12.0
+   }
+  },
+  {
+   "date": "2026-10-25",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 1.0,
+    "ingest.listings_new": 1.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.postings_ingested": 1.0,
+    "ingest.postings_with_jd": 1.0,
+    "extract.postings_to_extract": 1.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 1.0,
+    "extract.llm_extractions": 1.0,
+    "extract.llm_calls": 1.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 1.0,
+    "trends.skills_seen": 6.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 47.0,
+    "tailor.truthfulness_checks_passed": 1.0,
+    "tailor.overflow_bullets_dropped": 0.0,
+    "tailor.resumes_generated": 1.0,
+    "tailor.coverage_before_avg": 0.3333,
+    "tailor.coverage_after_avg": 0.5,
+    "gaps.gaps_found": 31.0,
+    "gaps.ideas_deduped": 3.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 1.0,
+    "publish.resumes_linked": 1.0,
+    "gaps.gaps_recently_covered": 15.0
+   }
+  },
+  {
+   "date": "2026-10-26",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 17.0,
+    "ingest.listings_new": 16.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.postings_ingested": 16.0,
+    "ingest.postings_with_jd": 15.0,
+    "ingest.jd_unsupported_ats": 1.0,
+    "extract.postings_to_extract": 15.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 15.0,
+    "extract.llm_extractions": 15.0,
+    "extract.llm_calls": 15.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 15.0,
+    "trends.skills_seen": 48.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 43.0,
+    "tailor.skipped_ineligible": 6.0,
+    "tailor.truthfulness_checks_passed": 9.0,
+    "tailor.overflow_bullets_dropped": 0.0,
+    "tailor.resumes_generated": 9.0,
+    "tailor.coverage_before_avg": 0.3672,
+    "tailor.coverage_after_avg": 0.3857,
+    "gaps.gaps_found": 40.0,
+    "gaps.ideas_deduped": 2.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 16.0,
+    "publish.resumes_linked": 9.0,
+    "gaps.gaps_recently_covered": 18.0
+   }
+  },
+  {
+   "date": "2026-10-27",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 26.0,
+    "ingest.listings_new": 10.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.postings_ingested": 10.0,
+    "ingest.postings_with_jd": 6.0,
+    "ingest.jd_fetch_failed": 4.0,
+    "extract.postings_to_extract": 6.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 6.0,
+    "extract.llm_extractions": 6.0,
+    "extract.llm_calls": 6.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 6.0,
+    "trends.skills_seen": 37.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 44.0,
+    "tailor.skipped_ineligible": 1.0,
+    "tailor.truthfulness_checks_passed": 4.0,
+    "tailor.overflow_bullets_dropped": 0.0,
+    "tailor.resumes_generated": 4.0,
+    "tailor.coverage_before_avg": 0.4843,
+    "tailor.coverage_after_avg": 0.5429,
+    "gaps.gaps_found": 42.0,
+    "gaps.ideas_deduped": 1.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 10.0,
+    "publish.resumes_linked": 4.0,
+    "gaps.gaps_recently_covered": 21.0
+   }
+  },
+  {
+   "date": "2026-10-28",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 22.0,
+    "ingest.listings_new": 12.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.jd_unsupported_ats": 7.0,
+    "ingest.postings_ingested": 12.0,
+    "ingest.jd_fetch_failed": 2.0,
+    "ingest.postings_with_jd": 3.0,
+    "extract.postings_to_extract": 3.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 3.0,
+    "extract.llm_extractions": 3.0,
+    "extract.llm_calls": 3.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 3.0,
+    "trends.skills_seen": 19.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 40.0,
+    "tailor.truthfulness_checks_passed": 2.0,
+    "tailor.overflow_bullets_dropped": 0.0,
+    "tailor.resumes_generated": 2.0,
+    "tailor.coverage_before_avg": 0.4722,
+    "tailor.coverage_after_avg": 0.5139,
+    "gaps.gaps_found": 42.0,
+    "gaps.ideas_deduped": 1.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 12.0,
+    "publish.resumes_linked": 2.0,
+    "gaps.gaps_recently_covered": 21.0
+   }
+  },
+  {
+   "date": "2026-10-29",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 24.0,
+    "ingest.listings_new": 12.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.jd_unsupported_ats": 3.0,
+    "ingest.postings_ingested": 12.0,
+    "ingest.postings_with_jd": 8.0,
+    "ingest.jd_fetch_failed": 1.0,
+    "extract.postings_to_extract": 8.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 8.0,
+    "extract.llm_extractions": 8.0,
+    "extract.llm_calls": 9.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 8.0,
+    "trends.skills_seen": 39.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 42.0,
+    "tailor.skipped_ineligible": 1.0,
+    "tailor.truthfulness_checks_passed": 7.0,
+    "tailor.overflow_bullets_dropped": 0.0,
+    "tailor.resumes_generated": 7.0,
+    "tailor.coverage_before_avg": 0.4571,
+    "tailor.coverage_after_avg": 0.4893,
+    "gaps.gaps_found": 47.0,
+    "gaps.ideas_deduped": 2.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 12.0,
+    "publish.resumes_linked": 7.0,
+    "gaps.gaps_recently_covered": 21.0
+   }
+  },
+  {
+   "date": "2026-10-30",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 21.0,
+    "ingest.listings_new": 9.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.jd_unsupported_ats": 7.0,
+    "ingest.postings_ingested": 9.0,
+    "ingest.postings_with_jd": 2.0,
+    "extract.postings_to_extract": 2.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 2.0,
+    "extract.llm_extractions": 2.0,
+    "extract.llm_calls": 2.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 2.0,
+    "trends.skills_seen": 16.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 41.0,
+    "tailor.skipped_ineligible": 1.0,
+    "tailor.truthfulness_checks_passed": 1.0,
+    "tailor.overflow_bullets_dropped": 0.0,
+    "tailor.resumes_generated": 1.0,
+    "tailor.coverage_before_avg": 0.4,
+    "tailor.coverage_after_avg": 0.4,
+    "gaps.gaps_found": 48.0,
+    "gaps.ideas_deduped": 1.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 9.0,
+    "publish.resumes_linked": 1.0,
+    "gaps.gaps_recently_covered": 21.0
+   }
+  },
+  {
+   "date": "2026-10-31",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 9.0,
+    "ingest.listings_new": 0.0,
+    "ingest.listings_capped": 0.0,
+    "extract.postings_to_extract": 0.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 0.0,
+    "extract.llm_calls": 0.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 0.0,
+    "trends.skills_seen": 0.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 42.0,
+    "gaps.gaps_found": 48.0,
+    "gaps.ideas_deduped": 2.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 0.0,
+    "publish.resumes_linked": 0.0,
+    "gaps.gaps_recently_covered": 21.0
+   }
+  },
+  {
+   "date": "2026-11-01",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 0.0,
+    "ingest.listings_new": 0.0,
+    "ingest.listings_capped": 0.0,
+    "extract.postings_to_extract": 0.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 0.0,
+    "extract.llm_calls": 0.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 0.0,
+    "trends.skills_seen": 0.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 40.0,
+    "gaps.gaps_found": 48.0,
+    "gaps.ideas_deduped": 2.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 0.0,
+    "publish.resumes_linked": 0.0,
+    "gaps.gaps_recently_covered": 21.0
+   }
+  },
+  {
+   "date": "2026-11-02",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 12.0,
+    "ingest.listings_new": 12.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.jd_unsupported_ats": 3.0,
+    "ingest.postings_ingested": 12.0,
+    "ingest.postings_with_jd": 6.0,
+    "ingest.jd_fetch_failed": 3.0,
+    "extract.postings_to_extract": 6.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 6.0,
+    "extract.llm_extractions": 6.0,
+    "extract.llm_calls": 6.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 6.0,
+    "trends.skills_seen": 33.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 41.0,
+    "tailor.truthfulness_checks_passed": 6.0,
+    "tailor.overflow_bullets_dropped": 0.0,
+    "tailor.resumes_generated": 6.0,
+    "tailor.coverage_before_avg": 0.3318,
+    "tailor.coverage_after_avg": 0.3574,
+    "gaps.gaps_found": 49.0,
+    "gaps.ideas_deduped": 2.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 12.0,
+    "publish.resumes_linked": 6.0,
+    "gaps.gaps_recently_covered": 21.0
+   }
+  },
+  {
+   "date": "2026-11-03",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 21.0,
+    "ingest.listings_new": 9.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.jd_unsupported_ats": 3.0,
+    "ingest.postings_ingested": 9.0,
+    "ingest.jd_fetch_failed": 2.0,
+    "ingest.postings_with_jd": 4.0,
+    "extract.postings_to_extract": 4.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 4.0,
+    "extract.llm_extractions": 4.0,
+    "extract.llm_calls": 4.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 4.0,
+    "trends.skills_seen": 34.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 40.0,
+    "tailor.skipped_ineligible": 1.0,
+    "tailor.truthfulness_checks_passed": 3.0,
+    "tailor.overflow_bullets_dropped": 0.0,
+    "tailor.resumes_generated": 3.0,
+    "tailor.coverage_before_avg": 0.2694,
+    "tailor.coverage_after_avg": 0.3148,
+    "gaps.gaps_found": 52.0,
+    "gaps.ideas_deduped": 2.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 9.0,
+    "publish.resumes_linked": 3.0,
+    "gaps.gaps_recently_covered": 21.0
+   }
+  },
+  {
+   "date": "2026-11-04",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 14.0,
+    "ingest.listings_new": 5.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.jd_unsupported_ats": 2.0,
+    "ingest.postings_ingested": 5.0,
+    "ingest.jd_fetch_failed": 1.0,
+    "ingest.postings_with_jd": 2.0,
+    "extract.postings_to_extract": 2.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 2.0,
+    "extract.llm_extractions": 2.0,
+    "extract.llm_calls": 2.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 2.0,
+    "trends.skills_seen": 14.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 39.0,
+    "tailor.truthfulness_checks_passed": 2.0,
+    "tailor.overflow_bullets_dropped": 0.0,
+    "tailor.resumes_generated": 2.0,
+    "tailor.coverage_before_avg": 0.4,
+    "tailor.coverage_after_avg": 0.4,
+    "gaps.gaps_found": 53.0,
+    "gaps.ideas_deduped": 2.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 5.0,
+    "publish.resumes_linked": 2.0,
+    "gaps.gaps_recently_covered": 21.0
+   }
+  },
+  {
+   "date": "2026-11-05",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 23.0,
+    "ingest.listings_new": 18.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.jd_unsupported_ats": 11.0,
+    "ingest.postings_ingested": 18.0,
+    "ingest.jd_fetch_failed": 2.0,
+    "ingest.postings_with_jd": 5.0,
+    "extract.postings_to_extract": 5.0,
+    "extract.cache_hits": 1.0,
+    "extract.cache_misses": 4.0,
+    "extract.llm_extractions": 4.0,
+    "extract.llm_calls": 4.0,
+    "extract.cache_hit_rate": 0.2,
+    "trends.postings_with_extraction": 5.0,
+    "trends.skills_seen": 32.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 45.0,
+    "tailor.skipped_ineligible": 2.0,
+    "tailor.truthfulness_checks_passed": 3.0,
+    "tailor.overflow_bullets_dropped": 0.0,
+    "tailor.resumes_generated": 3.0,
+    "tailor.coverage_before_avg": 0.4222,
+    "tailor.coverage_after_avg": 0.4222,
+    "gaps.gaps_found": 53.0,
+    "gaps.ideas_deduped": 3.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 18.0,
+    "publish.resumes_linked": 3.0,
+    "gaps.gaps_recently_covered": 20.0
+   }
+  },
+  {
+   "date": "2026-11-06",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 31.0,
+    "ingest.listings_new": 13.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.postings_ingested": 13.0,
+    "ingest.postings_with_jd": 9.0,
+    "ingest.jd_unsupported_ats": 4.0,
+    "extract.postings_to_extract": 9.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 9.0,
+    "extract.llm_extractions": 9.0,
+    "extract.llm_calls": 9.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 9.0,
+    "trends.skills_seen": 40.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 39.0,
+    "tailor.skipped_ineligible": 2.0,
+    "tailor.truthfulness_checks_passed": 7.0,
+    "tailor.overflow_bullets_dropped": 0.0,
+    "tailor.resumes_generated": 7.0,
+    "tailor.coverage_before_avg": 0.4023,
+    "tailor.coverage_after_avg": 0.4863,
+    "gaps.gaps_found": 55.0,
+    "gaps.ideas_deduped": 1.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 13.0,
+    "publish.resumes_linked": 7.0,
+    "gaps.gaps_recently_covered": 20.0
+   }
+  },
+  {
+   "date": "2026-11-07",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 15.0,
+    "ingest.listings_new": 2.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.jd_unsupported_ats": 2.0,
+    "ingest.postings_ingested": 2.0,
+    "extract.postings_to_extract": 0.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 0.0,
+    "extract.llm_calls": 0.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 0.0,
+    "trends.skills_seen": 0.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 45.0,
+    "gaps.gaps_found": 55.0,
+    "gaps.ideas_deduped": 1.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 2.0,
+    "publish.resumes_linked": 0.0,
+    "gaps.gaps_recently_covered": 20.0
+   }
+  },
+  {
+   "date": "2026-11-08",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 2.0,
+    "ingest.listings_new": 0.0,
+    "ingest.listings_capped": 0.0,
+    "extract.postings_to_extract": 0.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 0.0,
+    "extract.llm_calls": 0.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 0.0,
+    "trends.skills_seen": 0.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 41.0,
+    "gaps.gaps_found": 55.0,
+    "gaps.ideas_deduped": 1.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 0.0,
+    "publish.resumes_linked": 0.0,
+    "gaps.gaps_recently_covered": 20.0
+   }
+  },
+  {
+   "date": "2026-11-09",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 14.0,
+    "ingest.listings_new": 14.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.jd_fetch_failed": 3.0,
+    "ingest.postings_ingested": 14.0,
+    "ingest.jd_unsupported_ats": 9.0,
+    "ingest.postings_with_jd": 2.0,
+    "extract.postings_to_extract": 2.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 2.0,
+    "extract.llm_extractions": 2.0,
+    "extract.llm_calls": 2.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 2.0,
+    "trends.skills_seen": 26.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 41.0,
+    "tailor.truthfulness_checks_passed": 2.0,
+    "tailor.overflow_bullets_dropped": 0.0,
+    "tailor.resumes_generated": 2.0,
+    "tailor.coverage_before_avg": 0.2928,
+    "tailor.coverage_after_avg": 0.4342,
+    "gaps.gaps_found": 56.0,
+    "gaps.ideas_deduped": 1.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 14.0,
+    "publish.resumes_linked": 2.0,
+    "gaps.gaps_recently_covered": 20.0
+   }
+  },
+  {
+   "date": "2026-11-10",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 28.0,
+    "ingest.listings_new": 14.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.postings_ingested": 14.0,
+    "ingest.postings_with_jd": 9.0,
+    "ingest.jd_fetch_failed": 1.0,
+    "ingest.jd_unsupported_ats": 4.0,
+    "extract.postings_to_extract": 9.0,
+    "extract.cache_hits": 1.0,
+    "extract.cache_misses": 8.0,
+    "extract.llm_extractions": 8.0,
+    "extract.llm_calls": 9.0,
+    "extract.cache_hit_rate": 0.111,
+    "trends.postings_with_extraction": 9.0,
+    "trends.skills_seen": 36.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 40.0,
+    "tailor.skipped_ineligible": 2.0,
+    "tailor.truthfulness_checks_passed": 7.0,
+    "tailor.overflow_bullets_dropped": 0.0,
+    "tailor.resumes_generated": 7.0,
+    "tailor.coverage_before_avg": 0.3293,
+    "tailor.coverage_after_avg": 0.3293,
+    "gaps.gaps_found": 57.0,
+    "gaps.ideas_deduped": 1.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 14.0,
+    "publish.resumes_linked": 7.0,
+    "gaps.gaps_recently_covered": 20.0
+   }
+  },
+  {
+   "date": "2026-11-11",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 24.0,
+    "ingest.listings_new": 10.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.postings_ingested": 10.0,
+    "ingest.postings_with_jd": 4.0,
+    "ingest.jd_unsupported_ats": 5.0,
+    "ingest.jd_fetch_failed": 1.0,
+    "extract.postings_to_extract": 4.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 4.0,
+    "extract.llm_extractions": 4.0,
+    "extract.llm_calls": 4.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 4.0,
+    "trends.skills_seen": 16.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 42.0,
+    "tailor.skipped_ineligible": 1.0,
+    "tailor.truthfulness_checks_passed": 3.0,
+    "tailor.overflow_bullets_dropped": 0.0,
+    "tailor.resumes_generated": 3.0,
+    "tailor.coverage_before_avg": 0.3,
+    "tailor.coverage_after_avg": 0.3,
+    "gaps.gaps_found": 57.0,
+    "gaps.ideas_deduped": 1.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 10.0,
+    "publish.resumes_linked": 3.0,
+    "gaps.gaps_recently_covered": 20.0
+   }
+  },
+  {
+   "date": "2026-11-12",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 18.0,
+    "ingest.listings_new": 8.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.postings_ingested": 8.0,
+    "ingest.postings_with_jd": 5.0,
+    "ingest.jd_unsupported_ats": 2.0,
+    "ingest.jd_fetch_failed": 1.0,
+    "extract.postings_to_extract": 5.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 5.0,
+    "extract.llm_extractions": 5.0,
+    "extract.llm_calls": 5.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 5.0,
+    "trends.skills_seen": 27.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 44.0,
+    "tailor.skipped_ineligible": 2.0,
+    "tailor.truthfulness_checks_passed": 3.0,
+    "tailor.overflow_bullets_dropped": 0.0,
+    "tailor.resumes_generated": 3.0,
+    "tailor.coverage_before_avg": 0.6111,
+    "tailor.coverage_after_avg": 0.6667,
+    "gaps.gaps_found": 57.0,
+    "gaps.ideas_deduped": 3.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 8.0,
+    "publish.resumes_linked": 3.0,
+    "gaps.gaps_recently_covered": 21.0
+   }
+  },
+  {
+   "date": "2026-11-13",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 21.0,
+    "ingest.listings_new": 13.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.jd_fetch_failed": 3.0,
+    "ingest.postings_ingested": 13.0,
+    "ingest.postings_with_jd": 7.0,
+    "ingest.jd_unsupported_ats": 3.0,
+    "extract.postings_to_extract": 7.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 7.0,
+    "extract.llm_extractions": 7.0,
+    "extract.llm_calls": 7.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 7.0,
+    "trends.skills_seen": 35.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 44.0,
+    "tailor.truthfulness_checks_passed": 7.0,
+    "tailor.overflow_bullets_dropped": 0.0,
+    "tailor.resumes_generated": 7.0,
+    "tailor.coverage_before_avg": 0.4455,
+    "tailor.coverage_after_avg": 0.4455,
+    "gaps.gaps_found": 58.0,
+    "gaps.ideas_deduped": 2.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 13.0,
+    "publish.resumes_linked": 7.0,
+    "gaps.gaps_recently_covered": 21.0
+   }
+  },
+  {
+   "date": "2026-11-14",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 13.0,
+    "ingest.listings_new": 0.0,
+    "ingest.listings_capped": 0.0,
+    "extract.postings_to_extract": 0.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 0.0,
+    "extract.llm_calls": 0.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 0.0,
+    "trends.skills_seen": 0.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 46.0,
+    "gaps.gaps_found": 58.0,
+    "gaps.ideas_deduped": 2.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 0.0,
+    "publish.resumes_linked": 0.0,
+    "gaps.gaps_recently_covered": 21.0
+   }
+  },
+  {
+   "date": "2026-11-15",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 0.0,
+    "ingest.listings_new": 0.0,
+    "ingest.listings_capped": 0.0,
+    "extract.postings_to_extract": 0.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 0.0,
+    "extract.llm_calls": 0.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 0.0,
+    "trends.skills_seen": 0.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 44.0,
+    "gaps.gaps_found": 58.0,
+    "gaps.ideas_deduped": 2.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 0.0,
+    "publish.resumes_linked": 0.0,
+    "gaps.gaps_recently_covered": 21.0
+   }
+  },
+  {
+   "date": "2026-11-16",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 10.0,
+    "ingest.listings_new": 10.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.jd_unsupported_ats": 5.0,
+    "ingest.postings_ingested": 10.0,
+    "ingest.jd_fetch_failed": 3.0,
+    "ingest.postings_with_jd": 2.0,
+    "extract.postings_to_extract": 2.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 2.0,
+    "extract.llm_extractions": 2.0,
+    "extract.llm_calls": 2.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 2.0,
+    "trends.skills_seen": 9.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 47.0,
+    "tailor.skipped_ineligible": 1.0,
+    "tailor.truthfulness_checks_passed": 1.0,
+    "tailor.overflow_bullets_dropped": 0.0,
+    "tailor.resumes_generated": 1.0,
+    "tailor.coverage_before_avg": 0.3333,
+    "tailor.coverage_after_avg": 0.5556,
+    "gaps.gaps_found": 58.0,
+    "gaps.ideas_deduped": 3.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 11.0,
+    "publish.resumes_linked": 1.0,
+    "gaps.gaps_recently_covered": 21.0
+   }
+  },
+  {
+   "date": "2026-11-17",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 16.0,
+    "ingest.listings_new": 6.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.jd_fetch_failed": 1.0,
+    "ingest.postings_ingested": 6.0,
+    "ingest.jd_unsupported_ats": 3.0,
+    "ingest.postings_with_jd": 2.0,
+    "extract.postings_to_extract": 2.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 2.0,
+    "extract.llm_extractions": 2.0,
+    "extract.llm_calls": 2.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 2.0,
+    "trends.skills_seen": 20.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 46.0,
+    "tailor.skipped_ineligible": 1.0,
+    "tailor.truthfulness_checks_passed": 1.0,
+    "tailor.overflow_bullets_dropped": 0.0,
+    "tailor.resumes_generated": 1.0,
+    "tailor.coverage_before_avg": 0.1429,
+    "tailor.coverage_after_avg": 0.2857,
+    "gaps.gaps_found": 58.0,
+    "gaps.ideas_deduped": 2.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 6.0,
+    "publish.resumes_linked": 1.0,
+    "gaps.gaps_recently_covered": 21.0
+   }
+  },
+  {
+   "date": "2026-11-18",
+   "status": "succeeded",
+   "metrics": {
+    "ingest.listings_total": 17610.0,
+    "ingest.listings_matching_filter": 10.0,
+    "ingest.listings_new": 4.0,
+    "ingest.listings_capped": 0.0,
+    "ingest.jd_unsupported_ats": 1.0,
+    "ingest.postings_ingested": 4.0,
+    "ingest.postings_with_jd": 3.0,
+    "extract.postings_to_extract": 3.0,
+    "extract.cache_hits": 0.0,
+    "extract.cache_misses": 3.0,
+    "extract.llm_extractions": 3.0,
+    "extract.llm_calls": 3.0,
+    "extract.cache_hit_rate": 0.0,
+    "trends.postings_with_extraction": 3.0,
+    "trends.skills_seen": 15.0,
+    "trends.trend_items": 600.0,
+    "trends.trend_skills": 43.0,
+    "tailor.skipped_ineligible": 2.0,
+    "tailor.truthfulness_checks_passed": 1.0,
+    "tailor.overflow_bullets_dropped": 0.0,
+    "tailor.resumes_generated": 1.0,
+    "tailor.coverage_before_avg": 0.6667,
+    "tailor.coverage_after_avg": 0.6667,
+    "gaps.gaps_found": 58.0,
+    "gaps.ideas_deduped": 2.0,
+    "gaps.ideas_kept": 3.0,
+    "gaps.llm_calls": 1.0,
+    "publish.postings_published": 4.0,
+    "publish.resumes_linked": 1.0,
+    "gaps.gaps_recently_covered": 21.0
+   }
+  }
+ ],
+ "roadmap": [
+  {
+   "status": "done",
+   "label": "Stage 1-2",
+   "title": "Ingest",
+   "desc": "Simplify listings + public ATS APIs, dedupe, rule-based eligibility flags."
+  },
+  {
+   "status": "done",
+   "label": "Stage 3",
+   "title": "LLM extraction + eval",
+   "desc": "Validated JSON, retries, keyword fallback, labeled eval set."
+  },
+  {
+   "status": "done",
+   "label": "Stage 4",
+   "title": "Market & trends",
+   "desc": "Daily demand share, 7/30-day deltas, GitHub + HN attention."
+  },
+  {
+   "status": "done",
+   "label": "Stage 5",
+   "title": "Truthful tailoring",
+   "desc": "Select-and-reorder only; property-tested invariant."
+  },
+  {
+   "status": "done",
+   "label": "Stage 6-7",
+   "title": "Gaps, ideas, dashboard",
+   "desc": "Demand x trend ranking, 3 ideas/day, this page."
+  },
+  {
+   "status": "done",
+   "label": "Stage 8-10",
+   "title": "AWS, observability, CI",
+   "desc": "CDK stack, EMF metrics, idempotent runs, GitHub Actions."
+  },
+  {
+   "status": "todo",
+   "label": "Next",
+   "title": "More sources",
+   "desc": "Add other public listing repos; per-company ATS coverage report."
+  },
+  {
+   "status": "todo",
+   "label": "Next",
+   "title": "Better trend signal",
+   "desc": "Weight GitHub stars by recency; add arXiv for ML topics."
+  }
+ ],
+ "linkedin_draft": "What Summer 2027 SWE/AI internship postings asked for this week (week ending 2026-10-20):\n\nMy pipeline read 17 new US postings with full job descriptions across 1 daily runs.\nMost-requested skills (share of postings):\n- Python: 59%\n- LLMs: 41%\n- REST APIs: 41%\n- SQL: 41%\n- AI Agents: 35%\n\nDeveloper attention (new GitHub repos + Hacker News): LLMs, Python, Rust.\n\nCaveats: one source (SimplifyJobs listings), only postings whose ATS exposes a public JSON API, and skills are LLM-extracted (precision/recall measured in the repo).\n\n#internships #softwareengineering #machinelearning"
+}

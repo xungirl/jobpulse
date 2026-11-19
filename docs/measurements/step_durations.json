@@ -1,0 +1,42 @@
+{
+ "what": "Per-step wall time of the real 30-date backfill (Apple M2, real network + real Qwen calls, 4 concurrent)",
+ "source": "metrics lines of `uv run jobpulse backfill --start 2026-10-20 --end 2026-11-18`",
+ "steps": {
+  "ingest": {
+   "runs": 30,
+   "mean_s": 10.68,
+   "max_s": 50.65,
+   "total_s": 320.5
+  },
+  "extract": {
+   "runs": 30,
+   "mean_s": 10.79,
+   "max_s": 65.65,
+   "total_s": 323.7
+  },
+  "trends": {
+   "runs": 30,
+   "mean_s": 3.82,
+   "max_s": 15.2,
+   "total_s": 114.6
+  },
+  "tailor": {
+   "runs": 30,
+   "mean_s": 0.1,
+   "max_s": 0.61,
+   "total_s": 3.1
+  },
+  "gaps": {
+   "runs": 30,
+   "mean_s": 13.34,
+   "max_s": 71.5,
+   "total_s": 400.3
+  },
+  "publish": {
+   "runs": 30,
+   "mean_s": 0.01,
+   "max_s": 0.06,
+   "total_s": 0.4
+  }
+ }
+}

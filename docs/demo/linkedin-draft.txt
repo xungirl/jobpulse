@@ -1,0 +1,20 @@
+What Summer 2027 SWE/AI internship postings asked for this week (week ending 2026-11-18):
+
+My pipeline read 19 new US postings with full job descriptions across 7 daily runs.
+Most-requested skills (share of postings):
+- Python: 68%
+- SQL: 58%
+- Machine Learning: 32%
+- JavaScript: 26%
+- LLMs: 26%
+
+Rising vs the previous week:
+- SQL: +40.6 pp
+- C#: +15.8 pp
+- TypeScript: +14.2 pp
+
+Developer attention (new GitHub repos + Hacker News): LLMs, Linux, Rust.
+
+Caveats: one source (SimplifyJobs listings), only postings whose ATS exposes a public JSON API, and skills are LLM-extracted (precision/recall measured in the repo).
+
+#internships #softwareengineering #machinelearning

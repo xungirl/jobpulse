@@ -1,0 +1,8 @@
+{
+  "what": "Re-ran the extract step for an already-processed date with the real Qwen provider",
+  "command": "uv run jobpulse run --local --date 2026-10-20 --steps extract",
+  "result": {"postings_to_extract": 17, "cache_hits": 17, "cache_misses": 0, "llm_calls": 0, "cache_hit_rate": 1.0},
+  "ledger_lines_before": 304,
+  "ledger_lines_after": 304,
+  "note": "The RunRecord for 2026-10-20 in the demo now reflects this re-run (0 LLM calls); demo_summary.json was computed before it."
+}

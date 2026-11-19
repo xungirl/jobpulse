@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jobpulse dashboard</title>
+  <meta name="description" content="Daily Summer 2027 internship market: demanded skills, trends, truthful tailored resumes, project ideas.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <div class="brand"><span class="logo">◉</span> jobpulse</div>
+      <p class="sub">A daily serverless career-agent loop over Summer 2027 SWE / AI internship postings.
+        <span id="run-date"></span></p>
+      <div id="kpis" class="kpis"></div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="demand-section">
+      <h2>Skill demand</h2>
+      <p class="note">Share of postings (with a full JD) that mention each skill, required or nice-to-have.
+        Deltas are percentage points vs the previous window; “–” means not enough history.</p>
+      <div class="grid2">
+        <div class="card"><h3>Top skills, last 30 days</h3><div id="demand-bars"></div></div>
+        <div class="card"><h3>7-day rolling share, top 4 skills</h3><div id="demand-chart" class="chart"></div>
+          <details class="table-view"><summary>Table view</summary><div id="demand-table"></div></details></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>New postings <span id="postings-count" class="pill"></span></h2>
+      <div class="card scroll"><table id="postings" class="tbl"></table></div>
+    </section>
+
+    <section class="grid2">
+      <div>
+        <h2>Trending tech</h2>
+        <p class="note">Repos created in the last 7 days (GitHub search, by stars) and Hacker News stories,
+          mapped onto the skill taxonomy.</p>
+        <div class="card"><table id="trends" class="tbl"></table></div>
+      </div>
+      <div>
+        <h2>Skill gaps</h2>
+        <p class="note">In demand but not evidenced in the demo persona’s bullet bank.
+          Priority = 30-day share × (1 + trend score).</p>
+        <div class="card"><table id="gaps" class="tbl"></table></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Project ideas</h2>
+      <div id="ideas" class="ideas"></div>
+      <details class="older"><summary>Earlier ideas</summary><div id="ideas-recent" class="ideas"></div></details>
+    </section>
+
+    <section>
+      <h2>Tailored resumes <span class="pill">demo persona</span></h2>
+      <p class="note" id="persona-note"></p>
+      <div class="card scroll"><table id="resumes" class="tbl"></table></div>
+    </section>
+
+    <section class="grid2">
+      <div>
+        <h2>Pipeline run history</h2>
+        <div id="runs-timeline"></div>
+      </div>
+      <div>
+        <h2>Project roadmap</h2>
+        <div id="roadmap-timeline"></div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Weekly LinkedIn draft <span class="pill">text only · never auto-posted</span></h2>
+      <div class="card"><pre id="linkedin" class="draft"></pre>
+        <button id="copy-draft" class="btn" type="button">Copy draft</button></div>
+    </section>
+  </main>
+
+  <footer class="wrap foot">
+    Generated <span id="generated"></span> ·
+    Sources: SimplifyJobs/Summer2027-Internships, public ATS APIs, GitHub search, HN Algolia ·
+    Resumes use a fictional persona.
+  </footer>
+  <div id="tooltip" class="tooltip" role="status" hidden></div>
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+{
+ "date": "2026-10-20",
+ "note": "one replayed daily run on a copy of the demo state; seconds are Apple M2 wall time incl. network (ingest re-fetches listings.json)",
+ "steps": {
+  "ingest": {
+   "status": "ok",
+   "seconds_local": 8.12,
+   "doc_writes": 20,
+   "doc_reads": 53,
+   "wru": 28.0,
+   "rru": 49.5
+  },
+  "extract": {
+   "status": "ok",
+   "seconds_local": 0.03,
+   "doc_writes": 21,
+   "doc_reads": 43,
+   "wru": 21.0,
+   "rru": 33.5
+  },
+  "trends": {
+   "status": "ok",
+   "seconds_local": 4.03,
+   "doc_writes": 5,
+   "doc_reads": 50,
+   "wru": 19.0,
+   "rru": 39.0
+  },
+  "tailor": {
+   "status": "ok",
+   "seconds_local": 0.43,
+   "doc_writes": 27,
+   "doc_reads": 49,
+   "wru": 27.0,
+   "rru": 37.0
+  },
+  "gaps": {
+   "status": "ok",
+   "seconds_local": 0.02,
+   "doc_writes": 9,
+   "doc_reads": 6,
+   "wru": 19.0,
+   "rru": 16.5
+  },
+  "publish": {
+   "status": "ok",
+   "seconds_local": 0.01,
+   "doc_writes": 2,
+   "doc_reads": 59,
+   "wru": 4.0,
+   "rru": 66.5
+  }
+ },
+ "totals": {
+  "doc_writes": 84,
+  "doc_reads": 260,
+  "wru": 118.0,
+  "rru": 242.0,
+  "s3_puts": 19,
+  "s3_put_bytes": 236359
+ },
+ "state_db_bytes": 2088960
+}

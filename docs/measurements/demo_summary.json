@@ -1,0 +1,48 @@
+{
+ "dates": [
+  "2026-10-20",
+  "2026-11-18"
+ ],
+ "runs": 30,
+ "run_status": {
+  "succeeded": 30
+ },
+ "postings_ingested": 256.0,
+ "postings_with_jd": 127.0,
+ "jd_fetch_failed": 31.0,
+ "jd_unsupported_ats": 96.0,
+ "jd_closed": 0,
+ "llm_extractions": 125.0,
+ "extract_cache_hits": 19.0,
+ "extract_fallback_keyword": 0,
+ "extract_llm_calls": 110.0,
+ "gaps_llm_calls": 30.0,
+ "resumes_generated": 91,
+ "truthfulness_checks_passed": 91.0,
+ "overflow_bullets_dropped": 0.0,
+ "skipped_ineligible": 34.0,
+ "coverage_before_mean": 0.4005,
+ "coverage_after_mean": 0.4421,
+ "resumes_improved": 25,
+ "resumes_unchanged": 66,
+ "resumes_worse": 0,
+ "ideas_total": 90,
+ "ideas_by_source": {
+  "qwen": 85,
+  "template": 5
+ },
+ "avg_jd_postings_per_day": 4.23,
+ "site_bytes": 2432787,
+ "ledger": {
+  "total_real_llm_calls": 312,
+  "by_purpose": {
+   "smoke": 1,
+   "extract": 218,
+   "ideas": 93
+  },
+  "failed_calls": 1,
+  "prompt_tokens": 409872,
+  "completion_tokens": 102058,
+  "mean_latency_s": 7.58
+ }
+}
