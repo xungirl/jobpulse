@@ -18,6 +18,9 @@ Resume work from `git status` + this file. Newest entries at the bottom.
   Live backfill ingest for 2026-10-20..2026-11-18 (no LLM): 257 postings, 108 with full JD text,
   96 unsupported ATS, 51 fetch failures (mostly robots.txt disallow: Workday tenants, SmartRecruiters
   API). Audited constraint rules against real JDs; fixed 3 false-positive patterns (tests added).
-- 2026-11-18 - Stage 3 (in progress): 30 JDs exported to `eval/jds/` (deterministic sha256 order,
+- 2026-11-18 - Stage 3: 30 JDs exported to `eval/jds/` (deterministic sha256 order,
   JD >= 800 chars); labeled blind by an independent Claude agent into `eval/labels.json`
   (304 labels: 209 required, 95 nice-to-have) before any system output existed.
+  Eval (`uv run jobpulse eval --runs 3`, qwen3.8-flash, 91 calls): LLM micro P/R/F1 =
+  0.961/0.932/0.946 (std 0.005/0.010/0.004), keyword baseline 0.846/0.954/0.896; run-to-run
+  Jaccard 0.935. Results: `eval/results.json`, raw predictions: `eval/predictions/`.

@@ -1,0 +1,186 @@
+{
+  "annotator": "independent Claude agent (blind to system outputs)",
+  "guidelines": "Each JD was read in full and only technical skills explicitly written in it (or a taxonomy alias of one) that are asked of the candidate or named as the stack the intern will use were labeled, mapped to canonical taxonomy keys; nothing was inferred, and soft skills, degrees/majors and company product descriptions were excluded. Skills were split into required (minimum/basic or plainly required, or everything when the JD has no split) and nice_to_have (preferred/bonus/plus), each skill listed once at its highest tier. Technical skills with no taxonomy entry go in other (unscored); genuinely ambiguous cases were left out and explained in notes.",
+  "labels": {
+    "jd01": {
+      "required": ["Python", "Data Structures & Algorithms", "Computer Vision", "Machine Learning", "Deep Learning", "PyTorch", "TensorFlow", "Git", "Testing"],
+      "nice_to_have": ["Robotics", "Pandas", "NumPy", "SQL", "Linux", "Bash", "Docker"],
+      "other": ["OCR", "object detection", "image segmentation", "barcode recognition", "Jupyter", "experiment tracking", "dataset curation"],
+      "notes": "OpenCV (bonus) maps to Computer Vision, already required. 'Model evaluation techniques' is CV model evaluation, not LLM Evaluation, so left out. Testing from the responsibility 'contribute tests'. Robotics comes from a bonus 'personal ... robotics ... projects' item. 'Cloud-based development environments' is too generic for a cloud provider. Use of AI coding tools not labeled."
+    },
+    "jd02": {
+      "required": ["Java", "Scala", "Python", "TypeScript", "Node.js", "Data Structures & Algorithms", "AWS", "Distributed Systems", "Testing"],
+      "nice_to_have": ["gRPC", "Kafka", "Elasticsearch", "Redis", "DynamoDB"],
+      "other": ["Apache Flink", "RDS", "ElastiCache"],
+      "notes": "AWS and Testing (unit/integration tests) come from responsibilities. AWS also appears in nice-to-have (S3) but is listed once as required. 'Leveraging Generative AI' for dev workflows is about using AI tools, not a skill, so LLMs was left out (ambiguous)."
+    },
+    "jd03": {
+      "required": [".NET", "C#", "C++", "Java", "Object-Oriented Programming", "JavaScript", "TypeScript", "React", "Angular", "SQL", "Relational Databases", "MySQL", "RabbitMQ", "Redis", "Testing", "CI/CD", "Docker", "REST APIs", "Microservices", "Agile"],
+      "nice_to_have": [],
+      "other": ["xUnit", "Moq", "NSubstitute", "Cypress", "YAML", "HashiCorp Nomad", "SQL Server", "Oracle", "mocking frameworks"],
+      "notes": "No real required/preferred split, so everything is required. SQL comes from 'SQL Server' in the stack. Microservices comes from 'micro services' plus 'service-oriented architecture'. 'GitLab CI' maps to CI/CD only, not Git. The quantitative/numerical optimization line is not mapped."
+    },
+    "jd04": {
+      "required": ["C++", "Python", "Concurrency"],
+      "nice_to_have": [],
+      "other": ["computer systems coursework", "multi-processing", "inter-process communication", "API design"],
+      "notes": "Kernel, embedded systems and IPC describe the team's product and collaborators, not candidate requirements, so Operating Systems and Embedded Systems were left out. 'Computer Systems classes' (preferred) has no exact taxonomy match."
+    },
+    "jd05": {
+      "required": ["LLMs", "LLM Evaluation", "Python", "Deep Learning", "PyTorch"],
+      "nice_to_have": [],
+      "other": ["LLM post-training and alignment", "personalization/user modeling", "benchmarking", "computational human modeling"],
+      "notes": "'AI/ML' appears only as a PhD field, so Machine Learning was left out (ambiguous). Post-training/alignment was not mapped to Fine-tuning because no alias matches."
+    },
+    "jd06": {
+      "required": ["Deep Learning", "Computer Vision", "Embedded Systems"],
+      "nice_to_have": ["MLOps"],
+      "other": ["computational photography", "diffusion models", "GANs", "transformers", "quantization", "pruning", "super-resolution", "image restoration"],
+      "notes": "'Generative AI' here means generative imaging/diffusion, not language models, so LLMs was left out even though 'generative ai' is an LLMs alias (ambiguous). Embedded Systems comes from 'coursework on ... embedded system'. MLOps comes from 'experience deploying models on mobile or edge hardware' (model deployment), which is borderline."
+    },
+    "jd07": {
+      "required": ["Computer Vision", "Machine Learning", "Robotics", "Python", "C++", "PyTorch", "JAX"],
+      "nice_to_have": [],
+      "other": ["LiDAR/visual-inertial odometry", "Bayesian filtering", "geometric foundation models", "embodied reasoning", "control"],
+      "notes": "CV/ML/Robotics come from 'PhD candidate working in' (research experience), and Robotics also from ROS(2). 'Geometric foundation models' are not LLMs, so they were left out despite the 'foundation models' alias."
+    },
+    "jd08": {
+      "required": ["Computer Vision", "Reinforcement Learning", "AI Agents", "Robotics", "Machine Learning"],
+      "nice_to_have": [],
+      "other": ["embodied AI", "computational neuroscience", "language modeling"],
+      "notes": "Ambiguous: the only technical minimum qualification is 'strong interest in one of' CV, Embodied AI and RL, agentic systems, robotics, language, ML engineering, computational neuroscience. These were labeled as required. 'Language' was not mapped to NLP or LLMs because it is too vague. The nice-to-have items (open-source ML contributions, publications) add nothing new."
+    },
+    "jd09": {
+      "required": ["C++", "Python", "Operating Systems", "Computer Networking", "Git", "Testing", "CI/CD"],
+      "nice_to_have": ["Robotics", "Machine Learning", "Security"],
+      "other": ["computer architecture", "performance profiling", "low-level systems programming", "3D graphics", "simulation frameworks"],
+      "notes": "Computer Networking comes from 'networking fundamentals' (required) and 'network protocols' (bonus). 'Enthusiasm for ... robotics' (required) is interest only. Robotics is labeled from the bonus 'simulation frameworks used in robotics'."
+    },
+    "jd10": {
+      "required": ["C#", ".NET", "Object-Oriented Programming", "Data Structures & Algorithms", "Agile"],
+      "nice_to_have": [],
+      "other": [],
+      "notes": ".NET comes from the project stack (production .NET/C# codebase). Agile comes from 'Work in our Scrum team'. Use of AI dev tools not labeled."
+    },
+    "jd11": {
+      "required": ["React", "TypeScript", "Node.js", "PostgreSQL", "JavaScript", "Python", "Data Structures & Algorithms", "Testing", "CI/CD", "Observability"],
+      "nice_to_have": ["SQL", "Relational Databases", "REST APIs", "Docker", "GCP", "AWS", "LLMs"],
+      "other": ["OAuth", "Google Apps Script", "HRIS/ATS integrations", "databases (generic)", "web fundamentals"],
+      "notes": "React/TypeScript/Node.js/PostgreSQL come from the responsibilities stack, so they are listed as required even though React/Node.js/PostgreSQL also appear in nice-to-have. Observability comes from 'monitoring' in responsibilities. LLMs comes from 'interest in applying LLMs' (nice-to-have)."
+    },
+    "jd12": {
+      "required": ["Python", "Java", "C++", "Machine Learning", "NLP", "JavaScript", "HTML/CSS", "React", "Node.js", "REST APIs", "Spring Boot"],
+      "nice_to_have": ["TensorFlow", "PyTorch", "scikit-learn", "LangChain", "Elasticsearch", "Hadoop", "Spark", "Git", "MongoDB", "MySQL", "NoSQL"],
+      "other": ["information retrieval", "LangSmith", "Solr", "Redux", "Webpack", "Babel", "feature engineering"],
+      "notes": "This posting combines three intern positions (AI, Frontend, Backend). Labels are the union. ML libraries listed as 'a plus' inside basic quals go to nice-to-have. 'Model evaluation' (ML search models) is not LLM Evaluation."
+    },
+    "jd13": {
+      "required": ["Security"],
+      "nice_to_have": ["C++", "C", "Python", "MATLAB", "C#", "Java", "Linux", "Agile", "LLMs", "AI Agents"],
+      "other": ["SDLC", "vulnerability research", "command-line environments"],
+      "notes": "The minimum requirements are all non-technical, and every language/tool is under 'Preferred'. Security comes from the duties (vulnerability research, security challenges). LLMs/Agentic AI appear both in intro ('looking for AI-Aware') and preferred, and were put in nice-to-have."
+    },
+    "jd14": {
+      "required": ["Data Structures & Algorithms"],
+      "nice_to_have": ["C#"],
+      "other": ["Unity", "game development", "motion controls", "physics", "UI/UX"],
+      "notes": "Responsibilities mention Unity and C#, but the JD explicitly says familiarity with them is 'helpful, but not expected', so C# goes in nice-to-have. DSA comes from 'solid foundation in software development and algorithms'."
+    },
+    "jd15": {
+      "required": ["C++", "Compilers"],
+      "nice_to_have": ["CUDA"],
+      "other": ["PTX", "code generation", "register allocation", "instruction scheduling", "IR compression", "GPU/parallel architectures"],
+      "notes": "'GPU and parallel architectures' (plus) is hardware architecture, not parallel programming, so Concurrency was left out (ambiguous). OpenGL/Vulkan/OpenCL/Fortran describe what the team compiles for, not candidate requirements."
+    },
+    "jd16": {
+      "required": ["Machine Learning", "LLMs", "Python", "Java", "Data Analysis", "Prompt Engineering"],
+      "nice_to_have": ["AWS", "Azure", "GCP"],
+      "other": ["AI model optimization", "data modeling", "AI-driven decisioning", "next best action recommendations", "cloud computing (generic)"],
+      "notes": "Generative AI also maps to LLMs (already listed). 'AI/ML frameworks' (preferred) is generic and not mapped. 'Conduct testing' of POCs is too generic for Testing."
+    },
+    "jd17": {
+      "required": ["C#", "Java", "C++", "SQL", "Relational Databases", "HTML/CSS", "JavaScript", "React", "Agile"],
+      "nice_to_have": ["NoSQL"],
+      "other": ["SQL Server", "Sass"],
+      "notes": "C# is marked '(preferred)' inside a requirement line but kept required. NoSQL comes from 'bonus points'. Agile comes from interns being integrated into scrum teams."
+    },
+    "jd18": {
+      "required": ["LLMs"],
+      "nice_to_have": ["SQL", "Python"],
+      "other": ["Excel", "Google Sheets", "automation tools", "ChatGPT/Claude", "process mapping"],
+      "notes": "LLMs comes from 'build working solutions ... that combine LLMs' and 'hands-on experience using AI tools (such as LLMs ...)'. 'APIs' is generic, so REST APIs was left out. Prompt Engineering (from documenting prompts) is borderline and was left out."
+    },
+    "jd19": {
+      "required": ["C", "C++", "Python", "Java", "JavaScript", "Data Structures & Algorithms", "Git"],
+      "nice_to_have": ["Embedded Systems", "Machine Learning", "Statistics", "Deep Learning", "PyTorch", "TensorFlow", "Distributed Systems", "Computer Networking", "Agile", "Robotics"],
+      "other": ["assembly-level debugging", "full-stack development", "mobile/web frameworks", "cloud platforms (generic)", "databases (generic)"],
+      "notes": "The example intern projects (embedded, ML, data pipeline) are illustrative options and were not labeled. 'Experience writing, testing, and debugging code' is generic, so Testing was left out (ambiguous). RTOS/microcontrollers map to Embedded Systems, not Operating Systems. Statistics comes from 'statistics, probability theory'."
+    },
+    "jd20": {
+      "required": ["JavaScript", "TypeScript", "HTML/CSS", "Node.js", "Next.js", "Git", "SQL", "NoSQL", "MongoDB", "Azure", "AWS", "GCP", "AI Agents"],
+      "nice_to_have": [],
+      "other": ["Tailwind CSS", "ShadCN", "Cursor IDE", "no-code/low-code", "third-party API integration"],
+      "notes": "No split, so everything is required. AI Agents comes from the NextGen SDLC project ('AI Agent + PM'). Tailwind CSS is counted under HTML/CSS (also explicitly listed)."
+    },
+    "jd21": {
+      "required": ["Python", "SQL", "Data Analysis", "LLMs", "Prompt Engineering"],
+      "nice_to_have": [],
+      "other": ["Excel", "automation frameworks", "dashboards"],
+      "notes": "LLMs comes from the role description (modern AI tools such as large language models that the intern will apply). Prompt Engineering comes from the duty 'Build prompts'. Both are moderately ambiguous because this is a business/consulting role."
+    },
+    "jd22": {
+      "required": ["Python", "Deep Learning", "PyTorch", "JAX", "AI Agents", "LLMs", "Reinforcement Learning", "Computer Vision", "Fine-tuning"],
+      "nice_to_have": ["Machine Learning"],
+      "other": ["DeepSpeed", "direct preference optimization", "model distillation", "speech recognition/TTS", "vision-language models", "time series modeling", "multimodal AI"],
+      "notes": "The focus areas are 'one or more of' (agentic/RL, multimodal/CV, speech, post-training). They are labeled as required, though the candidate needs only one. Fine-tuning comes from RLHF. Plain 'evaluation' is not mapped to LLM Evaluation. Competitive programming was not mapped to DSA."
+    },
+    "jd23": {
+      "required": ["Data Structures & Algorithms", "Java", "Python", "Spring Boot", "React", "TypeScript", "Angular", "HTML/CSS", "Swift", "Kotlin", "LLMs", "AI Agents", "Prompt Engineering", "Tableau", "Data Analysis"],
+      "nice_to_have": ["Agile"],
+      "other": ["Splunk", "Adobe Analytics", "GitHub Copilot", "Devin.AI", "workflow design"],
+      "notes": "Ambiguous: most tech comes from a 'some developers will have exposure within the following categories' stack list, which varies by team. It is labeled as required stack, but it is not a candidate prerequisite. DSA comes from 'basic algorithmic programming exercises'. Agile comes from 'prior experience in agile teams is desirable'. 'GitHub Copilot' does not imply Git. Cybersecurity appears only as program description."
+    },
+    "jd24": {
+      "required": ["C#", ".NET", "Object-Oriented Programming", "SQL", "Relational Databases", "REST APIs", "GraphQL", "Testing", "CI/CD", "Azure", "Docker"],
+      "nice_to_have": ["Python", "TypeScript", "JavaScript", "Git", "Kubernetes", "Prompt Engineering"],
+      "other": ["xUnit", "NUnit", "feature flags", "Claude/Cursor/Hex AI tools", "API integration"],
+      "notes": "Stack items (REST/GraphQL, containers, Azure, CI/CD, TDD) come from responsibilities and 'What You'll Gain', so they are listed as required. Docker comes from 'containers'. Prompt Engineering comes from 'familiarity with prompting' (preferred). 'Agentic coding tools' is AI tool usage, so AI Agents was left out. Security is mentioned as a domain requirement, not a candidate skill."
+    },
+    "jd25": {
+      "required": [".NET", "C++", "JavaScript", "Java", "Python"],
+      "nice_to_have": [],
+      "other": ["technical documentation", "design artifacts"],
+      "notes": "Only the programming-language line is technical."
+    },
+    "jd26": {
+      "required": ["Python", "Java", "JavaScript", "TypeScript", "C#", "SQL", "R"],
+      "nice_to_have": [],
+      "other": ["cloud (generic)", "data (generic)"],
+      "notes": "A very generic JD. 'Cloud' and 'data' are not mapped to specific skills."
+    },
+    "jd27": {
+      "required": ["Data Structures & Algorithms", "System Design", "C++", "Go", "Java", "Python", "Git", "Linux"],
+      "nice_to_have": ["Distributed Systems", "Computer Networking", "Operating Systems", "Concurrency", "Docker", "Security", "AWS", "Azure", "GCP", "Kubernetes", "TensorFlow", "PyTorch", "Machine Learning"],
+      "other": ["systems programming", "asynchronous programming", "storage systems", "ransomware protection", "secure coding"],
+      "notes": "The responsibility 'work on large-scale distributed systems, cloud-native services, storage, cybersecurity, or platform infrastructure' is an either/or list. Distributed Systems and Security are labeled from the explicit 'extra excited' section instead. Security comes from data security/cryptography. Docker comes from 'containerized environments'. Git comes from 'version control systems'."
+    },
+    "jd28": {
+      "required": ["JavaScript", "Python", "Java", "C#"],
+      "nice_to_have": [],
+      "other": ["Visio", "Lucidchart", "Jira", "front-end frameworks (generic)", "API integrations", "flow charts"],
+      "notes": "'Coding and testing new screens' is too generic for Testing. The only plus is Jira (not in taxonomy)."
+    },
+    "jd29": {
+      "required": ["Machine Learning", "Python", "Data Structures & Algorithms"],
+      "nice_to_have": ["MLOps", "Deep Learning", "PyTorch", "TensorFlow", "Databricks", "Spark", "Airflow", "Go", "Java", "Scala"],
+      "other": ["recommender systems", "end-to-end ML workflows"],
+      "notes": "MLOps comes from 'experience deploying ML models in production environments'. Keras maps to TensorFlow."
+    },
+    "jd30": {
+      "required": ["Object-Oriented Programming", "C++", "Java", "Kotlin", "Swift", "Linux", "Git", "Embedded Systems"],
+      "nice_to_have": ["CI/CD", "Tableau"],
+      "other": ["CAN", "LIN", "pub/sub", "Jira", "build systems", "command line", "RTOS"],
+      "notes": "Embedded Systems comes from 'experience with microcontrollers ... (firmware teams)', which is a team-conditional requirement. The bonus RTOS also maps there. Tableau comes from the Looker alias ('business intelligence tools'). The responsibilities 'automation for testing ... or observability' are either/or options, so Testing and Observability were left out (ambiguous)."
+    }
+  }
+}
