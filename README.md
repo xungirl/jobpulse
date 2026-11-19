@@ -10,6 +10,17 @@ for the skill gaps, and publishes a static dashboard.
 
 ![dashboard screenshot](docs/screenshot.png)
 
+<details>
+<summary>Dark mode, 375 px mobile, and the full page</summary>
+
+| Dark (follows the OS setting) | Mobile, light | Mobile, dark |
+|---|---|---|
+| <img src="docs/images/dashboard-dark.png" alt="dashboard in dark mode" width="420"> | <img src="docs/images/mobile-light.png" alt="dashboard at 375 px, light" width="190"> | <img src="docs/images/mobile-dark.png" alt="dashboard at 375 px, dark" width="190"> |
+
+[Full page](docs/images/dashboard-full.png) · [Run history + roadmap timelines](docs/images/timelines.png) ·
+[Project ideas](docs/images/ideas.png) · [Live deployment on its first day (1 day of history)](docs/images/one-day.png)
+</details>
+
 [Demo output (committed; serve `docs/demo/` or enable GitHub Pages on `/docs`)](docs/demo/) · [Architecture](#architecture) · [Project Journey](#project-journey) ·
 [Run locally](#run-locally) · [Deploy](#deploy-to-aws) · [Limitations](#limitations) · [Ethics](#ethics)
 
@@ -135,6 +146,24 @@ All numbers come from runs on an Apple M2 laptop; the source file for each numbe
     - **Verified:** the test suite passes 10/10 consecutive runs.
     - **Measured:** the real 30-date demo run is committed under [`docs/demo/`](docs/demo/).
 
+11. **Dashboard redesign.**
+    - **Goal:** a page that reads well on a laptop and a phone, in light and dark mode, and still looks
+      right on a deployment with one day of data (the live stack started empty on 2026-11-18).
+    - **Decision:** keep vanilla TypeScript and zero runtime dependencies; no web fonts or CDNs (system
+      font stack only), so the page makes no third-party requests; its only fetch is `data/dashboard.json`. All colors are CSS custom
+      properties with a selected dark set; the chart series keep the previously validated palette.
+    - **Built:** a translucent sticky header with section links, a hero with KPI tiles, rounded cards,
+      segmented controls (chart / table view, today's / earlier ideas) implemented as ARIA tabs with arrow
+      keys, a width-responsive SVG chart with hover dots and touch support, tables that stack into cards
+      under 640 px, and the two roadmap timelines restyled to the same tokens.
+    - **Verified:** headless-Chrome screenshots at 1280 px and 375 px in both color schemes (no horizontal
+      scroll at 375 px), plus the live one-day dataset: the chart starts at the first day with data and
+      shows a single-point state, and empty sections show explanatory placeholders.
+    - **Problems / fixes:** the chart used to scale its 560-unit `viewBox` down on phones, which shrank
+      the axis text to about 6 px; it now redraws at the container's real width. With one day of history
+      the old chart drew a 30-day axis with no visible line; it now starts at the first day with data and
+      marks single points.
+
 ### Key metrics
 
 | Metric | Value | Source |
@@ -187,7 +216,7 @@ src/jobpulse/
 infra/        app.py stack.py bundle.py          (CDK, Python)
 dashboard/    src/main.ts                         (vanilla TS → src/jobpulse/web/app.js)
 eval/         jds/ labels.json predictions/ results.json
-docs/         architecture.svg/png COST.md demo/ measurements/
+docs/         architecture.svg/png COST.md demo/ measurements/ images/ (screenshots)
 ```
 
 ## Design decisions & trade-offs

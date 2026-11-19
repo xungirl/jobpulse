@@ -27,7 +27,8 @@ Repo: <link>
 
 ## Suggested images (from the repo)
 
-1. `docs/screenshot.png`: the dashboard header with demand bars and the 7-day rolling chart.
+1. `docs/screenshot.png`: the dashboard hero (KPI tiles) with demand bars and the 7-day rolling chart
+   (dark-mode variant: `docs/images/dashboard-dark.png`; phone: `docs/images/mobile-light.png`).
 2. `docs/architecture.png`: the architecture diagram (light theme).
 3. `docs/images/timelines.png`: run history + project roadmap timelines (or `docs/images/resume-example.png`,
    a tailored one-page resume for the fictional demo persona).

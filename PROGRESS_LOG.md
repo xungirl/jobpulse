@@ -38,8 +38,13 @@ Resume work from `git status` + this file. Newest entries at the bottom.
   starvation (two iterations; ideas re-generated for all dates: 3/day, 90 total). Cache re-run: 17/17
   hits, 0 calls. Measurements in `docs/measurements/`, cost estimate in `docs/COST.md`, demo site in
   `docs/demo/`, README/INTERVIEW/LINKEDIN written. Total real LLM calls: 312 / 1,200.
+- 2026-11-18 - Dashboard redesign (presentation only, no pipeline re-run): system font stack, light +
+  dark tokens, segmented controls, responsive chart and stacked tables, restyled timelines. `docs/demo/`
+  static files rebuilt from the existing data; screenshots in `docs/screenshot.png` + `docs/images/`.
 
 ## State for whoever resumes
 - Everything is committed; nothing deployed. To deploy: see README "Deploy to AWS".
 - Regenerate demo: `uv run jobpulse backfill --start 2026-10-20 --end 2026-11-18` (needs the key),
   then `cp -R out/site docs/demo` and `uv run python scripts/demo_summary.py`.
+- Presentation-only demo refresh (no key, no LLM): `cd dashboard && npm run build`, then
+  `cp src/jobpulse/web/{index.html,style.css,app.js} docs/demo/`.
