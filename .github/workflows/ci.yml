@@ -1,0 +1,47 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - run: uv sync --frozen --group infra
+      - name: ruff
+        run: uv run ruff check src tests infra && uv run ruff format --check src tests infra
+      - name: mypy --strict
+        run: uv run mypy
+      - name: pytest (fake LLM, fake HTTP, moto - no network, no secrets)
+        run: uv run pytest -q
+
+  dashboard-and-cdk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: dashboard type-check and build is up to date
+        working-directory: dashboard
+        run: |
+          npm ci
+          npm run build
+          git diff --exit-code -- ../src/jobpulse/web/app.js
+      - name: cdk synth + cdk-nag (no AWS credentials needed)
+        run: |
+          npm install -g aws-cdk@2
+          uv sync --frozen --group infra
+          cdk synth -c alert_email=ci@example.com --quiet
