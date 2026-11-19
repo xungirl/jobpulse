@@ -4,26 +4,31 @@
 
 ---
 
-I built jobpulse, a daily career-agent loop for my Summer 2027 internship search. It's open source.
+I built jobpulse, an open-source agent that reads the internship market for me every morning.
 
-Every day it pulls new SWE/AI internship postings, uses an LLM (Qwen) to extract each job's required skills, tracks demand and trends, tailors a one-page resume per posting, and proposes portfolio projects for my skill gaps.
+Live dashboard: https://d203ftbw510zrj.cloudfront.net
+Code: https://github.com/xungirl/jobpulse
 
-The rule I cared most about: the resume tailor only selects and reorders bullets I already wrote. It never generates text. A property test checked 2,000 generated variants with 0 violations.
+Every day at 6 a.m. it pulls new Summer 2027 SWE/AI postings, uses an LLM to extract what each job asks for, tracks which skills are rising, tailors a one-page resume per posting, and suggests portfolio projects for my skill gaps.
+
+One rule I wouldn't bend: the tailor only selects and reorders bullets I already wrote. It never writes new claims. A property test checked 2,000 generated resumes with 0 violations.
 
 What I measured:
-• Skill extraction on 30 blind-labeled job descriptions: F1 0.946 (± 0.004 over 3 runs), vs 0.896 for a keyword baseline
-• 30 daily runs, 256 postings, 127 with full job-description text
-• Tailoring raised requirement coverage from 40.1% to 44.2%. That's modest, and I report it as measured.
+• Skill extraction F1 0.946 (± 0.004 over 3 runs) on 30 labeled job descriptions, vs 0.896 for keyword matching
+• A 30-day backfill over 256 postings, 30/30 runs green
+• Resume requirement coverage 40.1% → 44.2%: modest, and reported as measured
 
-It runs as a serverless pipeline on AWS (Step Functions, Lambda, DynamoDB, S3, CloudFront, defined in CDK and checked with cdk-nag) and locally from the same code. It's not deployed yet, so the cost figure in the README is an estimate.
+It runs serverless on AWS (Step Functions, Lambda, DynamoDB, S3, CloudFront, all defined in CDK), at an estimated cent or so a month.
 
-Repo: <link>
+My favorite bug: every test passed, but the first real run failed. Each function read the API key at startup, while least-privilege IAM only allowed two of them to. Mocks don't enforce IAM; production does.
 
-#softwareengineering #aws #llm #internships
+Built with Claude Code as my pair programmer.
+
+#AWS #LLM #Serverless #AIAgents #Internships
 
 ---
 
-**Word count:** 176 words (post body from "I built" to before "Repo:"), counted with `wc -w`.
+**Word count:** 207 words (whole post incl. links and hashtags), counted with str.split().
 
 ## Suggested images (from the repo)
 
