@@ -1,0 +1,118 @@
+# DEMO PERSONA - a FICTIONAL candidate used for the public dashboard and tests.
+# Every fact below is made up for demonstration. Put your real bank in a local
+# file and point `bank = "..."` at it in jobpulse.local.toml (gitignored).
+#
+# Format adapted from jd-resume-tailor's builder (MIT, (c) 2026 xungirl):
+#   * write every true bullet ONCE; tailoring only selects and reorders
+#   * the tailor never edits a bullet's text, so numbers stay exactly as written
+#   * skills: one line per group, comma-separated items (items may be reordered, never added)
+
+[profile]
+name = "Jordan Lee"
+location = "Seattle, WA"
+links = [
+  { label = "jordan@example.com", url = "mailto:jordan@example.com" },
+  { label = "github.com/example", url = "https://github.com/example" },
+]
+
+[[education]]
+school = "Example State University"
+location = "Seattle, WA"
+degree = "Master of Science in Computer Science"
+dates = "Expected Dec 2027"
+lines = ["<b>Coursework:</b> Distributed Systems, Machine Learning, Databases, Algorithms"]
+
+[[education]]
+school = "Example College"
+location = "Portland, OR"
+degree = "Bachelor of Science in Information Systems"
+dates = "Sep 2020 - Jun 2024"
+
+[skills.languages]
+label = "Languages"
+items = ["Python", "Java", "Go", "TypeScript", "SQL", "C++"]
+
+[skills.backend]
+label = "Backend"
+items = ["FastAPI", "Spring Boot", "REST APIs", "gRPC", "PostgreSQL", "Redis", "Kafka"]
+
+[skills.cloud]
+label = "Cloud & DevOps"
+items = ["AWS (Lambda, DynamoDB, S3, Step Functions)", "Docker", "Kubernetes", "Terraform", "GitHub Actions CI/CD", "Linux"]
+
+[skills.ml]
+label = "ML / AI"
+items = ["PyTorch", "scikit-learn", "LLM evaluation", "RAG", "embeddings", "Pandas", "NumPy"]
+
+[skills.frontend]
+label = "Frontend"
+items = ["React", "TypeScript", "HTML/CSS"]
+
+[skills.testing]
+label = "Testing"
+items = ["pytest", "JUnit", "property-based testing", "load testing"]
+
+# ------------------------------------------------------------------ projects
+[projects.kv]
+name = "tinykv"
+desc = "Replicated Key-Value Store in Go"
+[projects.kv.bullets]
+core = "Built a Raft-replicated key-value store in Go with leader election, log replication, and a write-ahead log with fsync and group commit."
+chaos = "Lost 0 of 10,000 acknowledged writes across 50 injected process crashes in a chaos test harness that re-reads every acknowledged key."
+perf = "Raised 3-node throughput from 800 to 2,400 writes/s by batching fsyncs; measured 250 ms median leader failover."
+
+[projects.rag]
+name = "DocQA"
+desc = "Retrieval-Augmented Q&A over Support Tickets (Python, PyTorch)"
+[projects.rag.bullets]
+eval = "Benchmarked 12 retrieval configurations on a 60-query labeled set, raising Recall@5 from 65% to 91% with hybrid BM25 and embedding search."
+latency = "Cut median answer latency from 6.0 s to 2.8 s by caching embeddings and removing a redundant retrieval call."
+api = "Served the RAG pipeline through a FastAPI service with request validation, streaming responses, and pytest coverage of 85%."
+
+[projects.shop]
+name = "Shopline"
+desc = "E-Commerce Backend (Java, Spring Boot, PostgreSQL)"
+[projects.shop.bullets]
+api = "Designed 25 REST endpoints in Spring Boot and a normalized PostgreSQL schema for carts, orders, and inventory with optimistic locking."
+test = "Reached 88% line coverage with JUnit and Testcontainers; GitHub Actions CI blocks merges on failing tests."
+kafka = "Published order events to Kafka so inventory and email services update asynchronously; replayed 1,000 events with no duplicates."
+
+[projects.serverless]
+name = "pricewatch"
+desc = "Serverless Price Tracker on AWS"
+[projects.serverless.bullets]
+infra = "Deployed a scheduled AWS Lambda and DynamoDB pipeline with Terraform that checks 300 product pages daily for under $1 per month."
+obs = "Added structured JSON logs and CloudWatch alarms; traced a retry storm to a missing timeout and cut error rate from 4% to 0.3%."
+
+[projects.vision]
+name = "ShelfScan"
+desc = "Retail Shelf Detection (PyTorch, Computer Vision)"
+[projects.vision.bullets]
+model = "Fine-tuned a PyTorch object detector on 2,000 labeled shelf images, improving mAP@0.5 from 0.61 to 0.78 over the pretrained baseline."
+deploy = "Exported the model to ONNX and served it in a Docker container on Kubernetes, holding p95 inference latency under 120 ms."
+
+[projects.web]
+name = "StudyBuddy"
+desc = "Collaborative Study Planner (React, TypeScript, Node.js)"
+[projects.web.bullets]
+ui = "Built a React and TypeScript single-page app with real-time shared to-do lists over WebSockets for 40 classmates."
+perf = "Reduced initial bundle size from 900 KB to 310 KB with code splitting and lazy loading, lowering load time on 3G by 2.1 s."
+
+[[experience]]
+company = "Example Logistics Co."
+location = "Portland, OR"
+title = "Data Engineering Intern"
+dates = "Jun 2024 - Sep 2024"
+bullets = [
+  "Wrote SQL and Python ETL jobs joining 3 operational systems into a daily reporting table used by 2 planning teams.",
+  "Automated a weekly Excel report with Pandas and Airflow, saving the analytics team about 4 hours per week.",
+]
+
+# Default (untailored) resume: what you would send without looking at the JD.
+[default]
+skills = ["languages", "backend", "cloud", "ml", "testing"]
+projects = [
+  { key = "kv", bullets = ["core", "chaos"] },
+  { key = "shop", bullets = ["api", "test"] },
+  { key = "rag", bullets = ["eval", "latency"] },
+]
