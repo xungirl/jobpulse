@@ -17,6 +17,10 @@ STATIC_FILES = {
     "index.html": "text/html; charset=utf-8",
     "app.js": "text/javascript; charset=utf-8",
     "style.css": "text/css; charset=utf-8",
+    # Instrument Serif (SIL OFL 1.1), Latin subset, self-hosted so the page makes no third-party requests.
+    "fonts/instrument-serif-regular.woff2": "font/woff2",
+    "fonts/instrument-serif-italic.woff2": "font/woff2",
+    "fonts/OFL.txt": "text/plain; charset=utf-8",
 }
 HISTORY_DAYS = 30
 CHART_SKILLS = 6

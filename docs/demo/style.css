@@ -1,7 +1,13 @@
-/* jobpulse dashboard. System font stack, soft surfaces, light + selected dark tokens (no network fonts).
+/* jobpulse dashboard. Instrument Serif (OFL, self-hosted in fonts/) for display headings, system sans for
+   everything else; soft surfaces, light + selected dark tokens (no network fonts: all files ship with the site).
    Chart series colors: reference categorical palette slots 1-4 (validated, adjacent pairs, light + dark). */
+@font-face { font-family: "Instrument Serif"; src: url("fonts/instrument-serif-regular.woff2") format("woff2");
+  font-style: normal; font-weight: 400; font-display: swap; }
+@font-face { font-family: "Instrument Serif"; src: url("fonts/instrument-serif-italic.woff2") format("woff2");
+  font-style: italic; font-weight: 400; font-display: swap; }
 :root {
   color-scheme: light;
+  --font-serif: "Instrument Serif", "New York", "Iowan Old Style", Georgia, "Times New Roman", serif;
   --font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", system-ui, "Segoe UI", Roboto, sans-serif;
   --font-display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", system-ui, "Segoe UI", Roboto, sans-serif;
   --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
@@ -121,8 +127,11 @@ a:hover { text-decoration: underline; text-underline-offset: 2px; }
 /* ---------------------------------------------------------------- hero */
 .hero { padding-top: 48px; padding-bottom: 8px; }
 .eyebrow { margin: 0 0 10px; font-size: 0.86rem; font-weight: 600; color: var(--accent); letter-spacing: 0; }
-h1 { font-family: var(--font-display); font-size: clamp(2.1rem, 5.2vw, 3.5rem); line-height: 1.06; letter-spacing: -0.035em;
-  font-weight: 700; margin: 0 0 14px; max-width: 16ch; }
+h1 { font-family: var(--font-serif); font-size: clamp(2.9rem, 7.4vw, 5.4rem); line-height: 0.98; letter-spacing: -0.02em;
+  font-weight: 400; margin: 0 0 18px; max-width: 22ch; }
+h1 em { font-style: italic; background: linear-gradient(100deg, var(--accent), #bf5af2 70%);
+  -webkit-background-clip: text; background-clip: text; color: transparent; padding-right: 0.06em;
+  white-space: nowrap; }
 .sub { margin: 0 0 32px; color: var(--text-2); font-size: clamp(1.02rem, 1.6vw, 1.2rem); line-height: 1.45;
   max-width: 62ch; letter-spacing: -0.01em; }
 .kpis { display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 12px; }
@@ -142,8 +151,8 @@ h1 { font-family: var(--font-display); font-size: clamp(2.1rem, 5.2vw, 3.5rem); 
 .sec { padding-top: 64px; scroll-margin-top: 52px; }
 .sec-head { margin-bottom: 18px; }
 .sec-head.row { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
-h2 { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.1rem); line-height: 1.12; letter-spacing: -0.028em;
-  font-weight: 700; margin: 0 0 8px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+h2 { font-family: var(--font-serif); font-size: clamp(2rem, 3.8vw, 2.75rem); line-height: 1.05; letter-spacing: -0.01em;
+  font-weight: 400; margin: 0 0 8px; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 h3 { font-size: 0.95rem; margin: 0; color: var(--text); font-weight: 600; letter-spacing: -0.01em; }
 .note { margin: 0; color: var(--muted); font-size: 0.9rem; line-height: 1.5; max-width: 72ch; }
 .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px 22px;
