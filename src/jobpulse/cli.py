@@ -65,6 +65,24 @@ def cmd_linkedin(a: argparse.Namespace) -> int:
     return 0
 
 
+def cmd_runs(a: argparse.Namespace) -> int:
+    """Run history with the per-run health metrics (what the dashboard timeline shows)."""
+    ctx = local_context(Path(a.out), provider="none", bank_path=a.bank)
+    cols = [
+        ("ingest.postings_ingested", "ingested"),
+        ("extract.llm_calls", "llm"),
+        ("extract.cache_hit_rate", "cache_hit"),
+        ("extract.fallback_keyword", "fallback"),
+        ("ingest.jd_fetch_failed", "fetch_fail"),
+        ("tailor.resumes_generated", "resumes"),
+    ]
+    print(f"{'date':<11} {'status':<10} " + " ".join(f"{h:>10}" for _, h in cols))
+    for run in sorted(ctx.repos.runs(), key=lambda r: r.date)[-a.last :]:
+        vals = " ".join(f"{run.metrics.get(k, 0):>10g}" for k, _ in cols)
+        print(f"{run.date:<11} {run.status:<10} {vals}")
+    return 0
+
+
 def cmd_eval(a: argparse.Namespace) -> int:
     from jobpulse.evaluation import run_eval
 
@@ -102,6 +120,12 @@ def main(argv: list[str] | None = None) -> int:
     li.add_argument("--out", default="out")
     li.add_argument("--bank")
     li.set_defaults(fn=cmd_linkedin)
+
+    rs = sub.add_parser("runs", help="show recent run history and health metrics")
+    rs.add_argument("--out", default="out")
+    rs.add_argument("--bank")
+    rs.add_argument("--last", type=int, default=30)
+    rs.set_defaults(fn=cmd_runs)
 
     e = sub.add_parser("eval", help="extraction precision/recall vs hand labels")
     e.add_argument("--dir", default="eval")

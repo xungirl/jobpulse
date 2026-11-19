@@ -20,7 +20,6 @@ jobpulse.local.toml
 .env*
 
 # CDK / node
-infra/cdk.out/
 cdk.out/
 node_modules/
 .DS_Store

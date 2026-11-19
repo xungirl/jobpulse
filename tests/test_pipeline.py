@@ -6,6 +6,7 @@ import io
 import json
 from pathlib import Path
 
+from jobpulse.adapters.http import FakeHttpClient
 from jobpulse.adapters.llm import FakeProvider
 from jobpulse.context import Context
 from jobpulse.observability import EMF_METRICS, JsonLogger, Metrics
@@ -68,6 +69,16 @@ def test_failing_step_degrades_but_publish_still_runs(ctx: Context) -> None:
     assert run.steps["extract"].startswith("failed")
     assert run.steps["publish"] == "ok"
     assert run.status == "partial"
+
+
+def test_source_outage_is_recorded_and_dashboard_still_published(ctx: Context, tmp_path: Path) -> None:
+    ctx.http = FakeHttpClient({})  # listings.json, ATS, GitHub and HN all return 404
+    run = run_pipeline(ctx, "2026-11-18")
+    assert run.steps["ingest"] == "failed: HttpError"
+    assert run.steps["trends"] == "ok"  # trend sources are optional: counted, not fatal
+    assert run.metrics["trends.trend_source_failures"] == 2
+    assert run.steps["publish"] == "ok" and run.status == "partial"
+    assert (tmp_path / "site" / "data" / "dashboard.json").exists()
 
 
 def test_run_step_rejects_unknown_step(ctx: Context) -> None:

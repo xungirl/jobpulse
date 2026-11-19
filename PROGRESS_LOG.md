@@ -24,3 +24,12 @@ Resume work from `git status` + this file. Newest entries at the bottom.
   Eval (`uv run jobpulse eval --runs 3`, qwen3.8-flash, 91 calls): LLM micro P/R/F1 =
   0.961/0.932/0.946 (std 0.005/0.010/0.004), keyword baseline 0.846/0.954/0.896; run-to-run
   Jaccard 0.935. Results: `eval/results.json`, raw predictions: `eval/predictions/`.
+- 2026-11-18 - Stages 4-7: market/trends, truthful tailoring (property test: 2,000 variants, 0
+  violations), gaps + ideas, dashboard + LinkedIn draft. Integration tests cover idempotent re-runs
+  and partial failure.
+- 2026-11-18 - Stage 8: CDK stack + AWS adapters + Lambda handlers; `cdk synth` passes cdk-nag
+  (0 unsuppressed; suppressions documented in infra/stack.py). Bundle smoke-tested in the official
+  Lambda python3.12 arm64 image (colima). NOT deployed (parent session deploys after review).
+- 2026-11-18 - Stage 9: EMF limited to 8 whitelisted metrics (CloudWatch custom-metric free tier),
+  `jobpulse runs` history command, source-outage test (ingest fails -> run "partial", dashboard still
+  published).
