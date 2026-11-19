@@ -12,7 +12,11 @@ def day(postings: int, **counts: int) -> dict[str, object]:
 
 
 def test_window_share_sums_within_window() -> None:
-    series = {"2026-11-10": day(10, Python=5), "2026-11-17": day(10, Python=2), "2026-11-18": day(10, Python=8)}
+    series = {
+        "2026-11-10": day(10, Python=5),
+        "2026-11-17": day(10, Python=2),
+        "2026-11-18": day(10, Python=8),
+    }
     n, share = window_share(series, "2026-11-18", 7)
     assert n == 20 and share["Python"] == pytest.approx(0.5)
 

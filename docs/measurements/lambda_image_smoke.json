@@ -1,0 +1,9 @@
+{
+  "what": "Lambda bundle (build/lambda) imported and rendered a tailored one-page PDF inside the official AWS Lambda base image",
+  "image": "public.ecr.aws/lambda/python:3.12-arm64",
+  "command": "docker run --rm --platform linux/arm64 -e PYTHONPATH=/var/task --entrypoint python3 -v $PWD/build/lambda:/var/task:ro -v $PWD/scripts/lambda_image_smoke.py:/opt/smoke.py:ro public.ecr.aws/lambda/python:3.12-arm64 /opt/smoke.py",
+  "result": {"python": "3.12.16", "machine": "aarch64", "pdf_bytes": 4760, "fits": true, "boto3": "1.43.127", "import_and_render_s": 0.42},
+  "bundle_size_unzipped": "27M (du -sh build/lambda)",
+  "date": "2026-11-18",
+  "host": "Apple M2, colima VM (2 vCPU)"
+}

@@ -14,6 +14,20 @@ from datetime import UTC, datetime
 from typing import Any, TextIO
 
 NAMESPACE = "JobPulse"
+# Each distinct metric name is a billed CloudWatch custom metric beyond the first 10, so only these
+# run-health numbers are published as metrics.
+EMF_METRICS = frozenset(
+    {
+        "postings_ingested",
+        "llm_calls",
+        "cache_hit_rate",
+        "jd_fetch_failed",
+        "extract_failures",
+        "tailor_failures",
+        "resumes_generated",
+        "step_failed",
+    }
+)
 
 
 class JsonLogger:
@@ -65,22 +79,25 @@ class Metrics:
         return round(time.monotonic() - self._started, 2)
 
     def emf_record(self, step: str, run_date: str) -> dict[str, Any]:
-        """One EMF document: CloudWatch extracts every counter as a metric (dimension: Step)."""
-        names = sorted(self.counters)
+        """One EMF document. Only EMF_METRICS become CloudWatch metrics (no dimensions, so at most
+        8 custom metrics - inside the 10-metric free tier); every counter stays in the log line as a
+        property, queryable with Logs Insights at no extra cost.
+        """
+        declared = sorted(n for n in self.counters if n in EMF_METRICS)
         return {
             "_aws": {
                 "Timestamp": int(time.time() * 1000),
                 "CloudWatchMetrics": [
                     {
                         "Namespace": NAMESPACE,
-                        "Dimensions": [["Step"]],
-                        "Metrics": [{"Name": n, "Unit": "Count"} for n in names],
+                        "Dimensions": [[]],
+                        "Metrics": [{"Name": n, "Unit": "Count"} for n in declared],
                     }
                 ],
             },
             "Step": step,
             "run_date": run_date,
-            **{n: self.counters[n] for n in names},
+            **{n: self.counters[n] for n in sorted(self.counters)},
         }
 
     def flush(self, step: str, run_date: str, emf: bool, stream: TextIO | None = None) -> None:

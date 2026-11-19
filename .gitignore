@@ -24,3 +24,4 @@ infra/cdk.out/
 cdk.out/
 node_modules/
 .DS_Store
+infra/cdk.out/

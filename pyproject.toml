@@ -24,7 +24,7 @@ dev = [
 infra = [
     "aws-cdk-lib>=2.170",
     "constructs>=10.3",
-    "cdk-nag>=2.29",
+    "cdk-nag>=2.29,<3",
 ]
 
 [build-system]
@@ -36,6 +36,7 @@ packages = ["src/jobpulse"]
 
 [tool.ruff]
 line-length = 110
+extend-exclude = ["infra/cdk.out", "build", "dashboard/node_modules"]
 target-version = "py312"
 
 [tool.ruff.lint]
@@ -46,6 +47,9 @@ ignore = ["RUF001", "RUF002", "RUF003"]
 strict = true
 python_version = "3.12"
 files = ["src", "tests", "infra"]
+exclude = ["infra/cdk\\.out/", "build/"]
+explicit_package_bases = true
+mypy_path = ["src", "infra", "."]
 
 [[tool.mypy.overrides]]
 module = ["reportlab.*", "boto3.*", "botocore.*", "moto.*", "aws_cdk.*", "cdk_nag.*", "constructs.*"]

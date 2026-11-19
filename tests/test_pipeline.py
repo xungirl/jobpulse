@@ -8,7 +8,7 @@ from pathlib import Path
 
 from jobpulse.adapters.llm import FakeProvider
 from jobpulse.context import Context
-from jobpulse.observability import JsonLogger, Metrics
+from jobpulse.observability import EMF_METRICS, JsonLogger, Metrics
 from jobpulse.pipeline.gaps import is_duplicate, rank_gaps
 from jobpulse.pipeline.linkedin import weekly_post
 from jobpulse.runner import run_pipeline, run_step
@@ -102,10 +102,19 @@ def test_gap_ranking_and_dedupe() -> None:
 def test_emf_record_shape() -> None:
     m = Metrics()
     m.incr("llm_calls", 3)
+    m.incr("listings_total", 100)  # not whitelisted: kept as a log property, not a billed metric
     rec = m.emf_record("extract", "2026-11-18")
-    assert rec["llm_calls"] == 3
-    assert rec["_aws"]["CloudWatchMetrics"][0]["Metrics"] == [{"Name": "llm_calls", "Unit": "Count"}]
+    assert rec["llm_calls"] == 3 and rec["listings_total"] == 100
+    directive = rec["_aws"]["CloudWatchMetrics"][0]
+    assert directive["Metrics"] == [{"Name": "llm_calls", "Unit": "Count"}]
+    assert directive["Dimensions"] == [[]]
+    assert len(EMF_METRICS) <= 10  # stays inside the CloudWatch custom-metric free tier
     buf = io.StringIO()
     JsonLogger(stream=buf, run_date="d").info("hello", n=1)
-    assert json.loads(buf.getvalue()) | {"ts": ""} == {"ts": "", "level": "INFO", "event": "hello",
-                                                      "run_date": "d", "n": 1}
+    record = json.loads(buf.getvalue())
+    assert {k: v for k, v in record.items() if k != "ts"} == {
+        "level": "INFO",
+        "event": "hello",
+        "run_date": "d",
+        "n": 1,
+    }

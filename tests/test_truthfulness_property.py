@@ -33,8 +33,28 @@ extractions = st.builds(
     st.lists(st.sampled_from(SKILLS), max_size=8, unique=True),
 )
 
-words = st.sampled_from(["Built", "Cut", "latency", "from", "to", "with", "Python", "Kafka", "AWS", "React",
-                         "PyTorch", "tests", "Go,", "SQL", "Docker", "Raft", "users", "requests/s"])
+words = st.sampled_from(
+    [
+        "Built",
+        "Cut",
+        "latency",
+        "from",
+        "to",
+        "with",
+        "Python",
+        "Kafka",
+        "AWS",
+        "React",
+        "PyTorch",
+        "tests",
+        "Go,",
+        "SQL",
+        "Docker",
+        "Raft",
+        "users",
+        "requests/s",
+    ]
+)
 numbers = st.sampled_from(["3", "12", "95%", "2.8 s", "10,000", "$1", "0.78", "250 ms"])
 bullet_text = st.lists(st.one_of(words, numbers), min_size=4, max_size=28).map(" ".join)
 

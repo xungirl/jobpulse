@@ -77,7 +77,9 @@ def test_render_fits_one_page_and_overflow_guard(tax: Taxonomy) -> None:
     result, _ = render_one_page(bank, r)
     assert result.fits and result.pdf.startswith(b"%PDF")
     # Force overflow by cramming every project and bullet, then let the guard shrink it.
-    r.projects = [ChosenProject(p.key, p.name, p.desc, tuple(p.bullets.values())) for p in bank.projects.values()]
+    r.projects = [
+        ChosenProject(p.key, p.name, p.desc, tuple(p.bullets.values())) for p in bank.projects.values()
+    ]
     r.experience = r.experience * 4
     assert not render(bank, r).fits
     result, dropped = render_one_page(bank, r)
