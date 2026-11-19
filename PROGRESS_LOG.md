@@ -6,8 +6,8 @@ Resume work from `git status` + this file. Newest entries at the bottom.
 - Stage tags `stage-N` mark the commit where that stage's code landed. Code for several stages was
   written in one pass before being split into commits, so an intermediate commit may import a module
   committed a little later; the full suite is green at every tag from `stage-3` on.
-- Real LLM calls are logged to `.jobpulse/llm_ledger.jsonl` (gitignored; a summary is committed in
-  `docs/llm_budget.json` at the end). Budget: <= 1,200 calls; hard stop in code at 1,150.
+- Real LLM calls are logged to `.jobpulse/llm_ledger.jsonl` (gitignored; totals are committed in
+  `docs/measurements/demo_summary.json` under `ledger`). Budget: <= 1,200 calls; hard stop in code at 1,150.
 - Local run state: `out/state.sqlite` (gitignored). Committed demo output: `docs/demo/`.
 
 ## Log
@@ -33,3 +33,13 @@ Resume work from `git status` + this file. Newest entries at the bottom.
 - 2026-11-18 - Stage 9: EMF limited to 8 whitelisted metrics (CloudWatch custom-metric free tier),
   `jobpulse runs` history command, source-outage test (ingest fails -> run "partial", dashboard still
   published).
+- 2026-11-18 - Stage 10: real 30-date demo backfill (2026-10-20..2026-11-18): 30/30 runs succeeded,
+  256 postings, 127 with JD, 91 resumes (91/91 truthful), coverage 40.1% -> 44.2%. Found + fixed idea
+  starvation (two iterations; ideas re-generated for all dates: 3/day, 90 total). Cache re-run: 17/17
+  hits, 0 calls. Measurements in `docs/measurements/`, cost estimate in `docs/COST.md`, demo site in
+  `docs/demo/`, README/INTERVIEW/LINKEDIN written. Total real LLM calls: 312 / 1,200.
+
+## State for whoever resumes
+- Everything is committed; nothing deployed. To deploy: see README "Deploy to AWS".
+- Regenerate demo: `uv run jobpulse backfill --start 2026-10-20 --end 2026-11-18` (needs the key),
+  then `cp -R out/site docs/demo` and `uv run python scripts/demo_summary.py`.
