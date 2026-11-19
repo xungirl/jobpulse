@@ -105,9 +105,9 @@ function renderDemandChart(d: Dashboard): void {
   const skills = Object.keys(d.series.skills).slice(0, 4);
   const colors = ["var(--series-1)", "var(--series-2)", "var(--series-3)", "var(--series-4)"];
   const lines = skills.map((s) => rolling(d.series.skills[s], d.series.postings));
-  const W = 520, H = 240, L = 36, R = 92, T = 10, B = 26;
+  const W = 560, H = 240, L = 36, R = 128, T = 10, B = 26;
   const n = d.series.dates.length;
-  const ymax = Math.max(0.1, ...lines.flat().map((v) => v ?? 0));
+  const ymax = Math.ceil(Math.max(0.1, ...lines.flat().map((v) => v ?? 0)) * 10) / 10; // round up to 10%
   const x = (i: number): number => L + (i * (W - L - R)) / Math.max(1, n - 1);
   const y = (v: number): number => T + (1 - v / ymax) * (H - T - B);
   const ticks = [0, ymax / 2, ymax];
