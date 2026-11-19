@@ -37,7 +37,12 @@ def test_non_llm_steps_never_read_the_key(monkeypatch: pytest.MonkeyPatch, step:
 @pytest.mark.parametrize("step", sorted(lam.LLM_STEPS))
 def test_llm_steps_read_the_key(monkeypatch: pytest.MonkeyPatch, step: str) -> None:
     reads: list[str] = []
-    monkeypatch.setattr(lam, "read_secure_parameter", lambda name: reads.append(name) or "k")
+
+    def fake_read(name: str) -> str:
+        reads.append(name)
+        return "k"
+
+    monkeypatch.setattr(lam, "read_secure_parameter", fake_read)
     ctx = lam.aws_context(step)
     assert ctx.llm is not None
     assert reads == ["/jobpulse/dashscope-api-key"]
