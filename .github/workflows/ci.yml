@@ -18,7 +18,7 @@ jobs:
           enable-cache: true
       - run: uv sync --frozen --group infra
       - name: ruff
-        run: uv run ruff check src tests infra && uv run ruff format --check src tests infra
+        run: uv run ruff check src tests infra scripts && uv run ruff format --check src tests infra scripts
       - name: mypy --strict
         run: uv run mypy
       - name: pytest (fake LLM, fake HTTP, moto - no network, no secrets)

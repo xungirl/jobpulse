@@ -46,7 +46,7 @@ ignore = ["RUF001", "RUF002", "RUF003"]
 [tool.mypy]
 strict = true
 python_version = "3.12"
-files = ["src", "tests", "infra"]
+files = ["src", "tests", "infra", "scripts"]
 exclude = ["infra/cdk\\.out/", "build/"]
 explicit_package_bases = true
 mypy_path = ["src", "infra", "."]

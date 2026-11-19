@@ -6,8 +6,8 @@ export JSII_SILENCE_WARNING_UNTESTED_NODE_VERSION=1
 REPEATS="${1:-1}"
 
 uv sync --frozen --group infra -q
-uv run ruff check src tests infra
-uv run ruff format --check src tests infra
+uv run ruff check src tests infra scripts
+uv run ruff format --check src tests infra scripts
 uv run mypy
 for i in $(seq 1 "$REPEATS"); do
   echo "--- pytest run $i/$REPEATS"

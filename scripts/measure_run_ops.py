@@ -93,27 +93,45 @@ def main() -> None:
     store = CountingDocStore(SqliteDocStore(tmp / "state.sqlite"))
     llm = FakeProvider()
     llm.name = "qwen"  # cache keys match the real run -> cache hits, zero real LLM calls
-    ctx = Context(Repos(store), CountingBlobStore(tmp / "site"), llm,
-                  MemoizingHttpClient(UrllibHttpClient(), {LISTINGS_URL}), default_taxonomy(),
-                  demo_bank_toml(), JsonLogger(stream=io.StringIO()), Settings())
-    steps: dict[str, dict[str, float]] = {}
+    ctx = Context(
+        Repos(store),
+        CountingBlobStore(tmp / "site"),
+        llm,
+        MemoizingHttpClient(UrllibHttpClient(), {LISTINGS_URL}),
+        default_taxonomy(),
+        demo_bank_toml(),
+        JsonLogger(stream=io.StringIO()),
+        Settings(),
+    )
+    steps: dict[str, dict[str, Any]] = {}
     for step in ORDER:
         w0, r0, wru0, rru0, t0 = store.writes, store.reads, store.wru, store.rru, time.monotonic()
         try:
             run_step(ctx, step, a.date)
             status = "ok"
-        except Exception as e:  # noqa: BLE001 - measurement only
+        except Exception as e:
             status = f"failed: {type(e).__name__}"
-        steps[step] = {"status": status, "seconds_local": round(time.monotonic() - t0, 2),
-                       "doc_writes": store.writes - w0, "doc_reads": store.reads - r0,
-                       "wru": store.wru - wru0, "rru": store.rru - rru0}
+        steps[step] = {
+            "status": status,
+            "seconds_local": round(time.monotonic() - t0, 2),
+            "doc_writes": store.writes - w0,
+            "doc_reads": store.reads - r0,
+            "wru": store.wru - wru0,
+            "rru": store.rru - rru0,
+        }
     result = {
         "date": a.date,
         "note": "one replayed daily run on a copy of the demo state; seconds are Apple M2 wall time "
-                "incl. network (ingest re-fetches listings.json)",
+        "incl. network (ingest re-fetches listings.json)",
         "steps": steps,
-        "totals": {"doc_writes": store.writes, "doc_reads": store.reads, "wru": store.wru, "rru": store.rru,
-                   "s3_puts": CountingBlobStore.puts, "s3_put_bytes": CountingBlobStore.put_bytes_total},
+        "totals": {
+            "doc_writes": store.writes,
+            "doc_reads": store.reads,
+            "wru": store.wru,
+            "rru": store.rru,
+            "s3_puts": CountingBlobStore.puts,
+            "s3_put_bytes": CountingBlobStore.put_bytes_total,
+        },
         "state_db_bytes": (tmp / "state.sqlite").stat().st_size,
     }
     Path(a.out).write_text(json.dumps(result, indent=1))

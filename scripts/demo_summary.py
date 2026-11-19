@@ -1,6 +1,6 @@
 """Summarize the committed demo run (and the LLM call ledger) into docs/measurements/demo_summary.json.
 
-    uv run python scripts/demo_summary.py --out-dir out
+uv run python scripts/demo_summary.py --out-dir out
 """
 
 from __future__ import annotations
@@ -28,7 +28,11 @@ def main() -> None:
     resumes = [m for r in runs for m in repos.resumes(r.date)]
     ideas = repos.all_ideas()
     site = Path(a.out_dir) / "site"
-    ledger = [json.loads(line) for line in Path(a.ledger).read_text().splitlines()] if Path(a.ledger).exists() else []
+    ledger = (
+        [json.loads(line) for line in Path(a.ledger).read_text().splitlines()]
+        if Path(a.ledger).exists()
+        else []
+    )
     by_purpose = Counter(e["purpose"].split(":")[0] for e in ledger)
     ok = [e for e in ledger if e.get("ok")]
     summary = {
@@ -49,8 +53,12 @@ def main() -> None:
         "truthfulness_checks_passed": total("tailor.truthfulness_checks_passed"),
         "overflow_bullets_dropped": total("tailor.overflow_bullets_dropped"),
         "skipped_ineligible": total("tailor.skipped_ineligible"),
-        "coverage_before_mean": round(sum(r["coverage_before"] for r in resumes) / len(resumes), 4) if resumes else None,
-        "coverage_after_mean": round(sum(r["coverage_after"] for r in resumes) / len(resumes), 4) if resumes else None,
+        "coverage_before_mean": round(sum(r["coverage_before"] for r in resumes) / len(resumes), 4)
+        if resumes
+        else None,
+        "coverage_after_mean": round(sum(r["coverage_after"] for r in resumes) / len(resumes), 4)
+        if resumes
+        else None,
         "resumes_improved": sum(r["coverage_after"] > r["coverage_before"] for r in resumes),
         "resumes_unchanged": sum(r["coverage_after"] == r["coverage_before"] for r in resumes),
         "resumes_worse": sum(r["coverage_after"] < r["coverage_before"] for r in resumes),
