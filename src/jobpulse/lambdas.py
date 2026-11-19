@@ -28,6 +28,9 @@ from jobpulse.runner import run_step
 from jobpulse.taxonomy import default_taxonomy
 
 _DATE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+# Only these steps call the LLM. The CDK stack grants ssm:GetParameter on the API key to these
+# functions alone (least privilege), so the other steps must never try to read it.
+LLM_STEPS = frozenset({"extract", "gaps"})
 _ctx: Context | None = None  # reused across warm invocations (and across steps in one container)
 
 
@@ -54,13 +57,13 @@ def _llm_from_env() -> LLMProvider | None:
     )
 
 
-def aws_context() -> Context:
+def aws_context(step: str) -> Context:
     global _ctx
     if _ctx is None:
         _ctx = Context(
             repos=Repos(DynamoDocStore(os.environ["TABLE_NAME"])),
             site=S3BlobStore(os.environ["SITE_BUCKET"]),
-            llm=_llm_from_env(),
+            llm=_llm_from_env() if step in LLM_STEPS else None,
             http=UrllibHttpClient(),
             taxonomy=default_taxonomy(),
             bank_toml=demo_bank_toml(),  # public deployment shows the demo persona only
@@ -72,7 +75,7 @@ def aws_context() -> Context:
 
 def _handle(step: str, event: dict[str, Any]) -> dict[str, Any]:
     run_date = resolve_date(event)
-    ctx = aws_context()
+    ctx = aws_context(step)
     ledger = getattr(ctx.llm, "ledger", None)
     if isinstance(ledger, CallLedger):
         ledger.session_calls = 0  # MAX_LLM_CALLS is a per-invocation safety cap, not per container
