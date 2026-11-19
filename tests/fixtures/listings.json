@@ -1,0 +1,266 @@
+[
+ {
+  "source": "Simplify",
+  "is_visible": true,
+  "terms": [
+   "Summer 2027"
+  ],
+  "sponsorship": "Other",
+  "degrees": [
+   "Bachelor's"
+  ],
+  "id": "gh-1",
+  "company_name": "Acme Robotics",
+  "title": "Software Engineer Intern",
+  "category": "Software",
+  "active": true,
+  "date_posted": 1794927600,
+  "date_updated": 1794927600,
+  "url": "https://job-boards.greenhouse.io/acme/jobs/1001?utm_source=Simplify",
+  "locations": [
+   "Seattle, WA"
+  ]
+ },
+ {
+  "source": "Simplify",
+  "is_visible": true,
+  "terms": [
+   "Summer 2027"
+  ],
+  "sponsorship": "Other",
+  "degrees": [
+   "Bachelor's"
+  ],
+  "id": "lv-1",
+  "company_name": "Beta AI",
+  "title": "Machine Learning Intern",
+  "category": "AI/ML/Data",
+  "active": true,
+  "date_posted": 1795014000,
+  "date_updated": 1795014000,
+  "url": "https://jobs.lever.co/beta/11111111-2222-3333-4444-555555555555/apply",
+  "locations": [
+   "Remote in USA"
+  ]
+ },
+ {
+  "source": "Simplify",
+  "is_visible": true,
+  "terms": [
+   "Summer 2027"
+  ],
+  "sponsorship": "Other",
+  "degrees": [
+   "Bachelor's"
+  ],
+  "id": "gh-2",
+  "company_name": "Gamma Corp",
+  "title": "Backend Engineer Intern",
+  "category": "Software",
+  "active": true,
+  "date_posted": 1795014000,
+  "date_updated": 1795014000,
+  "url": "https://job-boards.greenhouse.io/gamma/jobs/2002",
+  "locations": [
+   "New York, NY"
+  ]
+ },
+ {
+  "source": "Simplify",
+  "is_visible": true,
+  "terms": [
+   "Summer 2027"
+  ],
+  "sponsorship": "Other",
+  "degrees": [
+   "Bachelor's"
+  ],
+  "id": "broken-1",
+  "company_name": "Delta",
+  "title": "Software Engineer Intern",
+  "category": "Software",
+  "active": true,
+  "date_posted": 1795014000,
+  "date_updated": 1795014000,
+  "url": "https://job-boards.greenhouse.io/delta/jobs/3003",
+  "locations": [
+   "Austin, TX"
+  ]
+ },
+ {
+  "source": "Simplify",
+  "is_visible": true,
+  "terms": [
+   "Summer 2027"
+  ],
+  "sponsorship": "Other",
+  "degrees": [
+   "Bachelor's"
+  ],
+  "id": "icims-1",
+  "company_name": "Epsilon",
+  "title": "Software Intern",
+  "category": "Software",
+  "active": true,
+  "date_posted": 1795014000,
+  "date_updated": 1795014000,
+  "url": "https://careers-epsilon.icims.com/jobs/1/job",
+  "locations": [
+   "Boston, MA"
+  ]
+ },
+ {
+  "source": "Simplify",
+  "is_visible": true,
+  "terms": [
+   "Summer 2027"
+  ],
+  "sponsorship": "Other",
+  "degrees": [
+   "Bachelor's"
+  ],
+  "id": "x-inactive",
+  "company_name": "Zeta",
+  "title": "SWE Intern",
+  "category": "Software",
+  "active": false,
+  "date_posted": 1795014000,
+  "date_updated": 1795014000,
+  "url": "https://x",
+  "locations": [
+   "Seattle, WA"
+  ]
+ },
+ {
+  "source": "Simplify",
+  "is_visible": true,
+  "terms": [
+   "Fall 2026"
+  ],
+  "sponsorship": "Other",
+  "degrees": [
+   "Bachelor's"
+  ],
+  "id": "x-term",
+  "company_name": "Zeta",
+  "title": "SWE Intern",
+  "category": "Software",
+  "active": true,
+  "date_posted": 1795014000,
+  "date_updated": 1795014000,
+  "url": "https://x",
+  "locations": [
+   "Seattle, WA"
+  ]
+ },
+ {
+  "source": "Simplify",
+  "is_visible": true,
+  "terms": [
+   "Summer 2027"
+  ],
+  "sponsorship": "Other",
+  "degrees": [
+   "Bachelor's"
+  ],
+  "id": "x-hw",
+  "company_name": "Zeta",
+  "title": "Hardware Intern",
+  "category": "Hardware",
+  "active": true,
+  "date_posted": 1795014000,
+  "date_updated": 1795014000,
+  "url": "https://x",
+  "locations": [
+   "Seattle, WA"
+  ]
+ },
+ {
+  "source": "Simplify",
+  "is_visible": true,
+  "terms": [
+   "Summer 2027"
+  ],
+  "sponsorship": "Other",
+  "degrees": [
+   "Bachelor's"
+  ],
+  "id": "x-canada",
+  "company_name": "Zeta",
+  "title": "SWE Intern",
+  "category": "Software",
+  "active": true,
+  "date_posted": 1795014000,
+  "date_updated": 1795014000,
+  "url": "https://x",
+  "locations": [
+   "Toronto, ON, Canada"
+  ]
+ },
+ {
+  "source": "Simplify",
+  "is_visible": true,
+  "terms": [
+   "Summer 2027"
+  ],
+  "sponsorship": "Other",
+  "degrees": [
+   "Bachelor's"
+  ],
+  "id": "x-old",
+  "company_name": "Zeta",
+  "title": "SWE Intern",
+  "category": "Software",
+  "active": true,
+  "date_posted": 1790866800,
+  "date_updated": 1790866800,
+  "url": "https://x",
+  "locations": [
+   "Seattle, WA"
+  ]
+ },
+ {
+  "source": "Simplify",
+  "is_visible": true,
+  "terms": [
+   "Summer 2027"
+  ],
+  "sponsorship": "Other",
+  "degrees": [
+   "Bachelor's"
+  ],
+  "id": "x-dup",
+  "company_name": "Gamma Corp",
+  "title": "Backend Engineer Intern",
+  "category": "Software",
+  "active": true,
+  "date_posted": 1795014000,
+  "date_updated": 1795014000,
+  "url": "https://job-boards.greenhouse.io/gamma/jobs/2003",
+  "locations": [
+   "Boston, MA"
+  ]
+ },
+ {
+  "source": "Simplify",
+  "is_visible": true,
+  "terms": [
+   "Summer 2027"
+  ],
+  "sponsorship": "Other",
+  "degrees": [
+   "Bachelor's"
+  ],
+  "id": "x-data-analyst",
+  "company_name": "Zeta",
+  "title": "Business Data Analyst Intern",
+  "category": "AI/ML/Data",
+  "active": true,
+  "date_posted": 1795014000,
+  "date_updated": 1795014000,
+  "url": "https://x",
+  "locations": [
+   "Seattle, WA"
+  ]
+ }
+]

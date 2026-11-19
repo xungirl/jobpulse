@@ -1,0 +1,18 @@
+{
+ "text": "Machine Learning Intern",
+ "categories": {
+  "location": "Remote"
+ },
+ "descriptionPlain": "Join our LLM team building RAG systems and evals.\n",
+ "lists": [
+  {
+   "text": "Requirements",
+   "content": "<li>Python and PyTorch</li><li>Machine learning coursework</li><li>Currently enrolled in a PhD or MS program</li>"
+  },
+  {
+   "text": "Bonus",
+   "content": "<li>Hugging Face, vector databases, Kubernetes</li>"
+  }
+ ],
+ "additionalPlain": "No visa sponsorship is available."
+}

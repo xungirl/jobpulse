@@ -9,7 +9,7 @@ import urllib.request
 import urllib.robotparser
 from collections.abc import Callable
 
-from jobpulse.ports import HttpError
+from jobpulse.ports import HttpClient, HttpError
 
 # Generic, no personal information (no name/email). Identifies the tool only.
 USER_AGENT = "jobpulse/0.1 (open-source job-market research bot)"
@@ -49,8 +49,17 @@ class UrllibHttpClient:
         rp_or_none = self._robots[origin]
         return rp_or_none is None or rp_or_none.can_fetch(USER_AGENT, url)
 
+    def _interval(self, host: str) -> float:
+        """Our own minimum gap between requests, or the site's robots.txt Crawl-delay if larger."""
+        for origin, rp in self._robots.items():
+            if rp is not None and urllib.parse.urlparse(origin).netloc == host:
+                delay = rp.crawl_delay(USER_AGENT)
+                if delay:
+                    return max(self.min_interval_s, float(delay))
+        return self.min_interval_s
+
     def _throttle(self, host: str) -> None:
-        wait = self._last_hit.get(host, 0.0) + self.min_interval_s - time.monotonic()
+        wait = self._last_hit.get(host, 0.0) + self._interval(host) - time.monotonic()
         if wait > 0:
             self._sleep(wait)
         self._last_hit[host] = time.monotonic()
@@ -95,3 +104,19 @@ class FakeHttpClient:
             if prefix.endswith("*") and url.startswith(prefix[:-1]):
                 return body
         raise HttpError(url, 404, "not found (fake)")
+
+
+class MemoizingHttpClient:
+    """Caches responses for chosen URLs within one process (backfill fetches listings.json once)."""
+
+    def __init__(self, inner: HttpClient, memoize: set[str]) -> None:
+        self.inner = inner
+        self.memoize = memoize
+        self._cache: dict[str, str] = {}
+
+    def get_text(self, url: str, headers: dict[str, str] | None = None) -> str:
+        if url not in self.memoize:
+            return self.inner.get_text(url, headers)
+        if url not in self._cache:
+            self._cache[url] = self.inner.get_text(url, headers)
+        return self._cache[url]

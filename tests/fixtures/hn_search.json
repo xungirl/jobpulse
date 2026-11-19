@@ -1,0 +1,19 @@
+{
+ "hits": [
+  {
+   "title": "Show HN: A Rust database built on io_uring",
+   "points": 400,
+   "objectID": "1"
+  },
+  {
+   "title": "Why LLM evals are hard",
+   "points": 250,
+   "objectID": "2"
+  },
+  {
+   "title": "Kubernetes is not your friend",
+   "points": 120,
+   "objectID": "3"
+  }
+ ]
+}

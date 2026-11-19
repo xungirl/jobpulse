@@ -3,6 +3,7 @@
     pk                  sk                  document
     ------------------  ------------------  ------------------------------------
     POSTING#<id>        META                Posting (dedupe: conditional put)
+    POSTING#<id>        EXTRACTION          Extraction used for this posting (any method)
     DAY#<date>          POSTING#<id>        {} - index of postings first seen that day
     EXTRACT#<jd_hash>   <prompt_version>    Extraction (LLM cache keyed by content)
     DEMAND              <date>              {"postings": n, "counts": {skill: n}}
@@ -49,6 +50,10 @@ class Repos:
     def is_known(self, posting_id: str) -> bool:
         return self.store.get(f"POSTING#{posting_id}", "META") is not None
 
+    def posting(self, posting_id: str) -> Posting | None:
+        doc = self.store.get(f"POSTING#{posting_id}", "META")
+        return Posting.from_dict(doc) if doc else None
+
     def first_seen(self, posting_id: str) -> str | None:
         doc = self.store.get(f"POSTING#{posting_id}", "META")
         return str(doc["first_seen"]) if doc else None
@@ -60,6 +65,13 @@ class Repos:
             if doc:
                 out.append(Posting.from_dict(doc))
         return out
+
+    def put_posting_extraction(self, posting_id: str, extraction: Extraction) -> None:
+        self.store.put(f"POSTING#{posting_id}", "EXTRACTION", extraction.to_dict())
+
+    def posting_extraction(self, posting_id: str) -> Extraction | None:
+        doc = self.store.get(f"POSTING#{posting_id}", "EXTRACTION")
+        return Extraction.from_dict(doc) if doc else None
 
     # ---------------------------------------------------------------- extraction cache
     def cached_extraction(self, jd_hash: str, version: str) -> Extraction | None:

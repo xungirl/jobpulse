@@ -1,0 +1,26 @@
+{
+ "items": [
+  {
+   "name": "agent-kit",
+   "description": "Build LLM agents with tool calling in Rust",
+   "topics": [
+    "llm",
+    "agents",
+    "mcp"
+   ],
+   "language": "Rust",
+   "stargazers_count": 900,
+   "html_url": "https://github.com/a/agent-kit"
+  },
+  {
+   "name": "fast-k8s",
+   "description": "Kubernetes operator",
+   "topics": [
+    "kubernetes"
+   ],
+   "language": "Go",
+   "stargazers_count": 300,
+   "html_url": "https://github.com/a/fast-k8s"
+  }
+ ]
+}

@@ -88,5 +88,7 @@ class Metrics:
         if emf:
             print(json.dumps(self.emf_record(step, run_date)), file=out)
         else:
-            print(json.dumps({"event": "metrics", "step": step, "run_date": run_date, **self.counters}),
-                  file=out)
+            print(
+                json.dumps({"event": "metrics", "step": step, "run_date": run_date, **self.counters}),
+                file=out,
+            )

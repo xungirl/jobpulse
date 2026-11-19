@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import json
 import re
+import threading
 import time
 import urllib.error
 import urllib.request
@@ -16,6 +17,7 @@ from collections.abc import Callable
 from datetime import UTC, datetime
 from pathlib import Path
 
+from jobpulse.ports import LLMProvider
 from jobpulse.taxonomy import default_taxonomy
 
 DASHSCOPE_BASE_URL = "https://dashscope.aliyuncs.com/compatible-mode/v1"
@@ -104,8 +106,11 @@ class QwenProvider:
             with urllib.request.urlopen(req, timeout=self.timeout_s) as r:
                 payload = json.loads(r.read().decode("utf-8"))
             usage = payload.get("usage") or {}
-            entry.update(ok=True, prompt_tokens=usage.get("prompt_tokens"),
-                         completion_tokens=usage.get("completion_tokens"))
+            entry.update(
+                ok=True,
+                prompt_tokens=usage.get("prompt_tokens"),
+                completion_tokens=usage.get("completion_tokens"),
+            )
             return str(payload["choices"][0]["message"]["content"])
         except urllib.error.HTTPError as e:
             entry.update(ok=False, error=f"HTTP {e.code}")
@@ -126,16 +131,18 @@ def _fake_extract(user: str) -> str:
     tax = default_taxonomy()
     jd = user.split("<jd>", 1)[-1].split("</jd>", 1)[0]
     nice_idx = re.search(r"(preferred|nice to have|bonus|plus)", jd, re.IGNORECASE)
-    head, tail = (jd[: nice_idx.start()], jd[nice_idx.start():]) if nice_idx else (jd, "")
+    head, tail = (jd[: nice_idx.start()], jd[nice_idx.start() :]) if nice_idx else (jd, "")
     required = sorted(tax.find(head))
     nice = sorted(tax.find(tail) - set(required))
-    return json.dumps({
-        "required_skills": required,
-        "nice_to_have": nice,
-        "domain": "software",
-        "seniority_signals": ["intern"],
-        "constraints": [],
-    })
+    return json.dumps(
+        {
+            "required_skills": required,
+            "nice_to_have": nice,
+            "domain": "software",
+            "seniority_signals": ["intern"],
+            "constraints": [],
+        }
+    )
 
 
 def _fake_ideas(user: str) -> str:
@@ -174,6 +181,21 @@ class FakeProvider:
     def complete_json(self, system: str, user: str, purpose: str) -> str:
         self.calls.append(purpose)
         return self.responder(system, user, purpose)
+
+
+class CountingProvider:
+    """Wraps any provider and counts calls made through it (thread-safe); used for per-step metrics."""
+
+    def __init__(self, inner: LLMProvider) -> None:
+        self.inner = inner
+        self.name = inner.name
+        self.count = 0
+        self._lock = threading.Lock()
+
+    def complete_json(self, system: str, user: str, purpose: str) -> str:
+        with self._lock:
+            self.count += 1
+        return self.inner.complete_json(system, user, purpose)
 
 
 def read_env_file_value(path: str | Path, key: str) -> str | None:
