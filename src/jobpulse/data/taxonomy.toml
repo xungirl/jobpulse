@@ -1,0 +1,455 @@
+# Skill taxonomy: one table per canonical skill.
+#
+#   aliases     - matched case-insensitively on word boundaries ("k8s" -> Kubernetes)
+#   exact       - matched case-SENSITIVELY, for short/ambiguous names ("Go", "R", "C")
+#   category    - used to group skills on the dashboard
+#
+# The canonical name (table key) always matches itself case-insensitively,
+# unless it is listed in `exact`, in which case only the exact forms match.
+
+# ---------------------------------------------------------------- languages
+["Python"]
+category = "language"
+aliases = ["python3"]
+
+["Java"]
+category = "language"
+aliases = []
+
+["C++"]
+category = "language"
+aliases = ["cpp", "c plus plus"]
+
+["C"]
+category = "language"
+exact = ["C"]
+
+["C#"]
+category = "language"
+aliases = ["csharp", "c sharp"]
+
+["Go"]
+category = "language"
+aliases = ["golang"]
+exact = ["Go"]
+
+["Rust"]
+category = "language"
+aliases = []
+
+["JavaScript"]
+category = "language"
+aliases = ["js", "ecmascript"]
+
+["TypeScript"]
+category = "language"
+aliases = []
+
+["Kotlin"]
+category = "language"
+aliases = []
+
+["Swift"]
+category = "language"
+aliases = []
+
+["Scala"]
+category = "language"
+aliases = []
+
+["Ruby"]
+category = "language"
+aliases = []
+
+["PHP"]
+category = "language"
+aliases = []
+
+["R"]
+category = "language"
+exact = ["R"]
+
+["MATLAB"]
+category = "language"
+aliases = []
+
+["SQL"]
+category = "language"
+aliases = ["t-sql", "pl/sql"]
+
+["Bash"]
+category = "language"
+aliases = ["shell scripting", "shell script", "bash scripting"]
+
+["Verilog"]
+category = "language"
+aliases = ["systemverilog", "vhdl"]
+
+# ---------------------------------------------------------------- backend & web
+["REST APIs"]
+category = "backend"
+aliases = ["restful", "rest api", "restful api", "restful apis", "rest apis", "restful services"]
+
+["GraphQL"]
+category = "backend"
+aliases = []
+
+["gRPC"]
+category = "backend"
+aliases = ["protobuf", "protocol buffers"]
+
+["Microservices"]
+category = "backend"
+aliases = ["microservice", "micro-services", "service-oriented architecture"]
+
+["Spring Boot"]
+category = "backend"
+aliases = ["spring framework"]
+
+["Django"]
+category = "backend"
+aliases = []
+
+["Flask"]
+category = "backend"
+aliases = []
+
+["FastAPI"]
+category = "backend"
+aliases = ["fast api"]
+
+["Node.js"]
+category = "backend"
+aliases = ["nodejs"]
+
+[".NET"]
+category = "backend"
+aliases = ["dotnet", "asp.net"]
+
+["Ruby on Rails"]
+category = "backend"
+aliases = ["rails"]
+
+["Kafka"]
+category = "backend"
+aliases = ["apache kafka"]
+
+["RabbitMQ"]
+category = "backend"
+aliases = []
+
+["Redis"]
+category = "backend"
+aliases = []
+
+["WebSockets"]
+category = "backend"
+aliases = ["websocket"]
+
+# ---------------------------------------------------------------- frontend & mobile
+["React"]
+category = "frontend"
+aliases = ["react.js", "reactjs"]
+
+["Angular"]
+category = "frontend"
+aliases = ["angularjs"]
+
+["Vue"]
+category = "frontend"
+aliases = ["vue.js", "vuejs"]
+
+["Next.js"]
+category = "frontend"
+aliases = ["nextjs"]
+
+["HTML/CSS"]
+category = "frontend"
+aliases = ["html", "css", "html5", "css3"]
+
+["iOS"]
+category = "mobile"
+aliases = ["swiftui", "uikit"]
+
+["Android"]
+category = "mobile"
+aliases = ["jetpack compose"]
+
+["React Native"]
+category = "mobile"
+aliases = []
+
+["Flutter"]
+category = "mobile"
+aliases = ["dart"]
+
+# ---------------------------------------------------------------- data stores & data engineering
+["PostgreSQL"]
+category = "data"
+aliases = ["postgres", "postgresql", "psql"]
+
+["MySQL"]
+category = "data"
+aliases = []
+
+["MongoDB"]
+category = "data"
+aliases = ["mongo"]
+
+["DynamoDB"]
+category = "data"
+aliases = ["dynamo db"]
+
+["Cassandra"]
+category = "data"
+aliases = []
+
+["Elasticsearch"]
+category = "data"
+aliases = ["elastic search", "opensearch"]
+
+["NoSQL"]
+category = "data"
+aliases = ["non-relational"]
+
+["Relational Databases"]
+category = "data"
+aliases = ["relational database", "rdbms", "relational databases"]
+
+["Spark"]
+category = "data"
+aliases = ["apache spark", "pyspark"]
+
+["Hadoop"]
+category = "data"
+aliases = ["hdfs", "mapreduce"]
+
+["Airflow"]
+category = "data"
+aliases = ["apache airflow"]
+
+["dbt"]
+category = "data"
+aliases = []
+
+["Snowflake"]
+category = "data"
+aliases = []
+
+["Databricks"]
+category = "data"
+aliases = []
+
+["BigQuery"]
+category = "data"
+aliases = ["big query"]
+
+["ETL"]
+category = "data"
+aliases = ["etl pipelines", "elt", "data pipelines", "data pipeline"]
+
+["Pandas"]
+category = "data"
+aliases = []
+
+["NumPy"]
+category = "data"
+aliases = ["numpy"]
+
+["Tableau"]
+category = "data"
+aliases = ["power bi", "looker"]
+
+# ---------------------------------------------------------------- cloud & devops
+["AWS"]
+category = "cloud"
+aliases = ["amazon web services", "ec2", "s3", "lambda", "aws lambda"]
+
+["GCP"]
+category = "cloud"
+aliases = ["google cloud", "google cloud platform"]
+
+["Azure"]
+category = "cloud"
+aliases = ["microsoft azure"]
+
+["Docker"]
+category = "devops"
+aliases = ["containers", "containerization"]
+
+["Kubernetes"]
+category = "devops"
+aliases = ["k8s", "eks", "gke", "aks"]
+
+["Terraform"]
+category = "devops"
+aliases = ["infrastructure as code", "iac"]
+
+["CI/CD"]
+category = "devops"
+aliases = ["ci / cd", "continuous integration", "continuous delivery", "continuous deployment",
+           "github actions", "jenkins", "gitlab ci"]
+
+["Linux"]
+category = "devops"
+aliases = ["unix"]
+
+["Git"]
+category = "devops"
+aliases = ["github", "gitlab", "version control"]
+
+["Serverless"]
+category = "cloud"
+aliases = []
+
+["Observability"]
+category = "devops"
+aliases = ["monitoring", "prometheus", "grafana", "opentelemetry", "datadog"]
+
+# ---------------------------------------------------------------- systems
+["Distributed Systems"]
+category = "systems"
+aliases = ["distributed system", "distributed computing"]
+
+["Operating Systems"]
+category = "systems"
+aliases = ["operating system", "os internals", "kernel"]
+
+["Computer Networking"]
+category = "systems"
+aliases = ["tcp/ip", "computer networks", "network protocols", "network programming"]
+
+["Concurrency"]
+category = "systems"
+aliases = ["multithreading", "multi-threading", "parallel programming", "multithreaded"]
+
+["Embedded Systems"]
+category = "systems"
+aliases = ["embedded software", "firmware", "rtos", "microcontrollers"]
+
+["CUDA"]
+category = "systems"
+aliases = ["gpu programming"]
+
+["Compilers"]
+category = "systems"
+aliases = ["compiler", "llvm"]
+
+["System Design"]
+category = "systems"
+aliases = ["software architecture", "scalable systems", "large-scale systems"]
+
+# ---------------------------------------------------------------- ML / AI
+["Machine Learning"]
+category = "ml"
+aliases = ["ml", "machine-learning"]
+
+["Deep Learning"]
+category = "ml"
+aliases = ["neural networks", "neural network"]
+
+["PyTorch"]
+category = "ml"
+aliases = ["torch"]
+
+["TensorFlow"]
+category = "ml"
+aliases = ["keras"]
+
+["JAX"]
+category = "ml"
+aliases = []
+
+["scikit-learn"]
+category = "ml"
+aliases = ["sklearn", "scikit learn"]
+
+["Computer Vision"]
+category = "ml"
+aliases = ["image processing", "opencv"]
+
+["NLP"]
+category = "ml"
+aliases = ["natural language processing"]
+
+["Reinforcement Learning"]
+category = "ml"
+aliases = ["rl"]
+
+["Statistics"]
+category = "ml"
+aliases = ["statistical", "probability", "a/b testing", "hypothesis testing"]
+
+["Data Analysis"]
+category = "ml"
+aliases = ["data analytics", "data visualization"]
+
+["MLOps"]
+category = "ml"
+aliases = ["model deployment", "model serving", "mlflow", "kubeflow"]
+
+["LLMs"]
+category = "ai"
+aliases = ["llm", "large language model", "large language models", "gpt", "foundation models", "generative ai",
+           "genai", "gen ai"]
+
+["RAG"]
+category = "ai"
+aliases = ["retrieval-augmented generation", "retrieval augmented generation"]
+
+["AI Agents"]
+category = "ai"
+aliases = ["agentic", "ai agent", "llm agents", "agentic ai", "tool calling", "tool use", "multi-agent"]
+
+["Prompt Engineering"]
+category = "ai"
+aliases = ["prompting", "prompt design"]
+
+["LLM Evaluation"]
+category = "ai"
+aliases = ["evals", "model evaluation", "llm evals", "evaluation frameworks"]
+
+["Fine-tuning"]
+category = "ai"
+aliases = ["fine tuning", "finetuning", "lora", "rlhf"]
+
+["Vector Databases"]
+category = "ai"
+aliases = ["vector database", "vector search", "embeddings", "pinecone", "faiss", "pgvector"]
+
+["Hugging Face"]
+category = "ai"
+aliases = ["huggingface", "transformers library"]
+
+["LangChain"]
+category = "ai"
+aliases = ["langgraph", "llamaindex"]
+
+["MCP"]
+category = "ai"
+aliases = ["model context protocol"]
+
+["Robotics"]
+category = "ml"
+aliases = ["ros", "ros2"]
+
+# ---------------------------------------------------------------- practices
+["Data Structures & Algorithms"]
+category = "practice"
+aliases = ["data structures", "algorithms", "data structures and algorithms"]
+
+["Object-Oriented Programming"]
+category = "practice"
+aliases = ["object-oriented", "object oriented", "oop", "object-oriented design"]
+
+["Testing"]
+category = "practice"
+aliases = ["unit testing", "unit tests", "test automation", "pytest", "junit", "integration testing", "tdd"]
+
+["Agile"]
+category = "practice"
+aliases = ["scrum"]
+
+["Security"]
+category = "security"
+aliases = ["cybersecurity", "cyber security", "application security", "cryptography"]

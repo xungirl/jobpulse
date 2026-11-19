@@ -1,0 +1,26 @@
+# Python / tooling
+__pycache__/
+*.pyc
+.venv/
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.hypothesis/
+dist/
+build/
+
+# local run state & outputs (the committed demo lives in docs/demo/)
+out/
+.jobpulse/*
+!.jobpulse/.keep
+
+# personal config: real bullet bank path, env-file path (never commit)
+jobpulse.local.toml
+*.env
+.env*
+
+# CDK / node
+infra/cdk.out/
+cdk.out/
+node_modules/
+.DS_Store
