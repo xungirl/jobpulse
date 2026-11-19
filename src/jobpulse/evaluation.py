@@ -49,6 +49,15 @@ def mean_pairwise_jaccard(runs: list[Sets]) -> float:
 
 def load_eval_set(eval_dir: Path) -> tuple[dict[str, dict[str, Any]], dict[str, dict[str, Any]]]:
     jds = {p.stem: json.loads(p.read_text()) for p in sorted((eval_dir / "jds").glob("*.json"))}
+    # JD texts are not redistributed in the repo (only URL + sha256). They live in a local,
+    # gitignored cache filled by scripts/fetch_eval_jds.py, which verifies each sha256.
+    cache = eval_dir / ".jd_cache"
+    for key, jd in jds.items():
+        if "jd_text" not in jd:
+            f = cache / f"{key}.txt"
+            if not f.exists():
+                raise FileNotFoundError(f"{f} missing: run `uv run python scripts/fetch_eval_jds.py` first")
+            jd["jd_text"] = f.read_text()
     labels = json.loads((eval_dir / "labels.json").read_text())["labels"]
     missing = set(jds) ^ set(labels)
     if missing:

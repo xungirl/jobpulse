@@ -6,6 +6,8 @@ the market demands and which technologies are trending, tailors a one-page resum
 **selecting and reordering true bullets only (never generating claims)**, proposes portfolio projects
 for the skill gaps, and publishes a static dashboard.
 
+**Live (AWS, updates daily at 14:00 UTC): https://d203ftbw510zrj.cloudfront.net**
+
 ![dashboard screenshot](docs/screenshot.png)
 
 [Demo output (committed; serve `docs/demo/` or enable GitHub Pages on `/docs`)](docs/demo/) · [Architecture](#architecture) · [Project Journey](#project-journey) ·
@@ -111,7 +113,13 @@ All numbers come from runs on an Apple M2 laptop; the source file for each numbe
      without Docker from `uv.lock` and was **smoke-tested inside the official
      `public.ecr.aws/lambda/python:3.12-arm64` image** (import + PDF render in 0.42 s).
      [Cost estimate](docs/COST.md).
-   - **Not yet deployed:** see [Deploy](#deploy-to-aws).
+   - **Deployed (2026-11-18):** `CREATE_COMPLETE` in 214 s. The first real run **failed**: every Lambda
+     read the API key from SSM at cold start, but (least privilege) only `extract` and `gaps` are granted
+     `ssm:GetParameter`, so ingest/trends/tailor/publish got `AccessDeniedException`. moto-based tests
+     could not catch it because moto does not enforce IAM. **Fix:** build the LLM client only in the steps
+     that use it (`LLM_STEPS` in `src/jobpulse/lambdas.py`) and add a regression test that fails if a
+     non-LLM step touches the key (`tests/test_lambda_llm_scope.py`). The redeploy took 18 s and the
+     next run **succeeded in 47 s** (4 new postings, 3 extractions, 1 tailored resume, 1 idea).
 
 9. **Observability & robustness.**
    - **Built:** structured JSON logs, and per-step metrics as CloudWatch EMF in Lambda (stdout locally).
@@ -148,8 +156,7 @@ All numbers come from runs on an Apple M2 laptop; the source file for each numbe
 | AWS cost | **estimate** ≈ $0.006/month within free tier, < $0.10 without | `docs/COST.md` |
 
 ### Next steps
-- Deploy with `scripts/deploy.sh`, then replace the estimates in `docs/COST.md` with measured Lambda
-  durations and billing data.
+- Replace the estimates in `docs/COST.md` with a month of measured Lambda durations and billing data.
 - Add a second listings source to reduce selection bias, and add a human spot-check of the eval labels.
 - Partition the single-partition `DEMAND` and `RUN` keys by month before running for years.
 
@@ -244,7 +251,7 @@ scripts/check.sh 10                                            # CI-equivalent c
 
 ## Deploy to AWS
 
-Everything targets **us-east-2**. Nothing in this repo has been deployed yet.
+Everything targets **us-east-2**. A live deployment runs at https://d203ftbw510zrj.cloudfront.net.
 
 ```bash
 npm i -g aws-cdk                     # CDK CLI
@@ -275,7 +282,9 @@ Confirm the two subscription emails (SNS and Budgets). See the [cost estimate](d
 - **Eval caveats.** 30 JDs and one AI annotator; the labels use the system's own taxonomy, which favors
   keyword recall. There is no human inter-annotator check yet.
 - **Taxonomy-bounded.** Skills outside the 109-skill taxonomy are kept as `unmapped` but are not counted.
-- **Not yet deployed.** AWS numbers are estimates until a real deployment.
+- **Cost is still an estimate.** The stack is deployed, but `docs/COST.md` uses list prices and
+  measured volumes, not a billing statement. The live database started empty on 2026-11-18, so the
+  live dashboard has less history than the committed 30-day demo.
 
 ## Ethics
 
@@ -287,8 +296,11 @@ Confirm the two subscription emails (SNS and Budgets). See the [cost estimate](d
   - Requests are rate-limited per host and retried with backoff.
   - The User-Agent is generic and contains no personal information.
   - Each run fetches the GitHub and HN APIs once.
-- **Eval data.** The 30 JD texts in `eval/jds/` are stored with their source URLs for reproducibility of
-  the evaluation only.
+- **Eval data.** Job-description text is **not redistributed**. `eval/jds/*.json` keeps the source URL,
+  company, title and the sha256 + length of the exact text that was labeled.
+  `uv run python scripts/fetch_eval_jds.py` re-fetches each posting into a gitignored cache and only
+  accepts byte-identical text; closed or edited postings are reported, and `eval/results.json` stays
+  the record of the published run.
 - **No automation of human actions.** Nothing applies to jobs or posts to LinkedIn; the weekly post is a
   text draft.
 

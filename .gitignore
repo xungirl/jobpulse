@@ -24,3 +24,6 @@ cdk.out/
 node_modules/
 .DS_Store
 infra/cdk.out/
+
+# eval JD texts: fetched locally, never redistributed (eval/jds keeps URL + sha256)
+eval/.jd_cache/
