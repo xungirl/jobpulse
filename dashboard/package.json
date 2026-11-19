@@ -1,0 +1,13 @@
+{
+  "name": "jobpulse-dashboard",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Vanilla TypeScript dashboard; compiles to src/jobpulse/web/app.js",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check": "tsc -p tsconfig.json --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "5.6.3"
+  }
+}

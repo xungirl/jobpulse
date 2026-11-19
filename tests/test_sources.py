@@ -40,7 +40,7 @@ def test_is_us_location(loc: str, us: bool) -> None:
 def test_greenhouse_fetch(fake_http: FakeHttpClient) -> None:
     job = ats.fetch_job_text(fake_http, "https://job-boards.greenhouse.io/acme/jobs/1001?utm_source=Simplify")
     assert job is not None and job.ats == "greenhouse" and job.open
-    assert "Python, C++ and Linux" in job.text
+    assert "Python, C++, Rust and Linux" in job.text
     assert "<li>" not in job.text and "&lt;" not in job.text
 
 
