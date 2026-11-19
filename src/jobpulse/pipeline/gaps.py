@@ -155,12 +155,16 @@ def run_gaps(ctx: Context, run_date: str) -> StepResult:
     trend_scores = {s.skill: s.score for s in ctx.repos.trends(run_date)}
     gaps = rank_gaps(demand, trend_scores, evidenced)
     m.set("gaps_found", len(gaps))
-    top = gaps[:TOP_GAPS_IN_PROMPT]
-    by_skill = {g["skill"]: g for g in top}
-
     previous = [i for i in ctx.repos.all_ideas() if i.date < run_date]
     window_start = (date.fromisoformat(run_date) - timedelta(days=REPEAT_WINDOW_DAYS)).isoformat()
     recent = [i for i in previous if i.date >= window_start]
+    # Gaps already targeted by an idea in the last 14 days are skipped, so the same top gaps
+    # do not get proposed (and then deduped away) day after day.
+    covered = {s for i in recent for s in i.target_skills}
+    open_gaps = [g for g in gaps if g["skill"] not in covered]
+    m.set("gaps_recently_covered", len(gaps) - len(open_gaps))
+    top = open_gaps[:TOP_GAPS_IN_PROMPT]
+    by_skill = {g["skill"]: g for g in top}
     existing = [f"{p.name} {p.desc}" for p in bank.projects.values()]
     ideas: list[ProjectIdea] = []
     llm = CountingProvider(ctx.llm) if ctx.llm else None

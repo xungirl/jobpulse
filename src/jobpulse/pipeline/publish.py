@@ -65,7 +65,10 @@ def _series(ctx: Context, run_date: str, skills: list[str]) -> dict[str, Any]:
 
 def build_dashboard_data(ctx: Context, run_date: str) -> dict[str, Any]:
     postings = []
-    for p in sorted(ctx.repos.postings_for_day(run_date), key=lambda p: (p.company.lower(), p.title)):
+    day = sorted(
+        ctx.repos.postings_for_day(run_date), key=lambda p: (not p.jd_text, p.company.lower(), p.title)
+    )
+    for p in day:  # postings with a full JD first
         ex = ctx.repos.posting_extraction(p.id)
         c = p.constraints
         flags = [

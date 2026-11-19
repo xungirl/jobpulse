@@ -97,6 +97,18 @@ def test_linkedin_draft_uses_only_stored_numbers(ctx: Context) -> None:
     assert weekly_post(ctx.repos, "2025-01-01", ctx.taxonomy).startswith("(no postings")
 
 
+def test_ideas_keep_coming_on_consecutive_days(ctx: Context) -> None:
+    """Regression: the same top gaps every day used to dedupe every idea away after a few days."""
+    from jobpulse.pipeline.gaps import run_gaps
+
+    run_pipeline(ctx, "2026-11-18")
+    first = {s for i in ctx.repos.all_ideas() for s in i.target_skills}
+    result = run_gaps(ctx, "2026-11-19")  # same demand data, one day later
+    second = [i for i in ctx.repos.all_ideas() if i.date == "2026-11-19"]
+    assert result.metrics["gaps_recently_covered"] == len(first)
+    assert all(not set(i.target_skills) & first for i in second)
+
+
 def test_gap_ranking_and_dedupe() -> None:
     demand = [
         {"skill": "Rust", "share_30d": 0.2, "count_30d": 4},
