@@ -47,7 +47,7 @@ if (( LIMIT < 100 )); then RC=0; echo "Account concurrency limit is $LIMIT -> de
 
 # --- 4. bootstrap once, then deploy
 if ! aws cloudformation describe-stacks --stack-name CDKToolkit >/dev/null 2>&1; then
-  cdk bootstrap "aws://$ACCOUNT/$REGION"
+  cdk bootstrap "aws://$ACCOUNT/$REGION" -c alert_email="$ALERT_EMAIL" -c reserved_concurrency="$RC"
 fi
 cdk deploy JobPulse --require-approval "${CDK_REQUIRE_APPROVAL:-broadening}" \
   -c alert_email="$ALERT_EMAIL" -c reserved_concurrency="$RC" --outputs-file infra/cdk.out/outputs.json
