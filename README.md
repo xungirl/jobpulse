@@ -181,7 +181,7 @@ All numbers come from runs on an Apple M2 laptop; the source file for each numbe
 | Real LLM calls during development | 312 of a 1,200 budget (218 extraction incl. 91 eval, 93 ideas, 1 smoke) | `docs/measurements/demo_summary.json` |
 | Lambda bundle | 27 MB unzipped; import + PDF render 0.42 s in the official arm64 Lambda image | `docs/measurements/lambda_image_smoke.json` |
 | cdk-nag (AwsSolutions) | 0 unsuppressed findings (20 compliant, 61 suppressed under 9 documented rule IDs) | `infra/stack.py`, `cdk synth` |
-| Test suite | 106 passed; 10/10 consecutive runs green | `scripts/check.sh 10` |
+| Test suite | 113 passed; 10/10 consecutive runs green (2026-11-18, after the deploy fix and redesign) | `uv run pytest` ×10 |
 | AWS cost | **estimate** ≈ $0.006/month within free tier, < $0.10 without | `docs/COST.md` |
 
 ### Next steps

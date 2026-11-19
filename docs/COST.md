@@ -1,6 +1,7 @@
-# AWS cost: ESTIMATE (not yet deployed)
+# AWS cost: ESTIMATE (deployed 2026-11-18; not yet a billing statement)
 
-> **This is an estimate, not a bill.** jobpulse has not been deployed yet. The *volumes* below come from
+> **This is an estimate, not a bill.** jobpulse has been deployed since 2026-11-18 (first successful run:
+> 47 s for all six steps), but no full billing month exists yet. The *volumes* below come from
 > real local runs (sources linked). The *prices* are public on-demand list prices for us-east-2 as known
 > to the author when writing; **verify them on https://aws.amazon.com/pricing before relying on them.**
 > After deploying, replace this page with Cost Explorer numbers.
@@ -45,7 +46,7 @@ watch the whole account, not just this stack, which is deliberately conservative
 | X-Ray (state machine) | ≈ 30 traces | 100,000 traces/month free | **$0** |
 | SSM Parameter Store | 1 standard SecureString (AWS-managed `aws/ssm` key) | standard parameters and standard throughput free | **$0** |
 | SNS | a few e-mails | 1,000 e-mail notifications/month free | **$0** |
-| AWS Budgets | 2 budgets | first 2 budgets free (assumption: verify) | **$0** |
+| AWS Budgets | 2 budgets (notifications only, no actions) | monitoring budgets without actions are free (aws.amazon.com/aws-cost-management/aws-budgets/pricing, checked 2026-11-18) | **$0** |
 | **Total** | | | **≈ $0.006 / month** (scripted) |
 
 The total is computed by `scripts/cost_estimate.py` → `docs/measurements/cost_estimate.json`
